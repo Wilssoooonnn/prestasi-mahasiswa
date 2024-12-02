@@ -51,37 +51,43 @@ class AuthController
 
             if (empty($username) || empty($password) || empty($role_id)) {
                 echo "All fields are required.";
+                exit(); // Hentikan eksekusi jika ada input kosong
             }
 
             // Hash password
             $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
 
             // Memuat model
-            require_once '../app/models/UserModel.php';
             $userModel = new UserModel();
 
             // Cek apakah username sudah ada
             if ($userModel->isUsernameExists($username)) {
-                echo "Username already exists.";
-            }
-
-            // Simpan pengguna baru ke database
-            $result = $userModel->register($username, $hashedPassword, $role_id);
-
-            if ($result) {
-                echo "Registration successful.";
-                header('Location: ' . BASE_URL . 'auth/login');
-                exit();
+                // Tampilkan alert jika username sudah ada
+                echo "<script>alert('Username already exists.');</script>";
             } else {
-                echo "Registration failed. Please try again.";
+                // Simpan pengguna baru ke database
+                $result = $userModel->register($username, $hashedPassword, $role_id);
+
+                if ($result) {
+                    // Tampilkan pesan sukses dan arahkan ke halaman login
+                    echo "<script>
+                        alert('Registration successful.');
+                        window.location.href = '" . BASE_URL . "auth/login';
+                    </script>";
+                    exit();
+                } else {
+                    // Tampilkan pesan gagal dalam alert
+                    echo "<script>alert('Registration failed. Please try again.');</script>";
+                }
             }
-        } else {
-            // Jika bukan POST, tampilkan form register
-            include '../app/views/template/header.php';
-            include '../app/views/auth/register.php';
-            include '../app/views/template/footer.php';
         }
+
+        // Jika bukan POST atau validasi gagal, tetap tampilkan form register
+        include '../app/views/template/header.php';
+        include '../app/views/auth/register.php';
+        include '../app/views/template/footer.php';
     }
+
     public function logout()
     {
         session_start();
