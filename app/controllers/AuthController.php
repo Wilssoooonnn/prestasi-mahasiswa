@@ -8,7 +8,7 @@ class AuthController
     public function index()
     {
         // Tampilkan halaman login sebagai halaman default
-        $judul = 'Login';   
+        $judul = 'Login';
         include '../app/views/template/header.php';
         include '../app/views/auth/login.php';
         include '../app/views/template/footer.php';

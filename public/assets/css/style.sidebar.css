@@ -1,0 +1,79 @@
+.sidebar {
+    height: 100vh;
+    color: #0B1215;
+    transition: width 0.3s ease-in-out;
+    border-right: 1px solid #e8e8e8;
+}
+
+.sidebar.collapsed {
+    width: 80px;
+}
+
+.sidebar.expanded {
+    width: 40vh;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    /* Gunakan Flexbox */
+    align-items: center;
+    /* Vertikal sejajar */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 10px 15px;
+    /* Spasi nyaman */
+    transition: opacity 0.3s ease-in-out;
+    color: #0B1215;
+    text-decoration: none;
+    /* Hilangkan underline */
+}
+
+.sidebar .nav-link:hover {
+    background-color: #dddddd;
+    /* Tambahkan hover efek */
+    color: #0B1215;
+    /* Ubah warna teks saat hover */
+}
+
+.nav-link span {
+    font-weight: 600;
+}
+
+.sidebar.collapsed .nav-link span {
+    display: none;
+}
+
+.sidebar.collapsed .nav-link i {
+    margin-left: 12px;
+}
+
+.sidebar.expanded .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar.collapsed img {
+    margin-right: 0;
+}
+
+.sidebar.collapsed .navbar-brand {
+    display: none;
+}
+
+#toggleBtn {
+    display: inline-flex;
+    /* Mengaktifkan Flexbox */
+    justify-content: center;
+    /* Ikon di tengah secara horizontal */
+    align-items: center;
+    /* Ikon di tengah secara vertikal */
+    width: 2rem;
+    /* Lebar tombol */
+    height: 5rem;
+    /* Tinggi tombol */
+    border-radius: 0 8px 8px 0;
+    /* Membuat ujung tombol melengkung */
+    padding: 0;
+    /* Hilangkan padding default */
+}
+
