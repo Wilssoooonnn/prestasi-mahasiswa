@@ -12,11 +12,11 @@
         </div>
 
         <!-- Navigasi Links -->
-        <nav class="nav flex-column mt-5">
-            <a href="#" class="nav-link mt-2">
+        <nav class="nav flex-column mt-2">
+            <a href="<?= BASE_URL; ?>/mahasiswa/home" class="nav-link mt-2">
                 <i class="material-icons">home</i> <span>Home</span>
             </a>
-            <a href="#" class="nav-link mt-2">
+            <a href="<?= BASE_URL; ?>/mahasiswa/profile" class="nav-link mt-2">
                 <i class="material-icons">person</i> <span>Profile</span>
             </a>
             <a href="#" class="nav-link mt-2">

@@ -3,5 +3,3 @@
         <p>This is the <?= $_SESSION['role']; ?> dashboard.</p>
         <a href="<?= BASE_URL; ?>auth/logout">Logout</a>
     </div>
-
-    
