@@ -17,7 +17,7 @@ class MahasiswaController extends Controller
     public function home(){
         $judul = 'Mahasiswa';
         include '../app/views/template/header.php';
-        include '../app/views/template/sidebar.php';
+        include '../app/views/template/sidebar_mahasiswa.php';
         include '../app/views/mahasiswa/home.php';
         include '../app/views/template/footer.php';
     }
@@ -25,7 +25,7 @@ class MahasiswaController extends Controller
     public function profile(){
         $judul = 'Mahasiswa';
         include '../app/views/template/header.php';
-        include '../app/views/template/sidebar.php';
+        include '../app/views/template/sidebar_mahasiswa.php';
         include '../app/views/mahasiswa/profile.php';
         include '../app/views/template/footer.php';
     }
