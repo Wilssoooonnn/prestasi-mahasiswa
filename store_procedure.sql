@@ -116,3 +116,39 @@ BEGIN
 END;
 
 EXEC TampilKompetisi;
+
+
+
+-- Get User By Username Login
+CREATE PROCEDURE GetUserByUsername
+    @Username NVARCHAR(255)
+AS
+BEGIN
+    SELECT u.username, u.password, r.role_name
+    FROM users u
+    JOIN roles r ON u.role_id = r.id
+    WHERE u.username = @Username;
+END;
+
+-- isUsernameExists
+CREATE PROCEDURE CheckUsernameExists
+    @Username NVARCHAR(255)
+AS
+BEGIN
+    SELECT 1
+    FROM users
+    WHERE username = @Username;
+END;
+
+
+-- Register User
+CREATE PROCEDURE RegisterUser
+    @Username NVARCHAR(255),
+    @Password NVARCHAR(255),
+    @RoleId INT
+AS
+BEGIN
+    INSERT INTO users (username, password, role_id)
+    VALUES (@Username, @Password, @RoleId);
+END;
+

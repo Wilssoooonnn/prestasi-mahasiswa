@@ -13,60 +13,66 @@ class UserModel
         $this->db = (new Database())->connect();
     }
 
+
+    private function logError($message)
+    {
+        error_log($message, 3, '../logs/error.log');
+    }
+
+    private function executeStoredProcedure($procedure, $params = [])
+    {
+        $query = "{CALL $procedure}";
+        $stmt = sqlsrv_prepare($this->db, $query, $params);
+
+        if (!$stmt) {
+            throw new Exception(print_r(sqlsrv_errors(), true));
+        }
+
+        if (!sqlsrv_execute($stmt)) {
+            throw new Exception(print_r(sqlsrv_errors(), true));
+        }
+
+        return $stmt;
+    }
+
+
     // Fungsi untuk login dan mengambil data pengguna berdasarkan username
     public function login($username, $password)
     {
-        // Menyiapkan query SQL untuk mengambil data user
-        $query = "
-            SELECT u.username, u.password, r.role_name 
-            FROM users u
-            JOIN roles r ON u.role_id = r.id
-            WHERE u.username = ?";  // Menggunakan parameterized query untuk menghindari SQL Injection
+        try {
+            $stmt = $this->executeStoredProcedure("GetUserByUsername(?)", [$username]);
+            $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
 
-        // Menyiapkan dan menjalankan query
-        $stmt = sqlsrv_prepare($this->db, $query, [$username]);
-        if ($stmt === false) {
-            die(print_r(sqlsrv_errors(), true)); // Debug jika terjadi error pada query
+            if ($user && password_verify($password, $user['password'])) {
+                return $user;
+            }
+            return null;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return null;
         }
-
-        // Menjalankan query
-        if (sqlsrv_execute($stmt) === false) {
-            die(print_r(sqlsrv_errors(), true)); // Debug jika terjadi error saat eksekusi
-        }
-
-        // Mengambil hasil query
-        $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
-
-        // Verifikasi password
-        if ($user && password_verify($password, $user['password'])) {
-            return $user; // Kembalikan data pengguna dan role-nya
-        }
-
-        return null; // Pengguna tidak ditemukan atau password salah
     }
 
-    public function register($username, $hashedPassword, $role_id)
+    public function register($username, $password, $role_id)
     {
-        $query = "INSERT INTO users (username, password, role_id) VALUES (?, ?, ?)";
-        $stmt = sqlsrv_prepare($this->db, $query, [$username, $hashedPassword, $role_id]);
-
-        if ($stmt === false) {
-            die(print_r(sqlsrv_errors(), true));
+        try {
+            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            $this->executeStoredProcedure("RegisterUser(?, ?, ?)", [$username, $hashedPassword, $role_id]);
+            return true;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return false;
         }
-
-        return sqlsrv_execute($stmt); // Kembalikan true jika berhasil
     }
 
     public function isUsernameExists($username)
     {
-        $query = "SELECT username FROM users WHERE username = ?";
-        $stmt = sqlsrv_prepare($this->db, $query, [$username]);
-
-        if ($stmt === false) {
-            die(print_r(sqlsrv_errors(), true));
+        try {
+            $stmt = $this->executeStoredProcedure("CheckUsernameExists(?)", [$username]);
+            return sqlsrv_fetch_array($stmt) !== false;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return false;
         }
-
-        sqlsrv_execute($stmt);
-        return sqlsrv_fetch_array($stmt) !== false; // Kembalikan true jika username ada
     }
 }
