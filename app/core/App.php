@@ -38,7 +38,6 @@ class App
 
         // Eksekusi method controller dengan parameter jika ada
         call_user_func_array([$controllerObj, $this->method], $this->params);
-        is_ex
     }
 
     // Fungsi untuk memparsing URL
