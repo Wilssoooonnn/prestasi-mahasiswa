@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- CEK USER LOGIN
 -- CEK USER LOGIN
 -- CEK USER LOGIN
@@ -104,6 +105,68 @@ AS
 BEGIN
     -- NIM valid
     IF EXISTS (SELECT 1 FROM mahasiswa WHERE nim = @nim)
+=======
+-- Get User By Username Login
+CREATE PROCEDURE GetUserByUsername
+    @Username NVARCHAR(255)
+AS
+BEGIN
+    SELECT u.username, u.password, r.role_name
+    FROM users u
+    JOIN roles r ON u.role_id = r.id
+    WHERE u.username = @Username;
+END;
+
+-- isUsernameExists
+CREATE PROCEDURE CheckUsernameExists
+    @Username NVARCHAR(255)
+AS
+BEGIN
+    SELECT 1
+    FROM users
+    WHERE username = @Username;
+END;
+
+
+-- Register User
+CREATE PROCEDURE RegisterUser
+    @Username NVARCHAR(255),
+    @Password NVARCHAR(255),
+    @RoleId INT
+AS
+BEGIN
+    INSERT INTO users (username, password, role_id)
+    VALUES (@Username, @Password, @RoleId);
+END;
+
+-- Ambil Nim dari Login
+alter PROCEDURE GetNimByLogin
+    @Username NVARCHAR(100),
+	@Nim NVARCHAR(20) OUTPUT
+AS
+BEGIN
+	SELECT @Nim = m.nim
+    FROM mahasiswa m
+    JOIN users u ON m.username = u.username
+    WHERE u.username = @Username;
+END;
+
+DECLARE @Nim int;
+EXEC GetNimByLogin 
+    @username = 'mahasiswa1', 
+    @Nim = @Nim OUTPUT;
+PRINT @Nim;
+
+--- AMBIL KOMPETISI SESUAI LOGIN NIM
+CREATE PROCEDURE GetKompetisiByNim
+    @Username NVARCHAR(100)
+AS
+BEGIN
+    DECLARE @Nim NVARCHAR(20);
+    EXEC GetNimByLogin @Username, @Nim OUTPUT;
+
+    IF @Nim IS NOT NULL
+>>>>>>> 64de4873f77f5a2474b1b66578c902e4ea477122
     BEGIN
         SELECT 
             m.nim AS NIM,
@@ -127,15 +190,21 @@ BEGIN
         JOIN 
             tingkat_kompetisi tk ON k.tingkat_id = tk.id
         WHERE 
+<<<<<<< HEAD
             m.nim = @nim;
     END
 	-- NIM invalid
+=======
+            m.nim = @Nim;
+    END
+>>>>>>> 64de4873f77f5a2474b1b66578c902e4ea477122
     ELSE
     BEGIN
         SELECT 'Tidak Ada Data Prestasi' AS Pesan;
         RETURN;
     END
 END;
+<<<<<<< HEAD
 
 -- NIM valid
 EXEC TampilKompetisi_Nim @nim = '220001003';
@@ -177,3 +246,5 @@ BEGIN
 END;
 
 EXEC TampilKompetisi;
+=======
+>>>>>>> 64de4873f77f5a2474b1b66578c902e4ea477122

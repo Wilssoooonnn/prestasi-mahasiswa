@@ -39,7 +39,9 @@
                     ?>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary">Register</button>
+            </div>
         </form>
 
         <!-- Tempat untuk menampilkan pesan error atau sukses -->
