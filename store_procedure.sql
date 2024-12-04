@@ -89,3 +89,32 @@ BEGIN
         RETURN;
     END
 END;
+
+--- AMBIL KOMPETISI SEMUANYA
+CREATE PROCEDURE GetKompetisi_All
+AS
+BEGIN
+    SELECT 
+        m.nim AS NIM,
+        m.nama AS Nama_Mahasiswa,
+        m.email AS Email_Mahasiswa,
+        k.nama_kompetisi AS Nama_Kompetisi,
+        jk.nama AS Jenis_Kompetisi,
+        tk.nama AS Tingkat_Kompetisi,
+        k.tempat_kompetisi AS Tempat_Kompetisi,
+        FORMAT(k.tanggal_mulai, 'yyyy-MM-dd') AS Tanggal_Mulai,
+        FORMAT(k.tanggal_akhir, 'yyyy-MM-dd') AS Tanggal_Akhir,
+        k.url_kompetisi AS URL_Kompetisi,
+        k.no_surat_tugas AS No_Surat_Tugas,
+        FORMAT(k.tanggal_surat_tugas, 'yyyy-MM-dd') AS Tanggal_Surat_Tugas
+    FROM 
+        mahasiswa m
+    JOIN 
+        kompetisi_mahasiswa km ON m.id = km.mahasiswa_id
+    JOIN 
+        kompetisi k ON km.kompetisi_id = k.id
+    JOIN 
+        jenis_kompetisi jk ON k.jenis_id = jk.id
+    JOIN 
+        tingkat_kompetisi tk ON k.tingkat_id = tk.id;
+END;

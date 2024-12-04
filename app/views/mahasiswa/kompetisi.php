@@ -17,44 +17,57 @@ $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
 
 ?>
 
-<div class="container mt-5">
+<div class="container-fluid mt-3">
     <h2>Data Kompetisi</h2>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>NIM </th>
-                <th>Nama Mahasiswa</th>
-                <th>Nama Kompetisi</th>
-                <th>Jenis Kompetisi</th>
-                <th>Tingkat Kompetisi</th>
-                <th>Tempat Kompetisi</th>
-                <th>Tanggal Mulai</th>
-                <th>Tanggal Akhir</th>
-                <th>URL Kompetisi</th>
-                <th>No Surat Tugas</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php if (!empty($dataKompetisi)) : ?>
-                <?php foreach ($dataKompetisi as $row) : ?>
-                    <tr>
-                        <td><?= htmlspecialchars($row['NIM']) ?></td>
-                        <td><?= htmlspecialchars($row['Nama_Mahasiswa']) ?></td>
-                        <td><?= htmlspecialchars($row['Nama_Kompetisi']) ?></td>
-                        <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
-                        <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
-                        <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
-                        <td><?= htmlspecialchars($row['Tanggal_Mulai']) ?></td>
-                        <td><?= htmlspecialchars($row['Tanggal_Akhir']) ?></td>
-                        <td><a href="<?= htmlspecialchars($row['URL_Kompetisi']) ?>" target="_blank">Link</a></td>
-                        <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
-                    </tr>
-                <?php endforeach; ?>
-            <?php else : ?>
+    <!-- CARD HEADER -->
+    <div class="card-header">
+        <div class="row g-2 align-items-center">
+            <div class="col d-flex">
+                <a href="<?= BASE_URL; ?>mahasiswa/dashboard" class="btn btn-primary">+ Tambah Data</a>
+            </div>
+            <div class="col d-flex justify-content-end">
+                <input type="search" class="form-control w-50" placeholder="Cari NIM">
+            </div>
+        </div>
+    </div>
+    <!-- CARD HEADER -->
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
                 <tr>
-                    <td colspan="10" class="text-center">Tidak ada data kompetisi</td>
+                    <th>NIM</th>
+                    <th>Nama Mahasiswa</th>
+                    <th>Nama Kompetisi</th>
+                    <th>Jenis Kompetisi</th>
+                    <th>Tingkat Kompetisi</th>
+                    <th>Tempat Kompetisi</th>
+                    <th>Tanggal Mulai</th>
+                    <th>Tanggal Akhir</th>
+                    <th>URL Kompetisi</th>
+                    <th>No Surat Tugas</th>
                 </tr>
-            <?php endif; ?>
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                <?php if (!empty($dataKompetisi)) : ?>
+                    <?php foreach ($dataKompetisi as $row) : ?>
+                        <tr>
+                            <td><?= htmlspecialchars($row['NIM']) ?></td>
+                            <td><?= htmlspecialchars($row['Nama_Mahasiswa']) ?></td>
+                            <td><?= htmlspecialchars($row['Nama_Kompetisi']) ?></td>
+                            <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
+                            <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
+                            <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
+                            <td><?= htmlspecialchars($row['Tanggal_Mulai']) ?></td>
+                            <td><?= htmlspecialchars($row['Tanggal_Akhir']) ?></td>
+                            <td><a href="<?= htmlspecialchars($row['URL_Kompetisi']) ?>" target="_blank">Link</a></td>
+                            <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <tr>
+                        <td colspan="10" class="text-center">Tidak ada data kompetisi</td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
