@@ -61,10 +61,10 @@ class AuthController
             $userModel = new UserModel();
 
             // Cek apakah username sudah ada
-            if ($userModel->isUsernameExists($username)) {
-                // Tampilkan alert jika username sudah ada
-                echo "<script>alert('Username already exists.');</script>";
-            } else {
+            // if ($userModel->isUsernameExists($username)) {
+            //     // Tampilkan alert jika username sudah ada
+            //     echo "<script>alert('Username already exists.');</script>";
+            // } else {
                 // Simpan pengguna baru ke database
                 $result = $userModel->register($username, $hashedPassword, $role_id);
 
@@ -79,7 +79,7 @@ class AuthController
                     // Tampilkan pesan gagal dalam alert
                     echo "<script>alert('Registration failed. Please try again.');</script>";
                 }
-            }
+            // }
         }
 
         // Jika bukan POST atau validasi gagal, tetap tampilkan form register
