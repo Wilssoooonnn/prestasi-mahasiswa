@@ -1,4 +1,5 @@
 </body>
+
 <script src="<?= BASE_URL; ?>/public/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="<?= BASE_URL; ?>/public/assets/js/jquery.js"></script>
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>

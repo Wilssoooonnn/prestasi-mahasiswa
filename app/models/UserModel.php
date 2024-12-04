@@ -52,7 +52,7 @@ class UserModel
         } catch (Exception $e) {
             $this->logError($e->getMessage());
             return null;
-        }
+        }   
     }
 
     public function register($username, $password, $role_id)
