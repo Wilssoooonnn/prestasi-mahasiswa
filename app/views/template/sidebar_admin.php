@@ -13,23 +13,23 @@
 
         <!-- Navigasi Links -->
         <nav class="nav flex-column mt-5">
-            <a href="#" class="nav-link mt-2">
+            <a href="<?= BASE_URL; ?>admin/dashboard" class="nav-link mt-2">
                 <i class="material-icons">home</i> <span>Home</span>
             </a>
 
-            <a href="#" class="nav-link mt-2">
+            <a href="<?= BASE_URL; ?>admin/profile" class="nav-link mt-2">
                 <i class="material-icons">person</i> <span>Profile</span>
             </a>
 
-            <a href="#" class="nav-link mt-2">
+            <a href="<?= BASE_URL; ?>admin/setting" class="nav-link mt-2">
                 <i class="material-icons">settings</i> <span>Settings</span>
             </a>
 
-            <a href="#" class="nav-link mt-2">
+            <a href="<?= BASE_URL; ?>admin/kompetisi" class="nav-link mt-2">
                 <i class="material-icons">emoji_events</i> <span>Kompetisi</span>
             </a>
 
-            <a href="#" class="nav-link mt-2">
+            <a href="<?= BASE_URL; ?>admin/help" class="nav-link mt-2">
                 <i class="material-icons">help</i> <span>Help</span>
             </a>
         </nav>

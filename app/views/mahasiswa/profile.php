@@ -260,4 +260,4 @@
                       </nav>
                     </div>
     <!-- CARD FOOTER -->
-</div>
+
