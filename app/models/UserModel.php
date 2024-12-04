@@ -40,6 +40,8 @@ class UserModel
     public function login($username, $password)
     {
         try {
+
+            // $stmt = $this->executeStoredProcedure("GetUserByUsername", [$username]);
             $stmt = $this->executeStoredProcedure("GetUserByUsername(?)", [$username]);
             $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
 
@@ -57,6 +59,7 @@ class UserModel
     {
         try {
             $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
+            // $this->executeStoredProcedure("RegisterUser", [$username, $hashedPassword, $role_id]);
             $this->executeStoredProcedure("RegisterUser(?, ?, ?)", [$username, $hashedPassword, $role_id]);
             return true;
         } catch (Exception $e) {
@@ -68,6 +71,7 @@ class UserModel
     public function isUsernameExists($username)
     {
         try {
+            // $stmt = $this->executeStoredProcedure("CheckUsernameExists", [$username]);
             $stmt = $this->executeStoredProcedure("CheckUsernameExists(?)", [$username]);
             return sqlsrv_fetch_array($stmt) !== false;
         } catch (Exception $e) {
