@@ -1,44 +1,103 @@
 -- CEK USER LOGIN
 -- CEK USER LOGIN
 -- CEK USER LOGIN
+
+--CREATE PROCEDURE CekUserLogin
+--    @username NVARCHAR(100),
+--    @password NVARCHAR(255),
+--    @role NVARCHAR(50) OUTPUT
+--AS
+--BEGIN
+--    DECLARE @role_id INT;
+--    SELECT @role_id = role_id
+--    FROM users
+--    WHERE username = @username AND password = @password;
+
+--    IF @role_id IS NULL
+--    BEGIN
+--        SET @role = 'Invalid';
+--    END
+--    ELSE
+--    BEGIN
+--        SET @role = 
+--            CASE @role_id
+--                WHEN 1 THEN 'mahasiswa'
+--                WHEN 2 THEN 'admin'
+--                WHEN 3 THEN 'dosen'
+--                ELSE 'Unknown'
+--            END;
+--    END
+--END;
+
+--DECLARE @role NVARCHAR(50);
+--EXEC CekUserLogin 
+--    @username = 'dosen1', 
+--    @password = 'dosen123', 
+--    @role = @role OUTPUT;
+--PRINT @role;
+
+--drop procedure CekUserLogin;
+
+-- CEK USER LOGIN
+-- CEK USER LOGIN
+-- CEK USER LOGIN
 CREATE PROCEDURE CekUserLogin
-    @username NVARCHAR(100),
-    @password NVARCHAR(255),
-    @role NVARCHAR(50) OUTPUT
+    @username NVARCHAR(100)
 AS
 BEGIN
-    DECLARE @role_id INT;
-    SELECT @role_id = role_id
-    FROM users
-    WHERE username = @username AND password = @password;
+    SELECT 
+        u.username,
+        u.password,
+        r.role_name
+    FROM 
+        users u
+    JOIN 
+        roles r ON u.role_id = r.id
+    WHERE 
+        u.username = @username;
+END;
 
-    IF @role_id IS NULL
+EXEC CekUserLogin @username = 'admin1';
+
+
+
+-- CEK USER LOGIN
+-- CEK USER LOGIN
+-- CEK USER LOGIN
+CREATE TRIGGER InsteadOf_Register
+ON users
+INSTEAD OF INSERT
+AS
+BEGIN
+    -- Cek apakah username yang akan dimasukkan sudah ada di tabel users
+    IF EXISTS (
+        SELECT 1
+        FROM users u
+        JOIN inserted i ON u.username = i.username
+    )
     BEGIN
-        SET @role = 'Invalid';
+        -- Jika username sudah ada, berikan pesan error
+        SELECT 'Username tidak tersedia.' AS Error;
     END
     ELSE
     BEGIN
-        SET @role = 
-            CASE @role_id
-                WHEN 1 THEN 'mahasiswa'
-                WHEN 2 THEN 'admin'
-                WHEN 3 THEN 'dosen'
-                ELSE 'Unknown'
-            END;
+        -- Jika username belum ada, masukkan data baru
+        INSERT INTO users (username, password, role_id)
+        SELECT username, password, role_id
+        FROM inserted;
     END
 END;
 
-DECLARE @role NVARCHAR(50);
-EXEC CekUserLogin 
-    @username = 'dosen1', 
-    @password = 'dosen123', -- belom dicoba kalo pw encrypt
-    @role = @role OUTPUT;
-PRINT @role;
+enable trigger InsteadOf_Register on users;
+
+INSERT INTO users (username, password, role_id) 
+VALUES ('admin1', 'admin123', 2);
 
 
 --- TAMPILKAN KOMPETISI SESUAI NIM MAHASISWA
 --- TAMPILKAN KOMPETISI SESUAI NIM MAHASISWA
 --- TAMPILKAN KOMPETISI SESUAI NIM MAHASISWA
+
 alter PROCEDURE TampilKompetisi_Nim
     @nim NVARCHAR(20)
 AS
@@ -84,9 +143,11 @@ EXEC TampilKompetisi_Nim @nim = '220001003';
 EXEC TampilKompetisi_Nim @nim = '999999999';
 
 
+
 --- TAMPILKAN SEMUA KOMPETISI (UTK ADMIN)
 --- TAMPILKAN SEMUA KOMPETISI (UTK ADMIN)
 --- TAMPILKAN SEMUA KOMPETISI (UTK ADMIN)
+
 CREATE PROCEDURE TampilKompetisi
 AS
 BEGIN
@@ -116,39 +177,3 @@ BEGIN
 END;
 
 EXEC TampilKompetisi;
-
-
-
--- Get User By Username Login
-CREATE PROCEDURE GetUserByUsername
-    @Username NVARCHAR(255)
-AS
-BEGIN
-    SELECT u.username, u.password, r.role_name
-    FROM users u
-    JOIN roles r ON u.role_id = r.id
-    WHERE u.username = @Username;
-END;
-
--- isUsernameExists
-CREATE PROCEDURE CheckUsernameExists
-    @Username NVARCHAR(255)
-AS
-BEGIN
-    SELECT 1
-    FROM users
-    WHERE username = @Username;
-END;
-
-
--- Register User
-CREATE PROCEDURE RegisterUser
-    @Username NVARCHAR(255),
-    @Password NVARCHAR(255),
-    @RoleId INT
-AS
-BEGIN
-    INSERT INTO users (username, password, role_id)
-    VALUES (@Username, @Password, @RoleId);
-END;
-
