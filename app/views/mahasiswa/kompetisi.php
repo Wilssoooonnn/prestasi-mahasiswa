@@ -22,7 +22,7 @@ $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>NIM</th>
+                <th>NIM </th>
                 <th>Nama Mahasiswa</th>
                 <th>Nama Kompetisi</th>
                 <th>Jenis Kompetisi</th>
