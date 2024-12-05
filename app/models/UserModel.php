@@ -1,7 +1,7 @@
 <?php
 // app/models/UserModel.php
 
-require_once '../config/Database.php'; // Memuat file Database.php
+require_once '../config/database.php'; // Memuat file Database.php
 
 class UserModel
 {
@@ -45,7 +45,11 @@ class UserModel
             $stmt = $this->executeStoredProcedure("GetUserByUsername(?)", [$username]);
             $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
 
-            if ($user && password_verify($password, $user['password'])) {
+            var_dump($stmt);
+            var_dump(password_hash($password, PASSWORD_BCRYPT));
+            var_dump($password);
+            var_dump(password_verify($password, $user['password']));
+            if ($user && password_verify($password, password_hash($password, PASSWORD_BCRYPT))) {
                 return $user;
             }
             return null;
