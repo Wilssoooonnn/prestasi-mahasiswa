@@ -3,5 +3,3 @@
         <p>Ini Halaman Dashboard <?= $_SESSION['role']; ?>.</p>
         <a href="<?= BASE_URL; ?>auth/logout">Logout</a>
     </div>
-
-    

@@ -1,263 +1,500 @@
-<div class="container-fluid">
-    <!-- PAGE HEADER -->
-    <div class="row">
-        <div class="col-lg-12 col-md-12 col-12">
-            <div class="mb-5">
-                <h3 class="mb-0 ">Invoice</h3>
-            </div>
-        </div>
-    </div>
-    <!-- PAGE HEADER -->
+<!-- Container fluid -->
+<div class="app-content-area">
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <!-- Bg -->
+        <div
+          class="pt-20 rounded-top"
+          style="
+            background: url(../assets/images/background/profile-cover.jpg)
+              no-repeat;
+            background-size: cover;
+          "
+        ></div>
+        <div class="card rounded-bottom rounded-0 smooth-shadow-sm mb-5">
+          <div
+            class="d-flex align-items-center justify-content-between pt-4 pb-6 px-4"
+          >
+            <div class="d-flex align-items-center">
+              <!-- avatar -->
+              <div
+                class="avatar-xxl avatar-indicators avatar-online me-2 position-relative d-flex justify-content-end align-items-end mt-n10"
+              >
+              <img src="<?= BASE_URL; ?>public/assets/images/logo-2.svg" alt="Image" class="rounded-circle avatar avatar-xl" style="height: 40px;">
+            <a href="#!" class="position-absolute top-0 right-0 me-2"
+            >
+              <img src="../assets/images/svg/checked-mark.svg" alt="Image"
+                class="icon-sm">
+            </a>
+              </div>
+              <!-- text -->
+              <div class="lh-1">
+                <h2 class="mb-0">
+                  Jitu Chauhan
+                  <a
+                    href="#!"
+                    class="text-decoration-none"
 
-    <!-- CARD HEADER -->
-    <div class="card-header">
-        <div class="row g-2">
-            <div class="col-lg-6 col-md-5 d-grid d-lg-block">
-                <a href="invoice-generator.html" class="btn btn-primary">+ Create New Invoice</a>
+                  >
+                  </a>
+                </h2>
+                <p class="mb-0 d-block">@imjituchauhan</p>
+              </div>
             </div>
-            <div class="col-md-7 col-lg-4">
-                <input type="search" class="form-control w-100" placeholder="Search for Invoice Number, Customer Name">
+            <div>
+              <a
+                href="#!"
+                class="btn btn-outline-primary d-none d-md-block"
+                >Edit Profile</a
+              >
             </div>
-            <div class="col-lg-2 d-flex">
-                <select class="form-select">
-                    <option selected="">Status</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-                <a href="#!" class="btn btn-danger-soft  btn-icon ms-2 texttooltip" data-template="trashOne">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 icon-xs">
-                        <polyline points="3 6 5 6 21 6"></polyline>
-                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                        <line x1="10" y1="11" x2="10" y2="17"></line>
-                        <line x1="14" y1="11" x2="14" y2="17"></line>
-                    </svg>
-                    <div id="trashOne" class="d-none">
-                        <span>Delete</span>
+          </div>
+          <!-- nav -->
+          <ul class="nav nav-lt-tab px-4" id="pills-tab" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" href="profile-overview.html">Overview</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile-project.html">Project</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="profile-files.html">Files</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile-team.html">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile-followers.html"> Followers </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile-activity.html">Activity</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- content -->
+    <div >
+      <!-- row -->
+      <div class="row">
+        <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-5">
+          <!-- card -->
+          <div class="card h-100">
+            <!-- card body -->
+            <div class="card-header">
+              <h4 class="mb-0">About Me</h4>
+            </div>
+            <div class="card-body">
+              <!-- card title -->
+
+              <h5 class="text-uppercase"
+                >Bio</h5
+              >
+              <!-- text -->
+              <p class="mt-2 mb-6">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspen disse var ius enim in eros elementum tristique.
+                Duis cursus, mi quis viverra ornare, eros dolor interdum
+                nulla, ut commodo diam libero vitae erat.
+              </p>
+              <!-- row -->
+              <div class="row">
+                <div class="col-12 mb-5">
+                  <!-- text -->
+                  <h5 class="text-uppercase">Position</h5>
+                  <p class="mb-0">Theme designer at Gumroad.</p>
+                </div>
+                <div class="col-6 mb-5">
+                  <h5 class="text-uppercase">Phone</h5>
+                  <p class="mb-0">+32112345689</p>
+                </div>
+                <div class="col-6 mb-5">
+                  <h5 class="text-uppercase">
+                    Date of Birth
+                  </h5>
+                  <p class="mb-0">01.10.1997</p>
+                </div>
+                <div class="col-6">
+                  <h5 class="text-uppercase">Email</h5>
+                  <p class="mb-0">Dashui@gmail.com</p>
+                </div>
+                <div class="col-6">
+                  <h5 class="text-uppercase">Location</h5>
+                  <p class="mb-0">Ahmedabad, India</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-5">
+          <!-- card -->
+          <div class="card">
+            <div class="card-header">
+              <h4 class="mb-0">Projects Contributions</h4>
+            </div>
+            <!-- card body -->
+            <div class="card-body">
+              <!-- card title -->
+
+              <div
+                class="d-md-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="d-flex align-items-center">
+                  <div>
+                    <div
+
+                    >
+                      <img
+                        src="../assets/images/svg/brand-logo-1.svg"
+                        alt="Image"
+                     >
                     </div>
-                </a>
-
-            </div>
-        </div>
-    </div>
-    <!-- CARD HEADER -->
-    
-    <!-- CARD BODY -->
-    <div class="card-body">
-                      <div class="table-responsive table-card">
-                        <table class="table text-nowrap mb-0 table-centered">
-                          <thead class="table-light">
-                            <tr>
-                              <th class="ps-0">Invoices</th>
-                              <th>Status</th>
-                              <th>Customer Info</th>
-                              <th>Date</th>
-                              <th>Email</th>
-                              <th>Amount</th>
-                              <th>Action</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="ps-0">
-                                <a href="#!">#88120</a>
-                              </td>
-                              <td>
-                                <span class="badge badge-warning-soft text-warning">Pending</span>
-                              </td>
-                              <td class="ps-1">
-                                <div class="d-flex align-items-center">
-                                  <div class="ms-2">
-                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Jan Harmon</a></h5>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>19 Apr 2023</td>
-
-                              <td>michaelbaggett@dayrep.com</td>
-                              <td>$35.99</td>
-                              
-                            </tr>
-                            <tr>
-                              <td class="ps-0">
-                                <a href="#!">#88119</a>
-                              </td>
-                              <td>
-                                <span class="badge badge-success-soft text-success">Paid</span>
-                              </td>
-                              <td class="ps-1">
-                                <div class="d-flex align-items-center">
-                                  <div class="ms-2">
-                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Helen Mullins</a></h5>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>18 Apr 2023</td>
-
-                              <td>helenmullins@dayrep.com</td>
-                              <td>$135.99</td>
-                              <td>
-                                <div>
-                                  <div class="dropdown">
-                                    <a class="btn btn-ghost btn-icon btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical icon-xs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                                    </a>
-
-                                    <div class="dropdown-menu">
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2 icon-xs"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>View
-                                        </a>
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit me-2 icon-xs"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>Edit
-                                        </a>
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download me-2 icon-xs"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Download
-                                        </a>
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 me-2 icon-xs"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>Delete
-                                        </a>
-
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="ps-0">
-                                <a href="#!">#88118</a>
-                              </td>
-                              <td>
-                                <span class="badge badge-success-soft text-success">Paid</span>
-                              </td>
-                              <td class="ps-1">
-                                <div class="d-flex align-items-center">
-                                  <div class="ms-2">
-                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Agnes Addison</a></h5>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>16 Apr 2023</td>
-
-                              <td>agnesaddison@gmail.com</td>
-                              <td>$235.99</td>
-                              <td>
-                                <div>
-                                  <div class="dropdown">
-                                    <a class="btn btn-ghost btn-icon btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical icon-xs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                                    </a>
-
-                                    <div class="dropdown-menu">
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2 icon-xs"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>View
-                                        </a>
-
-
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit me-2 icon-xs"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>Edit
-                                        </a>
-
-
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download me-2 icon-xs"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Download
-                                        </a>
-
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 me-2 icon-xs"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>Delete
-                                        </a>
-
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="ps-0">
-                                <a href="#!">#88117</a>
-                              </td>
-                              <td>
-                                <span class="badge badge-success-soft text-success">Paid</span>
-                              </td>
-                              <td class="ps-1">
-                                <div class="d-flex align-items-center">
-                                  <div class="ms-2">
-                                    <h5 class="mb-0"> <a href="#!" class="text-inherit">Justin Holtz</a></h5>
-                                  </div>
-                                </div>
-                              </td>
-                              <td>16 Apr 2023</td>
-
-                              <td>justinholtz@gmail.com</td>
-                              <td>$235.23</td>
-                              <td>
-                                <div>
-                                  <div class="dropdown">
-                                    <a class="btn btn-ghost btn-icon btn-sm rounded-circle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical icon-xs"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
-                                    </a>
-
-                                    <div class="dropdown-menu">
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-eye me-2 icon-xs"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>View
-                                        </a>
-
-
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit me-2 icon-xs"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>Edit
-                                        </a>
-
-
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-download me-2 icon-xs"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>Download
-                                        </a>
-
-
-                                        <a class="dropdown-item d-flex align-items-center" href="#!">
-                                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash-2 me-2 icon-xs"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>Delete
-                                        </a>
-
-                                    </div>
-                                  </div>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                  </div>
+                  <!-- text -->
+                  <div class="ms-3">
+                    <h5 class="mb-1">
+                      <a href="#!" class="text-inherit"
+                        >Slack Figma Design UI</a
+                      >
+                    </h5>
+                    <p class="mb-0 fs-5 text-muted">
+                      Project description and details about...
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center ms-10 ms-md-0 mt-3"
+                >
+                  <!-- avatar group -->
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-11.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-2.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-3.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                  </div>
+                  <div>
+                    <!-- dropdown -->
+                    <div class="dropdown dropstart">
+                      <a
+                        href="#!"
+                        class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                        id="dropdownprojectOne"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          data-feather="more-vertical"
+                           class="icon-xs"
+                        ></i>
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownprojectOne"
+                      >
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#!"
+                          >Another action</a
+                        >
+                        <a class="dropdown-item d-flex align-items-center" href="#!"
+                          >Something else here</a
+                        >
                       </div>
                     </div>
-    <!-- CARD BODY -->
+                  </div>
+                </div>
+              </div>
+              <div
+                class="d-md-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="d-flex align-items-center">
+                  <div>
+                    <!-- icon shape -->
+                    <div
 
-    <!-- CARD FOOTER -->
-    <div class="card-footer d-md-flex justify-content-between align-items-center ">
-                      <span>Showing 1 to 8 of 12 entries</span>
-                      <nav class="mt-2 mt-md-0">
-                        <ul class="pagination mb-0 ">
-                          <li class="page-item">
-                            <a class="page-link" href="#!">Previous</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link active" href="#!">1</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#!">2</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#!">3</a>
-                          </li>
-                          <li class="page-item">
-                            <a class="page-link" href="#!">Next</a>
-                          </li>
-                          </ul>
-
-                      </nav>
+                    >
+                      <img
+                        src="../assets/images/svg/brand-logo-2.svg"
+                        alt="Image"
+                     >
                     </div>
-    <!-- CARD FOOTER -->
+                  </div>
+                  <!-- text -->
+                  <div class="ms-3">
+                    <h5 class="mb-1">
+                      <a href="#!" class="text-inherit"
+                        >Design 3d Character</a
+                      >
+                    </h5>
+                    <p class="mb-0 fs-5 text-muted">
+                      Project description and details about...
+                    </p>
+                  </div>
+                </div>
 
+                <div
+                  class="d-flex align-items-center ms-10 ms-md-0 mt-3"
+                >
+                  <!-- avatar group -->
+                  <div class="avatar-group me-2">
+                    <span class="avatar avatar-sm">
+                      <!-- img -->
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-4.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                    <span class="avatar avatar-sm">
+                      <!-- img -->
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-5.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                    <span class="avatar avatar-sm">
+                      <!-- img -->
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-6.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                  </div>
+                  <div>
+                    <!-- dropdown -->
+                    <div class="dropdown dropstart">
+                      <a
+                        href="#!"
+                        class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                        id="dropdownprojectTwo"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          data-feather="more-vertical"
+                           class="icon-xs"
+                        ></i>
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownprojectTwo"
+                      >
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#!"
+                          >Another action</a
+                        >
+                        <a class="dropdown-item d-flex align-items-center" href="#!"
+                          >Something else here</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="d-md-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="d-flex align-items-center">
+                  <div>
+                    <!-- icon shape -->
+                    <div
+
+                    >
+                      <img
+                        src="../assets/images/svg/brand-logo-3.svg"
+                        alt="Image"
+                     >
+                    </div>
+                  </div>
+                  <!-- text -->
+                  <div class="ms-3">
+                    <h5 class="mb-1">
+                      <a href="#!" class="text-inherit"
+                        >Github Development</a
+                      >
+                    </h5>
+                    <p class="mb-0 fs-5 text-muted">
+                      Project description and details about...
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center ms-10 ms-md-0 mt-3"
+                >
+                  <!-- avatar group -->
+                  <div class="avatar-group me-2">
+                    <span class="avatar avatar-sm">
+                      <!-- img -->
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-7.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                    <span class="avatar avatar-sm">
+                      <!-- img -->
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-8.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                    <span class="avatar avatar-sm">
+                      <!-- img -->
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-9.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                  </div>
+                  <div>
+                    <!-- dropdown -->
+                    <div class="dropdown dropstart">
+                      <a
+                        href="#!"
+                        class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                        id="dropdownprojectThree"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          data-feather="more-vertical"
+                           class="icon-xs"
+                        ></i>
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownprojectThree"
+                      >
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#!"
+                          >Another action</a
+                        >
+                        <a class="dropdown-item d-flex align-items-center" href="#!"
+                          >Something else here</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="d-md-flex justify-content-between align-items-center mb-4"
+              >
+                <div class="d-flex align-items-center">
+                  <!-- icon shape -->
+                  <div>
+                    <div
+
+                    >
+                      <img
+                        src="../assets/images/svg/brand-logo-4.svg"
+                        alt="Image"
+                     >
+                    </div>
+                  </div>
+                  <!-- text -->
+                  <div class="ms-3">
+                    <h5 class="mb-1">
+                      <a href="#!" class="text-inherit"
+                        >Dropbox Design System</a
+                      >
+                    </h5>
+                    <p class="mb-0 fs-5 text-muted">
+                      Project description and details about...
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="d-flex align-items-center ms-10 ms-md-0 mt-3"
+                >
+                  <!-- avatar group -->
+                  <div class="avatar-group me-2">
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-10.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-11.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                    <!-- img -->
+                    <span class="avatar avatar-sm">
+                      <img
+                        alt="avatar"
+                        src="../assets/images/avatar/avatar-12.jpg"
+                        class="rounded-circle"
+                     >
+                    </span>
+                  </div>
+                  <div>
+                    <!-- dropdown -->
+                    <div class="dropdown dropstart">
+                      <a
+                        href="#!"
+                        class="btn btn-ghost btn-icon btn-sm rounded-circle"
+                        id="dropdownprojectFour"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          data-feather="more-vertical"
+                           class="icon-xs"
+                        ></i>
+                      </a>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownprojectFour"
+                      >
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#!"
+                          >Another action</a
+                        >
+                        <a class="dropdown-item d-flex align-items-center" href="#!"
+                          >Something else here</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
