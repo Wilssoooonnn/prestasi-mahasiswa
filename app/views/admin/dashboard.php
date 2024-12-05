@@ -74,42 +74,40 @@
     </div>
 
     <!-- Table Section -->
-    <table id="dataTable" class="table table-striped table-bordered mt-3" style="width:100%">
+    <table class="table" style="width:100%">
         <thead>
             <tr>
-                <th>No</th>
-                <th>Judul Kompetisi</th>
-                <th>Status</th>
+                <th scope="col">No</th>
+                <th scope="col">Judul Kompetisi</th>
+                <th scope="col">Status</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>#2457</td>
+                <th scope="row">1</th>
                 <td>Brandon Jacob</td>
-                <td><span class="badge bg-success">Terverifikasi</span></td>
+                <td><span class="badge rounded-pill text-bg-success">Terverifikasi</span></td>
             </tr>
             <tr>
-                <td>#2147</td>
+                <th scope="row">2</th>
                 <td>Bridie Kessler</td>
-                <td><span class="badge bg-warning text-dark">Proses</span></td>
+                <td><span class="badge rounded-pill text-bg-warning">Proses</span></td>
             </tr>
             <tr>
-                <td>#2049</td>
+                <th scope="row">3</th>
                 <td>Ashleigh Langosh</td>
-                <td><span class="badge bg-success">Terverifikasi</span></td>
+                <td><span class="badge rounded-pill text-bg-success">Terverifikasi</span></td>
             </tr>
             <tr>
-                <td>#2644</td>
+                <th scope="row">4</th>
                 <td>Angus Grady</td>
-                <td><span class="badge bg-danger">Ditolak</span></td>
+                <td><span class="badge rounded-pill text-bg-danger">Ditolak</span></td>
             </tr>
             <tr>
-                <td>#2644</td>
+                <th scope="row">5</th>
                 <td>Raheem Lehner</td>
-                <td><span class="badge bg-success">Terverifikasi</span></td>
+                <td><span class="badge rounded-pill text-bg-success">Terverifikasi</span></td>
             </tr>
         </tbody>
     </table>
-    <br>
-    <a href="<?= BASE_URL; ?>auth/logout">Logout</a>
 </div>
