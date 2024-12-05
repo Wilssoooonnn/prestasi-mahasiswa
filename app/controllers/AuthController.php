@@ -61,7 +61,7 @@ class AuthController
             $userModel = new UserModel();
 
             // Cek apakah username sudah ada
-            if ($userModel->isUsernameExists($username)) {
+            if (!$userModel->isUsernameExists($username)) {
                 // Tampilkan alert jika username sudah ada
                 echo "<script>alert('Username already exists.');</script>";
             } else {
