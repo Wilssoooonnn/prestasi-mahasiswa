@@ -1122,3 +1122,183 @@ Array
 )
 
 [2024-12-05 13:23:54] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:20:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:20:20] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:20:23] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:20:23] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:20:32] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:20:32] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:20:58] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:20:58] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:21:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:21:20] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:21:33] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:21:33] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:28:16] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:28:16] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:28:24] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:28:24] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:29:42] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:29:42] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:29:43] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:29:43] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:30:58] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:30:58] Error executing stored procedure: GetKompetisi_All
+[2024-12-05 15:33:30] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-05 15:33:30] Error executing stored procedure: GetKompetisi_All

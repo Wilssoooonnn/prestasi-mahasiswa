@@ -17,13 +17,12 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
 
 ?>
 
-<div class="container w-100">
-    <h2>Data Kompetisi</h2>
+<div class="container mt-5">
     <!-- CARD HEADER -->
     <div class="card-header">
         <div class="row g-2 align-items-center">
             <div class="col d-flex">
-                <a href="#" class="btn btn-primary"> Tambah Data</a>
+                <button type="button" class="btn btn-md btn-primary" onclick="tambahData()"> Tambah Data</button>
             </div>
             <div class="col d-flex justify-content-end">
                 <input type="search" class="form-control w-50" placeholder="Cari NIM">
