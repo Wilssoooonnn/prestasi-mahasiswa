@@ -118,3 +118,46 @@ BEGIN
     JOIN 
         tingkat_kompetisi tk ON k.tingkat_id = tk.id;
 END;
+
+-- Membuat tabel Status
+CREATE TABLE status (
+    id INT PRIMARY KEY IDENTITY(1,1), -- Auto increment
+    nama NVARCHAR(50) NOT NULL
+);
+
+-- Menambahkan data ke tabel Status
+INSERT INTO Status (nama) 
+VALUES 
+    ('Proses'),
+    ('Berhasil'),
+    ('Gagal');
+
+
+-- Tambahkan status_id di kompetisi_mahasiswa
+ALTER TABLE kompetisi_mahasiswa
+ADD status_id INT;
+
+-- Tambahkan foreign key untuk status_id
+ALTER TABLE kompetisi_mahasiswa
+ADD CONSTRAINT fk_status 
+FOREIGN KEY (status_id) REFERENCES status(id) ON DELETE CASCADE; 
+
+-- untuk tahu nama constraint
+--SELECT 
+--    o.name AS Constraint_Name, 
+--    c.name AS Table_Name,
+--    o.type_desc AS Constraint_Type
+--FROM sys.objects o
+--JOIN sys.tables c ON o.parent_object_id = c.object_id
+--WHERE c.name = 'kompetisi_mahasiswa';
+
+-- Ganti primary key
+ALTER TABLE kompetisi_mahasiswa
+DROP CONSTRAINT PK__kompetis__BFC723E9C700849A;
+--lanjut
+UPDATE kompetisi_mahasiswa
+SET status_id = 1
+WHERE status_id IS NULL;
+
+--ALTER TABLE kompetisi_mahasiswa
+--ADD CONSTRAINT PK_kompetisi_mahasiswa PRIMARY KEY (kompetisi_id, mahasiswa_id, status_id);
