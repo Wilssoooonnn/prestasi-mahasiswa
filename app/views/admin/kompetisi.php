@@ -17,13 +17,13 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
 
 ?>
 
-<div class="container-fluid mt-5">
+<div class="container w-100">
     <h2>Data Kompetisi</h2>
     <!-- CARD HEADER -->
     <div class="card-header">
         <div class="row g-2 align-items-center">
             <div class="col d-flex">
-                <a href="#" class="btn btn-primary">+ Tambah Data</a>
+                <a href="#" class="btn btn-primary"> Tambah Data</a>
             </div>
             <div class="col d-flex justify-content-end">
                 <input type="search" class="form-control w-50" placeholder="Cari NIM">
@@ -41,10 +41,9 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
                     <th>Jenis Kompetisi</th>
                     <th>Tingkat Kompetisi</th>
                     <th>Tempat Kompetisi</th>
-                    <th>Tanggal Mulai</th>
-                    <th>Tanggal Akhir</th>
                     <th>URL Kompetisi</th>
                     <th>No Surat Tugas</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -57,10 +56,12 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
                             <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
-                            <td><?= htmlspecialchars($row['Tanggal_Mulai']) ?></td>
-                            <td><?= htmlspecialchars($row['Tanggal_Akhir']) ?></td>
-                            <td><a href="<?= htmlspecialchars($row['URL_Kompetisi']) ?>" target="_blank">Link</a></td>
+                            <td><a href="<?= htmlspecialchars($row['URL_Kompetisi']) ?>" target="#">Link</a></td>
                             <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
+                            <td>
+                                <a href="#" class="btn btn-success">Approve</a>
+                                <a href="#" class="btn btn-danger mt-1">Decline</a>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else : ?>
@@ -72,4 +73,3 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
         </table>
     </div>
 </div>
-
