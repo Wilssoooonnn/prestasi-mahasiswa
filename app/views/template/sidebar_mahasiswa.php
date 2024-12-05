@@ -1,34 +1,49 @@
 <div class="d-flex">
     <!-- Sidebar -->
-
-    <div id="sidebar" class="sidebar expanded">
-
+    <div class="sidebar sidebar-light sidebar-fixed border-end">
         <!-- Logo -->
-        <div class="d-flex align-items-center justify-content-between mt-5 px-3">
-            <div class="d-flex align-items-center">
+        <div class="sidebar-header border-bottom">
+            <div class="sidebar-brand">
                 <img src="<?= BASE_URL; ?>public/assets/images/head-logo.svg" alt="Logo" class="img-fluid" style="height: 40px;">
-                <a href="#" class="navbar-brand ml-2 font-weight-bold">PRESMA</a>
             </div>
         </div>
 
         <!-- Navigasi Links -->
-        <nav class="nav flex-column mt-2">
-            <a href="<?= BASE_URL; ?>/mahasiswa/home" class="nav-link mt-2">
-                <i class="material-icons">home</i> <span>Home</span>
-            </a>
-            <a href="<?= BASE_URL; ?>/mahasiswa/profile" class="nav-link mt-2">
-                <i class="material-icons">person</i> <span>Profile</span>
-            </a>
-            <a href="#" class="nav-link mt-2">
-                <i class="material-icons">settings</i> <span>Settings</span>
-            </a>
-            <a href="#" class="nav-link mt-2">
-                <i class="material-icons">help</i> <span>Help</span>
-            </a>
-        </nav>
+        <ul class="sidebar-nav flex-grow-1">
+            <li class="nav-title">Nav Title</li>
 
+            <li class="nav-item">
+                <a href="<?= BASE_URL; ?>admin/dashboard" class="nav-link">
+                    <i class="fi fi-rr-house-blank"></i> <span class="mb-1 ms-4">Home</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="<?= BASE_URL; ?>admin/profile" class="nav-link">
+                    <i class="fi fi-rr-user"></i> <span class="mb-1 ms-4">Profile</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="<?= BASE_URL; ?>admin/setting" class="nav-link">
+                    <i class="fi fi-rr-settings-sliders"></i><span class="mb-1 ms-4">Settings</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="<?= BASE_URL; ?>admin/kompetisi" class="nav-link">
+                    <i class="fi fi-rr-trophy-star"></i> <span class="mb-1 ms-4">Kompetisi</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="<?= BASE_URL; ?>admin/help" class="nav-link">
+                    <i class="fi fi-rr-interrogation"></i> <span class="mb-1 ms-4">Help</span>
+                </a>
+            </li>
+        </ul>
     </div>
-    <button id="toggleBtn" class="btn btn-primary mt-5 py-3 px-3">
-        <i class="material-icons" id="arrowIcon">play_arrow</i>
-    </button>
+
+
+
 </div>

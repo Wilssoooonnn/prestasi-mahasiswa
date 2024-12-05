@@ -1,5 +1,5 @@
 <?php
-// app/core/App.php
+// app/core/App.php 
 
 class App
 {
@@ -11,7 +11,6 @@ class App
     {
         session_start();
         $url = $this->parseUrl();
-
         // Cek apakah ada elemen di dalam URL, jika ada, tentukan controller dan method
         if (!empty($url)) {
             // Cek apakah controller yang diminta ada
