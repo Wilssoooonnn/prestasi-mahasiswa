@@ -10,23 +10,19 @@
             background: url(../assets/images/background/profile-cover.jpg)
               no-repeat;
             background-size: cover;
-          "
-        ></div>
+          "></div>
         <div class="card rounded-bottom rounded-0 smooth-shadow-sm mb-5">
           <div
-            class="d-flex align-items-center justify-content-between pt-4 pb-6 px-4"
-          >
+            class="d-flex align-items-center justify-content-between pt-4 pb-6 px-4">
             <div class="d-flex align-items-center">
               <!-- avatar -->
               <div
-                class="avatar-xxl avatar-indicators avatar-online me-2 position-relative d-flex justify-content-end align-items-end mt-n10"
-              >
-              <img src="<?= BASE_URL; ?>public/assets/images/logo-2.svg" alt="Image" class="rounded-circle avatar avatar-xl" style="height: 40px;">
-            <a href="#!" class="position-absolute top-0 right-0 me-2"
-            >
-              <img src="../assets/images/svg/checked-mark.svg" alt="Image"
-                class="icon-sm">
-            </a>
+                class="avatar-xxl avatar-indicators avatar-online me-2 position-relative d-flex justify-content-end align-items-end mt-n10">
+                <img src="<?= BASE_URL; ?>public/assets/images/logo-2.svg" alt="Image" class="rounded-circle avatar avatar-xl" style="height: 40px;">
+                <a href="#!" class="position-absolute top-0 right-0 me-2">
+                  <img src="../assets/images/svg/checked-mark.svg" alt="Image"
+                    class="icon-sm">
+                </a>
               </div>
               <!-- text -->
               <div class="lh-1">
@@ -34,9 +30,7 @@
                   Jitu Chauhan
                   <a
                     href="#!"
-                    class="text-decoration-none"
-
-                  >
+                    class="text-decoration-none">
                   </a>
                 </h2>
                 <p class="mb-0 d-block">@imjituchauhan</p>
@@ -45,9 +39,7 @@
             <div>
               <a
                 href="#!"
-                class="btn btn-outline-primary d-none d-md-block"
-                >Edit Profile</a
-              >
+                class="btn btn-outline-primary d-none d-md-block">Edit Profile</a>
             </div>
           </div>
           <!-- nav -->
@@ -76,7 +68,7 @@
       </div>
     </div>
     <!-- content -->
-    <div >
+    <div>
       <!-- row -->
       <div class="row">
         <div class="col-xl-6 col-lg-12 col-md-12 col-12 mb-5">
@@ -89,9 +81,7 @@
             <div class="card-body">
               <!-- card title -->
 
-              <h5 class="text-uppercase"
-                >Bio</h5
-              >
+              <h5 class="text-uppercase">Bio</h5>
               <!-- text -->
               <p class="mt-2 mb-6">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -139,25 +129,19 @@
               <!-- card title -->
 
               <div
-                class="d-md-flex justify-content-between align-items-center mb-4"
-              >
+                class="d-md-flex justify-content-between align-items-center mb-4">
                 <div class="d-flex align-items-center">
                   <div>
-                    <div
-
-                    >
+                    <div>
                       <img
                         src="../assets/images/svg/brand-logo-1.svg"
-                        alt="Image"
-                     >
+                        alt="Image">
                     </div>
                   </div>
                   <!-- text -->
                   <div class="ms-3">
                     <h5 class="mb-1">
-                      <a href="#!" class="text-inherit"
-                        >Slack Figma Design UI</a
-                      >
+                      <a href="#!" class="text-inherit">Slack Figma Design UI</a>
                     </h5>
                     <p class="mb-0 fs-5 text-muted">
                       Project description and details about...
@@ -165,8 +149,7 @@
                   </div>
                 </div>
                 <div
-                  class="d-flex align-items-center ms-10 ms-md-0 mt-3"
-                >
+                  class="d-flex align-items-center ms-10 ms-md-0 mt-3">
                   <!-- avatar group -->
                   <div class="avatar-group me-2">
                     <!-- img -->
@@ -174,24 +157,21 @@
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-11.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                     <!-- img -->
                     <span class="avatar avatar-sm">
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-2.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                     <!-- img -->
                     <span class="avatar avatar-sm">
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-3.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                   </div>
                   <div>
@@ -203,50 +183,37 @@
                         id="dropdownprojectOne"
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
-                        aria-expanded="false"
-                      >
+                        aria-expanded="false">
                         <i
                           data-feather="more-vertical"
-                           class="icon-xs"
-                        ></i>
+                          class="icon-xs"></i>
                       </a>
                       <div
                         class="dropdown-menu"
-                        aria-labelledby="dropdownprojectOne"
-                      >
+                        aria-labelledby="dropdownprojectOne">
                         <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
-                        <a class="dropdown-item d-flex align-items-center" href="#!"
-                          >Another action</a
-                        >
-                        <a class="dropdown-item d-flex align-items-center" href="#!"
-                          >Something else here</a
-                        >
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="d-md-flex justify-content-between align-items-center mb-4"
-              >
+                class="d-md-flex justify-content-between align-items-center mb-4">
                 <div class="d-flex align-items-center">
                   <div>
                     <!-- icon shape -->
-                    <div
-
-                    >
+                    <div>
                       <img
                         src="../assets/images/svg/brand-logo-2.svg"
-                        alt="Image"
-                     >
+                        alt="Image">
                     </div>
                   </div>
                   <!-- text -->
                   <div class="ms-3">
                     <h5 class="mb-1">
-                      <a href="#!" class="text-inherit"
-                        >Design 3d Character</a
-                      >
+                      <a href="#!" class="text-inherit">Design 3d Character</a>
                     </h5>
                     <p class="mb-0 fs-5 text-muted">
                       Project description and details about...
@@ -255,8 +222,7 @@
                 </div>
 
                 <div
-                  class="d-flex align-items-center ms-10 ms-md-0 mt-3"
-                >
+                  class="d-flex align-items-center ms-10 ms-md-0 mt-3">
                   <!-- avatar group -->
                   <div class="avatar-group me-2">
                     <span class="avatar avatar-sm">
@@ -264,24 +230,21 @@
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-4.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                     <span class="avatar avatar-sm">
                       <!-- img -->
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-5.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                     <span class="avatar avatar-sm">
                       <!-- img -->
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-6.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                   </div>
                   <div>
@@ -293,50 +256,37 @@
                         id="dropdownprojectTwo"
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
-                        aria-expanded="false"
-                      >
+                        aria-expanded="false">
                         <i
                           data-feather="more-vertical"
-                           class="icon-xs"
-                        ></i>
+                          class="icon-xs"></i>
                       </a>
                       <div
                         class="dropdown-menu"
-                        aria-labelledby="dropdownprojectTwo"
-                      >
+                        aria-labelledby="dropdownprojectTwo">
                         <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
-                        <a class="dropdown-item d-flex align-items-center" href="#!"
-                          >Another action</a
-                        >
-                        <a class="dropdown-item d-flex align-items-center" href="#!"
-                          >Something else here</a
-                        >
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="d-md-flex justify-content-between align-items-center mb-4"
-              >
+                class="d-md-flex justify-content-between align-items-center mb-4">
                 <div class="d-flex align-items-center">
                   <div>
                     <!-- icon shape -->
-                    <div
-
-                    >
+                    <div>
                       <img
                         src="../assets/images/svg/brand-logo-3.svg"
-                        alt="Image"
-                     >
+                        alt="Image">
                     </div>
                   </div>
                   <!-- text -->
                   <div class="ms-3">
                     <h5 class="mb-1">
-                      <a href="#!" class="text-inherit"
-                        >Github Development</a
-                      >
+                      <a href="#!" class="text-inherit">Github Development</a>
                     </h5>
                     <p class="mb-0 fs-5 text-muted">
                       Project description and details about...
@@ -344,8 +294,7 @@
                   </div>
                 </div>
                 <div
-                  class="d-flex align-items-center ms-10 ms-md-0 mt-3"
-                >
+                  class="d-flex align-items-center ms-10 ms-md-0 mt-3">
                   <!-- avatar group -->
                   <div class="avatar-group me-2">
                     <span class="avatar avatar-sm">
@@ -353,24 +302,21 @@
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-7.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                     <span class="avatar avatar-sm">
                       <!-- img -->
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-8.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                     <span class="avatar avatar-sm">
                       <!-- img -->
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-9.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                   </div>
                   <div>
@@ -382,50 +328,37 @@
                         id="dropdownprojectThree"
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
-                        aria-expanded="false"
-                      >
+                        aria-expanded="false">
                         <i
                           data-feather="more-vertical"
-                           class="icon-xs"
-                        ></i>
+                          class="icon-xs"></i>
                       </a>
                       <div
                         class="dropdown-menu"
-                        aria-labelledby="dropdownprojectThree"
-                      >
+                        aria-labelledby="dropdownprojectThree">
                         <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
-                        <a class="dropdown-item d-flex align-items-center" href="#!"
-                          >Another action</a
-                        >
-                        <a class="dropdown-item d-flex align-items-center" href="#!"
-                          >Something else here</a
-                        >
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
               <div
-                class="d-md-flex justify-content-between align-items-center mb-4"
-              >
+                class="d-md-flex justify-content-between align-items-center mb-4">
                 <div class="d-flex align-items-center">
                   <!-- icon shape -->
                   <div>
-                    <div
-
-                    >
+                    <div>
                       <img
                         src="../assets/images/svg/brand-logo-4.svg"
-                        alt="Image"
-                     >
+                        alt="Image">
                     </div>
                   </div>
                   <!-- text -->
                   <div class="ms-3">
                     <h5 class="mb-1">
-                      <a href="#!" class="text-inherit"
-                        >Dropbox Design System</a
-                      >
+                      <a href="#!" class="text-inherit">Dropbox Design System</a>
                     </h5>
                     <p class="mb-0 fs-5 text-muted">
                       Project description and details about...
@@ -433,8 +366,7 @@
                   </div>
                 </div>
                 <div
-                  class="d-flex align-items-center ms-10 ms-md-0 mt-3"
-                >
+                  class="d-flex align-items-center ms-10 ms-md-0 mt-3">
                   <!-- avatar group -->
                   <div class="avatar-group me-2">
                     <!-- img -->
@@ -442,24 +374,21 @@
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-10.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                     <!-- img -->
                     <span class="avatar avatar-sm">
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-11.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                     <!-- img -->
                     <span class="avatar avatar-sm">
                       <img
                         alt="avatar"
                         src="../assets/images/avatar/avatar-12.jpg"
-                        class="rounded-circle"
-                     >
+                        class="rounded-circle">
                     </span>
                   </div>
                   <div>
@@ -471,30 +400,23 @@
                         id="dropdownprojectFour"
                         data-bs-toggle="dropdown"
                         aria-haspopup="true"
-                        aria-expanded="false"
-                      >
+                        aria-expanded="false">
                         <i
                           data-feather="more-vertical"
-                           class="icon-xs"
-                        ></i>
+                          class="icon-xs"></i>
                       </a>
                       <div
                         class="dropdown-menu"
-                        aria-labelledby="dropdownprojectFour"
-                      >
+                        aria-labelledby="dropdownprojectFour">
                         <a class="dropdown-item d-flex align-items-center" href="#!">Action</a>
-                        <a class="dropdown-item d-flex align-items-center" href="#!"
-                          >Another action</a
-                        >
-                        <a class="dropdown-item d-flex align-items-center" href="#!"
-                          >Something else here</a
-                        >
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Another action</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#!">Something else here</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              </div>
             </div>
           </div>
         </div>
+      </div>
