@@ -48,4 +48,50 @@ class AdminModel
             return [];
         }
     }
+
+    public function readKompetisiPaginated($limit, $offset)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetKompetisi_All", [$limit, $offset]);
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
+
+    public function readDataAdminByUsername($username)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetAdminDataByUsername", [$username]);
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            if (empty($result)) {  // Debugging
+                echo "No data returned from database.";
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
+
+
+    public function getTotalKompetisiCount()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetKompetisi_Count");
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['total'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
 }

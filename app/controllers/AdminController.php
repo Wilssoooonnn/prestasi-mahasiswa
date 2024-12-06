@@ -16,13 +16,32 @@ class AdminController
 
     public function profile()
     {
-        // Tampilkan halaman admin sebagai halaman default
+        // Pastikan user sudah login dan username ada di session
+        if (!isset($_SESSION['user'])) {
+            header('Location: login.php');
+            exit;
+        }
+
+        // Ambil data admin berdasarkan username
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+        $dataAdmin = $adminModel->readDataAdminByUsername($_SESSION['user']);
+
+        // Pastikan data admin ada
+        if (empty($dataAdmin)) {
+            // Jika data tidak ditemukan, arahkan ke halaman error
+            echo "Admin data not found!";
+            exit;
+        }
+
+        // Kirim data admin ke view
         $judul = 'Profile';
         include '../app/views/template/header.php';
         include '../app/views/template/navigation_admin.php';
-        include '../app/views/admin/profile.php';
+        include '../app/views/admin/profile.php';  // Ganti dengan path view yang sesuai
         include '../app/views/template/footer.php';
     }
+
     public function kompetisi()
     {
         // Tampilkan halaman admin sebagai halaman default
@@ -58,5 +77,40 @@ class AdminController
         include '../app/views/template/header.php';
         include '../app/views/admin/tes.php';
         include '../app/views/template/footer.php';
+    }
+
+    public function loadKompetisiAjax()
+    {
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+
+        // Ambil parameter dari request
+        $page = isset($_POST['page']) ? (int)$_POST['page'] : 1;
+        $limit = 10; // Jumlah data per halaman
+        $offset = ($page - 1) * $limit;
+
+        // Ambil data kompetisi dan total
+        $dataAllKompetisi = $adminModel->readKompetisiPaginated($limit, $offset);
+        $totalKompetisi = $adminModel->getTotalKompetisiCount();
+        $totalPages = ceil($totalKompetisi / $limit);
+
+        // Kirim data sebagai JSON
+        header('Content-Type: application/json');
+        echo json_encode([
+            'data' => $dataAllKompetisi,
+            'totalPages' => $totalPages,
+            'currentPage' => $page,
+        ]);
+    }
+
+    public function getDataAdmin()
+    {
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+        // Ambil data admin
+        $dataAdmin = $adminModel->readDataAdminByUsername($_SESSION['user']);
+
+        // Kirim data sebagai JSON
+        echo json_encode($dataAdmin);
     }
 }

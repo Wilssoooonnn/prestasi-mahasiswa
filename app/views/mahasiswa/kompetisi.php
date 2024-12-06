@@ -16,8 +16,7 @@ $mahasiswaModel = new MahasiswaModel();
 $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
 
 ?>
-
-<div class="container-fluid mt-3">
+<div class="container mt-5">
     <h2>Data Kompetisi</h2>
     <!-- CARD HEADER -->
     <div class="card-header">
