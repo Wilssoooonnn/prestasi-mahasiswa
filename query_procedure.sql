@@ -261,3 +261,132 @@ BEGIN
     WHERE m.nim = @nim;
 END;
 GO
+
+
+--===============================================================================
+
+
+-- INSERT DATA KOMPETISI
+CREATE PROCEDURE InsertKompetisi
+    @status_id INT,
+    @jenis_id INT,
+    @tingkat_id INT,
+    @nama_kompetisi VARCHAR(255),
+    @tempat_kompetisi VARCHAR(255),
+    @url_kompetisi VARCHAR(255),
+    @tanggal_mulai DATE,
+    @tanggal_akhir DATE,
+    @no_surat_tugas VARCHAR(50),
+    @tanggal_surat_tugas DATE,
+	@file_surat_tugas VARCHAR(100),
+	@file_sertifikat VARCHAR(100),
+	@foto_kegiatan VARCHAR(100),
+	@file_poster VARCHAR(100)
+AS
+BEGIN
+    BEGIN TRY
+        INSERT INTO kompetisi (
+            status_id, 
+            jenis_id, 
+            tingkat_id, 
+            nama_kompetisi, 
+            tempat_kompetisi, 
+            url_kompetisi, 
+            tanggal_mulai, 
+            tanggal_akhir, 
+            no_surat_tugas, 
+            tanggal_surat_tugas,
+			file_surat_tugas,
+			file_sertifikat,
+			foto_kegiatan,
+			file_poster
+        )
+        VALUES (
+            @status_id, 
+            @jenis_id, 
+            @tingkat_id, 
+            @nama_kompetisi, 
+            @tempat_kompetisi, 
+            @url_kompetisi, 
+            @tanggal_mulai, 
+            @tanggal_akhir, 
+            @no_surat_tugas, 
+            @tanggal_surat_tugas,
+			@file_surat_tugas,
+			@file_sertifikat,
+			@foto_kegiatan,
+			@file_poster
+        );
+
+        PRINT 'Data kompetisi berhasil ditambahkan.';
+    END TRY
+    BEGIN CATCH
+        -- Tangani error dan tampilkan pesan
+        DECLARE @ErrorMessage VARCHAR(255) = ERROR_MESSAGE();
+        DECLARE @ErrorSeverity INT = ERROR_SEVERITY();
+        DECLARE @ErrorState INT = ERROR_STATE();
+
+        RAISERROR (@ErrorMessage, @ErrorSeverity, @ErrorState);
+    END CATCH
+END;
+GO
+
+
+
+-- CARI ID UNTUK INSERT KOMPETISI INDIVIDU
+CREATE PROCEDURE GetIdByLogin 
+	@Username VARCHAR(100),
+    @Mahasiswa_id INT OUTPUT
+AS
+BEGIN
+    -- Deklarasi variabel untuk menyimpan NIM
+    DECLARE @Nim VARCHAR(20);
+	-- Eksekusi prosedur untuk mendapatkan NIM berdasarkan username
+    EXEC GetNimByLogin @Username, @Nim OUTPUT
+
+	IF @Nim IS NOT NULL
+    BEGIN
+        SELECT @Mahasiswa_id = m.id
+		FROM mahasiswa m
+		WHERE m.username = @Username
+	END
+    ELSE
+    BEGIN
+        SELECT 
+            'Mahasiswa_id tidak ditemukan' AS Pesan;
+        RETURN;
+    END
+END;
+		
+--DECLARE @Mahasiswa_id int;
+--EXEC GetIdByLogin 
+--    @username = 'odin', 
+--    @Mahasiswa_id = @Mahasiswa_id OUTPUT;
+--PRINT @Mahasiswa_id;
+		
+
+
+-- CARI ID UNTUK INSERT KOMPETISI KELOMPOK
+CREATE PROCEDURE GetIdFromNim 
+	@Nim CHAR(10),
+    @Mahasiswa_id INT OUTPUT
+AS
+BEGIN
+	SELECT @Mahasiswa_id = m.id
+	FROM mahasiswa m
+	WHERE m.nim = @Nim
+
+    IF @Mahasiswa_id IS NULL
+	BEGIN
+        SELECT 
+            'Mahasiswa_id tidak ditemukan' AS Pesan;
+        RETURN;
+    END
+END;
+
+--DECLARE @Mahasiswa_id int;
+--EXEC GetIdFromNim 
+--    @nim = '220001002', 
+--    @Mahasiswa_id = @Mahasiswa_id OUTPUT;
+--PRINT @Mahasiswa_id;
+
