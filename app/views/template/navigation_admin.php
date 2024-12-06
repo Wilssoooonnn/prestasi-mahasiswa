@@ -29,7 +29,7 @@
             </li>
             <li class="nav-item">
                 <a href="<?= BASE_URL; ?>admin/help" class="nav-link">
-                    <i class="fi fi-rr-interrogation"></i> <span class="ms-3">Help</span>
+                    <i class="fi fi-rr-interrogation"></i> <span class="ms-3">F.A.Q</span>
                 </a>
             </li>
         </ul>
