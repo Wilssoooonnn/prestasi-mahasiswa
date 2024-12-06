@@ -17,11 +17,11 @@
                 <i class="fi fi-rr-user"></i> <span class="ms-3">Profile</span>
             </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a href="<?= BASE_URL; ?>admin/setting" class="nav-link d-flex align-items-center">
                 <i class="fi fi-rr-settings-sliders"></i> <span class="ms-3">Settings</span>
             </a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a href="<?= BASE_URL; ?>admin/kompetisi" class="nav-link d-flex align-items-center">
                 <i class="fi fi-rr-trophy-star"></i> <span class="ms-3">Kompetisi</span>
@@ -58,7 +58,7 @@
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownProfile">
                             <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/profile">My Profile</a></li>
-                            <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/setting">Settings</a></li>
+                            <!-- <li><a class="dropdown-item" href="<?= BASE_URL; ?>admin/setting">Settings</a></li> -->
                             <li><a class="dropdown-item" href="<?= BASE_URL; ?>auth/logout">Logout</a></li>
                         </ul>
                     </li>

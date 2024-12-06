@@ -6,14 +6,14 @@
                 <!-- F.A.Q Group 3 -->
                 <div class="card">
                     <div class="card-body">
-                        <h5 class="card-title">Dolore occaecati ducimus quam</h5>
+                        <h5 class="card-title">Basic Question</h5>
 
                         <div class="accordion accordion-flush" id="faq-group-3">
 
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" data-bs-target="#faqsThree-1" type="button" data-bs-toggle="collapse">
-                                        Assumenda doloribus est fugiat sint incidunt animi totam nisi?
+                                        Bagaimana cara mengunggah prestasi saya ke sistem?
                                     </button>
                                 </h2>
                                 <div id="faqsThree-1" class="accordion-collapse collapse" data-bs-parent="#faq-group-3">
@@ -26,7 +26,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" data-bs-target="#faqsThree-2" type="button" data-bs-toggle="collapse">
-                                        Consequatur saepe explicabo odio atque nisi?
+                                        Bagaimana cara melihat riwayat prestasi yang sudah saya unggah?
                                     </button>
                                 </h2>
                                 <div id="faqsThree-2" class="accordion-collapse collapse" data-bs-parent="#faq-group-3">
@@ -39,7 +39,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" data-bs-target="#faqsThree-3" type="button" data-bs-toggle="collapse">
-                                        Voluptates vel est fugiat molestiae rem sit eos sint?
+                                        Bagaimana cara mengubah data prestasi yang sudah diunggah?
                                     </button>
                                 </h2>
                                 <div id="faqsThree-3" class="accordion-collapse collapse" data-bs-parent="#faq-group-3">
@@ -52,7 +52,7 @@
                             <div class="accordion-item">
                                 <h2 class="accordion-header">
                                     <button class="accordion-button collapsed" data-bs-target="#faqsThree-4" type="button" data-bs-toggle="collapse">
-                                        Ab ipsa cum autem voluptas doloremque velit?
+                                        Bagaimana cara menghapus prestasi yang sudah diunggah?
                                     </button>
                                 </h2>
                                 <div id="faqsThree-4" class="accordion-collapse collapse" data-bs-parent="#faq-group-3">
@@ -62,18 +62,6 @@
                                 </div>
                             </div>
 
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-                                    <button class="accordion-button collapsed" data-bs-target="#faqsThree-5" type="button" data-bs-toggle="collapse">
-                                        Aliquam magni ducimus facilis numquam dolorum harum eveniet iusto?
-                                    </button>
-                                </h2>
-                                <div id="faqsThree-5" class="accordion-collapse collapse" data-bs-parent="#faq-group-3">
-                                    <div class="accordion-body">
-                                        Aut necessitatibus maxime quis dolor et. Nihil laboriosam molestiae qui molestias placeat corrupti non quo accusamus. Nemo qui quis harum enim sed. Aliquam molestias pariatur delectus voluptas quidem qui rerum id quisquam. Perspiciatis voluptatem voluptatem eos. Vel aut minus labore at rerum eos.
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
 
