@@ -22,16 +22,16 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
     <div class="card-header">
         <div class="row g-2 align-items-center">
             <div class="col d-flex">
-                <a href="#" class="btn btn-primary"> Tambah Data</a>
+                <input type="search" class="form-control w-50" placeholder="Cari NIM">
             </div>
             <div class="col d-flex justify-content-end">
-                <input type="search" class="form-control w-50" placeholder="Cari NIM">
+                <a href="#" class="btn btn-primary"> Tambah Data</a>
             </div>
         </div>
     </div>
     <!-- CARD HEADER -->
     <div class="table-responsive">
-        <table class="table table-striped">
+        <table class="table table-striped mt-3">
             <thead>
                 <tr>
                     <th>NIM</th>
