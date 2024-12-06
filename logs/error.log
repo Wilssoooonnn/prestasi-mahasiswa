@@ -1038,4 +1038,18 @@ Failed to prepare stored procedure.Invalid password for username: abcInvalid pas
 )
 
 [2024-12-06 01:38:02] Error executing stored procedure: GetKompetisi_All
->>>>>>> f9699a6f9d18cda8e3466410c13c6b7c5993a2fb
+[2024-12-06 04:30:19] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNim'.
+        )
+
+)
+
+[2024-12-06 04:30:19] Error executing stored procedure: GetKompetisiByNim
