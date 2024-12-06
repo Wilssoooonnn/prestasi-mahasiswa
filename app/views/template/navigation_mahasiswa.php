@@ -8,27 +8,27 @@
 
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a href="<?= BASE_URL; ?>admin/dashboard" class="nav-link">
+                <a href="<?= BASE_URL; ?>mahasiswa/dashboard" class="nav-link">
                     <i class="fi fi-rr-house-blank"></i> <span class="ms-3">Home</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= BASE_URL; ?>admin/profile" class="nav-link">
+                <a href="<?= BASE_URL; ?>mahasiswa/profile" class="nav-link">
                     <i class="fi fi-rr-user"></i> <span class="ms-3">Profile</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= BASE_URL; ?>admin/setting" class="nav-link">
+                <a href="<?= BASE_URL; ?>mahasiswa/setting" class="nav-link">
                     <i class="fi fi-rr-settings-sliders"></i> <span class="ms-3">Settings</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= BASE_URL; ?>admin/kompetisi" class="nav-link">
+                <a href="<?= BASE_URL; ?>mahasiswa/kompetisi" class="nav-link">
                     <i class="fi fi-rr-trophy-star"></i> <span class="ms-3">Kompetisi</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a href="<?= BASE_URL; ?>admin/help" class="nav-link">
+                <a href="<?= BASE_URL; ?>mahasiswa/help" class="nav-link">
                     <i class="fi fi-rr-interrogation"></i> <span class="ms-3">Help</span>
                 </a>
             </li>
