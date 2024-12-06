@@ -52,14 +52,13 @@ class UserModel
         } catch (Exception $e) {
             $this->logError($e->getMessage());
             return null;
-        }   
+        }
     }
 
     public function register($username, $password, $role_id)
     {
         try {
             $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-            // $this->executeStoredProcedure("RegisterUser", [$username, $hashedPassword, $role_id]);
             $this->executeStoredProcedure("RegisterUser(?, ?, ?)", [$username, $hashedPassword, $role_id]);
             return true;
         } catch (Exception $e) {
@@ -71,9 +70,8 @@ class UserModel
     public function isUsernameExists($username)
     {
         try {
-            // $stmt = $this->executeStoredProcedure("CheckUsernameExists", [$username]);
             $stmt = $this->executeStoredProcedure("CheckUsernameExists(?)", [$username]);
-            return sqlsrv_fetch_array($stmt) !== false;
+            return sqlsrv_fetch_array($stmt) === 1;
         } catch (Exception $e) {
             $this->logError($e->getMessage());
             return false;
