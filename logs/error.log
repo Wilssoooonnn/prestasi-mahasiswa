@@ -942,3 +942,63 @@ Array
 )
 
 [2024-12-05 04:53:45] Error executing stored procedure: GetKompetisiByNim
+[2024-12-06 01:36:09] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-06 01:36:09] Error executing stored procedure: GetKompetisi_All
+[2024-12-06 01:36:29] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-06 01:36:29] Error executing stored procedure: GetKompetisi_All
+[2024-12-06 01:36:31] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-06 01:36:31] Error executing stored procedure: GetKompetisi_All
+[2024-12-06 01:38:02] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisi_All'.
+        )
+
+)
+
+[2024-12-06 01:38:02] Error executing stored procedure: GetKompetisi_All
