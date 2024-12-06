@@ -268,7 +268,6 @@ GO
 
 -- INSERT DATA KOMPETISI
 CREATE PROCEDURE InsertKompetisi
-    @status_id INT,
     @jenis_id INT,
     @tingkat_id INT,
     @nama_kompetisi VARCHAR(255),
@@ -302,7 +301,7 @@ BEGIN
 			file_poster
         )
         VALUES (
-            @status_id, 
+            1, 
             @jenis_id, 
             @tingkat_id, 
             @nama_kompetisi, 
@@ -330,6 +329,23 @@ BEGIN
     END CATCH
 END;
 GO
+
+--DECLARE @jenis_id INT,
+--    @tingkat_id INT,
+--    @nama_kompetisi VARCHAR(255),
+--    @tempat_kompetisi VARCHAR(255),
+--    @url_kompetisi VARCHAR(255),
+--    @tanggal_mulai DATE,
+--    @tanggal_akhir DATE,
+--    @no_surat_tugas VARCHAR(50),
+--    @tanggal_surat_tugas DATE,
+--	@file_surat_tugas VARCHAR(100),
+--	@file_sertifikat VARCHAR(100),
+--	@foto_kegiatan VARCHAR(100),
+--	@file_poster VARCHAR(100);
+--EXEC InsertKompetisi 1, 2, 'Lomba Sepak Bola', 'Stadion Nasional', 'http://lombasepakbola.com', 
+--'2024-01-10', '2024-01-15', 'ST-001', '2024-01-05', '1.jpg', '2.jpg', '3.jpg', '4.jpg';
+--select top 1 * from kompetisi order by id desc;
 
 
 
