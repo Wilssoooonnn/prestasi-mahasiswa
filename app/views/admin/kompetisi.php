@@ -16,7 +16,7 @@ $adminModel = new AdminModel();
 $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
 
 ?>
-<div class="container w-100">
+<div class="container mt-5">
     <h2>Data Kompetisi</h2>
     <!-- CARD HEADER -->
     <div class="card-header">
