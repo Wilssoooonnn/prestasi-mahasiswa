@@ -94,3 +94,22 @@ nav.navbar {
     padding-top: 70px;
     /* Pastikan konten tidak tertutup navbar */
 }
+
+/* Styling untuk container gambar profil */
+.profile-img-container {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    /* Menambahkan padding untuk border putih */
+    background-color: white;
+    /* Warna latar belakang untuk lingkaran putih */
+    border-radius: 50%;
+    /* Membuat lingkaran */
+}
+
+i[class^="fi-rr-"]:before,
+i[class*=" fi-rr-"]:before,
+span[class^="fi-rr-"]:before,
+w span[class*="fi-rr-"]:before {
+    line-height: 1.6 !important;
+}

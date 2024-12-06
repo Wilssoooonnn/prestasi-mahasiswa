@@ -6,22 +6,22 @@
             <div class="card mb-3 position-relative">
                 <!-- Background Image -->
                 <div class="background-image position-relative bg-primary" style="height: 40vh;">
-                    <!-- Overlay -->
-                    <!-- <div class="position-absolute w-100 h-100"
-                        style="background-color: rgba(0, 0, 0, 0.3);">
-                    </div> -->
-
                     <!-- Profile Section -->
                     <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="z-index: 1;">
-                        <!-- Avatar -->
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                            alt="Profile"
-                            class="rounded-circle img-fluid border"
-                            style="width: 120px; height: 120px; object-fit: cover;">
+                        <!-- Avatar with Hover Effect -->
+                        <div class="profile-img-container">
+                            <img id="profileImage" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="Profile"
+                                class="rounded-circle img-fluid border profile-img"
+                                style="width: 120px; height: 120px; object-fit: cover;">
+                        </div>
 
+                        <button class="btn btn-light rounded-circle position-absolute" id="profileImageUpload" style="width: 40px; height: 40px; left: 52%;">
+                            <i class="fi fi-rr-edit"></i>
+                        </button>
                         <!-- Name and Role -->
                         <div class="text-white text-center mt-3">
-                            <h2 class="mb-1"><?= $dataAdmin[0]['nama'];     ?></h2>
+                            <h2 class="mb-1"><?= $dataAdmin[0]['nama']; ?></h2>
                             <p class="mb-0 fw-light"><?= $_SESSION['role']; ?></p>
                         </div>
                     </div>
@@ -29,6 +29,7 @@
             </div>
         </div>
     </div>
+
 
 
 
