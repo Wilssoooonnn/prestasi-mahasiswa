@@ -1,25 +1,35 @@
-<div class="container mt-5">
+<div class="container mt-3">
 
     <!-- Cards Section -->
     <div class="row mb-12">
         <div class="col-md-12">
             <div class="card mb-3 position-relative">
                 <!-- Background Image -->
-                <div class="background-image position-relative" style="height: 40vh; background: url('https://images.unsplash.com/photo-1496715976403-7e36dc43f17b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;">
-                    <div class="overlay position-absolute w-100 h-100"></div>
+                <div class="background-image position-relative bg-primary" style="height: 40vh;">
+                    <!-- Overlay -->
+                    <!-- <div class="position-absolute w-100 h-100"
+                        style="background-color: rgba(0, 0, 0, 0.3);">
+                    </div> -->
+
                     <!-- Profile Section -->
-                    <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+                    <div class="position-absolute d-flex flex-column align-items-center justify-content-center w-100 h-100" style="z-index: 1;">
+                        <!-- Avatar -->
                         <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="Profile"
                             class="rounded-circle img-fluid border"
                             style="width: 120px; height: 120px; object-fit: cover;">
 
-                        <h2 class="mt-3">Nama Profile</h2>
+                        <!-- Name and Role -->
+                        <div class="text-white text-center mt-3">
+                            <h2 class="mb-1"><?= $dataAdmin[0]['nama'];     ?></h2>
+                            <p class="mb-0 fw-light"><?= $_SESSION['role']; ?></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 
@@ -48,24 +58,29 @@
                         <div class="tab-pane fade show active profile-overview" id="profile-overview">
                             <h5 class="card-title mt-3">Profile Details</h5>
 
-                            <div class="row">
+                            <div class="row mt-3">
+                                <div class="col-lg-3 col-md-4 label ">ID Pegawai</div>
+                                <div class="col-lg-9 col-md-8"><?= $dataAdmin[0]['id'];     ?></div>
+                            </div>
+
+                            <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                                <div class="col-lg-9 col-md-8">Kevin Anderson</div>
+                                <div class="col-lg-9 col-md-8"><?= $dataAdmin[0]['nama'];     ?></div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Address</div>
-                                <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                                <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022 (data statis) </div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Phone</div>
-                                <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                                <div class="col-lg-9 col-md-8">(436) 486-3538 x29071 (data statis)</div>
                             </div>
 
-                            <div class="row">
+                            <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Email</div>
-                                <div class="col-lg-9 col-md-8">k.anderson@example.com</div>
+                                <div class="col-lg-9 col-md-8"><?= $dataAdmin[0]['email'];     ?></div>
                             </div>
 
                         </div>
@@ -74,17 +89,6 @@
 
                             <!-- Profile Edit Form -->
                             <form>
-                                <div class="row mb-3">
-                                    <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
-                                    <div class="col-md-8 col-lg-9">
-                                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                                            alt="Avatar" class="rounded-circle" style="width: 30px; height: 30px; object-fit: cover;">
-                                        <div class="pt-2">
-                                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                                            <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <div class="row mb-3">
                                     <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>

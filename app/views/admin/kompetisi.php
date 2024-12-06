@@ -16,9 +16,9 @@ $adminModel = new AdminModel();
 $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
 
 ?>
-<div class="container mt-5">
+<div class="container mt-3">
     <h2>Data Kompetisi</h2>
-    <!-- CARD HEADER -->
+    <!-- Card Header -->
     <div class="card-header">
         <div class="row g-2 align-items-center">
             <div class="col d-flex">
@@ -29,7 +29,8 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
             </div>
         </div>
     </div>
-    <!-- CARD HEADER -->
+
+    <!-- Table Data -->
     <div class="table-responsive">
         <table class="table table-striped mt-3">
             <thead>
@@ -43,36 +44,18 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
                     <th>Action</th>
                 </tr>
             </thead>
-            <tbody>
-                <?php if (!empty($dataAllKompetisi)) : ?>
-                    <?php foreach ($dataAllKompetisi as $row) : ?>
-                        <tr>
-                            <td><?= htmlspecialchars($row['NIM']) ?></td>
-                            <td><?= htmlspecialchars($row['Nama_Mahasiswa']) ?></td>
-                            <td><?= htmlspecialchars($row['Nama_Kompetisi']) ?></td>
-                            <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
-                            <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
-                            <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
-                            <td>
-                                <button class="btn btn-info"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#detailModal"
-                                    onclick="loadDetailData(<?= htmlspecialchars(json_encode($row)) ?>)">
-                                    Detail
-                                </button>
-                                <button class="btn btn-success">Approve</button>
-                                <button class="btn btn-danger">Decline</button>
-                            </td>
-                        </tr>
-                    <?php endforeach; ?>
-                <?php else : ?>
-                    <tr>
-                        <td colspan="10" class="text-center">Tidak ada data kompetisi</td>
-                    </tr>
-                <?php endif; ?>
+            <tbody id="kompetisiTableBody">
+                <!-- Load data -->
             </tbody>
         </table>
     </div>
+
+    <nav>
+        <ul class="pagination justify-content-center" id="pagination">
+            <!-- Load pagination -->
+        </ul>
+    </nav>
+
 
     <!-- Modal Detail -->
     <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
@@ -99,16 +82,6 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
         </div>
     </div>
 </div>
-
-<script>
-    function loadDetailData(data) {
-        document.getElementById('detailNIM').textContent = data.NIM;
-        document.getElementById('detailNama').textContent = data.Nama_Mahasiswa;
-        document.getElementById('detailKompetisi').textContent = data.Nama_Kompetisi;
-        document.getElementById('detailJenis').textContent = data.Jenis_Kompetisi;
-        document.getElementById('detailTingkat').textContent = data.Tingkat_Kompetisi;
-        document.getElementById('detailTempat').textContent = data.Tempat_Kompetisi;
-        document.getElementById('detailURL').setAttribute('href', data.URL_Kompetisi);
-        document.getElementById('detailSurat').textContent = data.No_Surat_Tugas;
-    }
-</script>
+<!-- <script>
+    const baseURL = "<?= BASE_URL ?>";
+</script> -->
