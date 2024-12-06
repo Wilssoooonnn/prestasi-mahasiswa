@@ -14,12 +14,21 @@ class AuthController
         include '../app/views/template/footer.php';
     }
 
+    public function showRegisterForm()
+    {
+        $judul = 'Register';
+        include '../app/views/template/header.php';
+        include '../app/views/auth/register.php';
+        include '../app/views/template/footer.php';
+    }
+
     public function login()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $userModel = new UserModel(); // Membuat instance UserModel
 
             $user = $userModel->login($_POST['username'], $_POST['password']);
+            var_dump($user);
             if ($user) {
                 session_start();
                 $_SESSION['user'] = $user['username'];
@@ -44,49 +53,50 @@ class AuthController
     public function register()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Validasi input
-            $username = $_POST['username'] ?? '';
-            $password = $_POST['password'] ?? '';
-            $role_id = $_POST['role_id'] ?? '';
+            // Validasi input (pastikan username dan password tidak kosong)
+            $username = trim($_POST['username']);
+            $password = trim($_POST['password']);
+            $role = $_POST['role_id']; // Pastikan ada mekanisme pemilihan role (misalnya dropdown)
 
-            if (empty($username) || empty($password) || empty($role_id)) {
-                echo "All fields are required.";
-                exit(); // Hentikan eksekusi jika ada input kosong
+            if (empty($username) || empty($password) || empty($role)) {
+                // Jika ada data yang kosong
+                echo "Semua field harus diisi.";
+                return;
             }
 
-            // Hash password
-            $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-
-            // Memuat model
+            // Cek apakah username sudah ada di database
             $userModel = new UserModel();
-
-            // Cek apakah username sudah ada
             if ($userModel->isUsernameExists($username)) {
-                // Tampilkan alert jika username sudah ada
-                echo "<script>alert('Username already exists.');</script>";
-            } else {
-                // Simpan pengguna baru ke database
-                $result = $userModel->register($username, $hashedPassword, $role_id);
-
-                if ($result) {
-                    // Tampilkan pesan sukses dan arahkan ke halaman login
-                    echo "<script>
-                        alert('Registration successful.');
-                        window.location.href = '" . BASE_URL . "auth/login';
-                    </script>";
-                    exit();
-                } else {
-                    // Tampilkan pesan gagal dalam alert
-                    echo "<script>alert('Registration failed. Please try again.');</script>";
-                }
+                echo "Username sudah terdaftar.";
+                return;
             }
-        }
 
-        // Jika bukan POST atau validasi gagal, tetap tampilkan form register
-        include '../app/views/template/header.php';
-        include '../app/views/auth/register.php';
-        include '../app/views/template/footer.php';
+            // Hash password sebelum menyimpannya
+            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+            // Simpan data pengguna baru ke database
+            $userData = [
+                'username' => $username,
+                'password' => $hashedPassword,
+                'role_id' => $role
+            ];
+
+            $isRegistered = $userModel->register($userData);
+
+            if ($isRegistered) {
+                // Jika registrasi sukses, redirect ke halaman login
+                header('Location: ' . BASE_URL . 'auth/login');
+                exit();
+            } else {
+                // Jika gagal menyimpan ke database
+                echo "Terjadi kesalahan saat registrasi. Coba lagi.";
+            }
+        } else {
+            // Jika bukan request POST, tampilkan halaman registrasi
+            AuthController::showRegisterForm(); // Bisa menampilkan form registrasi
+        }
     }
+
 
     public function logout()
     {
