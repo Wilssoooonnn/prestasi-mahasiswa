@@ -7,22 +7,22 @@
     </div>
     <ul class="nav flex-column">
         <li class="nav-item">
-            <a href="<?= BASE_URL; ?>admin/dashboard" class="nav-link d-flex align-items-center">
+            <a href="<?= BASE_URL; ?>admin/dashboard" class="nav-link d-flex align-items-center custom-nav-link">
                 <i class="fi fi-rr-house-blank"></i> <span class="ms-3">Home</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="<?= BASE_URL; ?>admin/profile" class="nav-link d-flex align-items-center">
+            <a href="<?= BASE_URL; ?>admin/profile" class="nav-link d-flex align-items-center custom-nav-link">
                 <i class="fi fi-rr-user"></i> <span class="ms-3">Profile</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="<?= BASE_URL; ?>admin/kompetisi" class="nav-link d-flex align-items-center">
+            <a href="<?= BASE_URL; ?>admin/kompetisi" class="nav-link d-flex align-items-center custom-nav-link">
                 <i class="fi fi-rr-trophy-star"></i> <span class="ms-3">Kompetisi</span>
             </a>
         </li>
         <li class="nav-item">
-            <a href="<?= BASE_URL; ?>admin/help" class="nav-link d-flex align-items-center">
+            <a href="<?= BASE_URL; ?>admin/help" class="nav-link d-flex align-items-center custom-nav-link">
                 <i class="fi fi-rr-interrogation"></i> <span class="ms-3">Help</span>
             </a>
         </li>
