@@ -942,3 +942,43 @@ Array
 )
 
 [2024-12-05 04:53:45] Error executing stored procedure: GetKompetisiByNim
+Invalid password for username: abcInvalid password for username: arifInvalid password for username: abcInvalid password for username: abcPreparation failed: Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 0
+            [code] => 0
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Syntax error, permission violation, or other nonspecific error
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Syntax error, permission violation, or other nonspecific error
+        )
+
+)
+Failed to prepare stored procedure.Preparation failed: Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 0
+            [code] => 0
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Syntax error, permission violation, or other nonspecific error
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Syntax error, permission violation, or other nonspecific error
+        )
+
+)
+Failed to prepare stored procedure.Preparation failed: Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 0
+            [code] => 0
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Syntax error, permission violation, or other nonspecific error
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Syntax error, permission violation, or other nonspecific error
+        )
+
+)
+Failed to prepare stored procedure.Invalid password for username: abcInvalid password for username: haloUser not found: testuserInvalid password for username: abcInvalid password for username: abcUsername already exists: newuserInvalid password for username: newuserInvalid password for username: newadminInvalid password for username: newadminInvalid password for username: abcInvalid password for username: newadmin
