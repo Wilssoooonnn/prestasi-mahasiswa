@@ -1,3 +1,4 @@
+</div>
 <!-- Source JavaScript -->
 <script src="<?= BASE_URL; ?>/public/assets/js/jquery.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
@@ -7,11 +8,20 @@
 
 <!-- Script Code -->
 <script>
-    // Toggle Sidebar
-    document.getElementById("sidebarToggle").addEventListener("click", function() {
-        document.getElementById("sidebar").classList.toggle("d-none");
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('main-content');
+
+        if (sidebar.style.marginLeft === '-250px') {
+            sidebar.style.marginLeft = '0';
+            mainContent.style.marginLeft = '250px';
+        } else {
+            sidebar.style.marginLeft = '-250px';
+            mainContent.style.marginLeft = '0';
+        }
     });
 </script>
+
 <!-- End Script Code -->
 </body>
 

@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Local CSS -->
-    <link rel="stylesheet" href="<?= BASE_URL; ?>public/assets/css/style.sidebar.css">
+    <link rel="stylesheet" href="<?= BASE_URL; ?>public/assets/css/style.css">
 </head>
 <style>
     * {

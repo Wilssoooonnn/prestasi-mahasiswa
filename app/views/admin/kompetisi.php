@@ -39,8 +39,6 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
                     <th>Nama Kompetisi</th>
                     <th>Jenis Kompetisi</th>
                     <th>Tingkat Kompetisi</th>
-                    <th>Tempat Kompetisi</th>
-                    <th>URL Kompetisi</th>
                     <th>No Surat Tugas</th>
                     <th>Action</th>
                 </tr>
@@ -54,8 +52,6 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
                             <td><?= htmlspecialchars($row['Nama_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
-                            <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
-                            <td><a href="<?= htmlspecialchars($row['URL_Kompetisi']) ?>" target="#">Link</a></td>
                             <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
                             <td>
                                 <button class="btn btn-info"
@@ -64,8 +60,8 @@ $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
                                     onclick="loadDetailData(<?= htmlspecialchars(json_encode($row)) ?>)">
                                     Detail
                                 </button>
-                                <a href="#" class="btn btn-success">Approve</a>
-                                <a href="#" class="btn btn-danger mt-1">Decline</a>
+                                <button class="btn btn-success">Approve</button>
+                                <button class="btn btn-danger">Decline</button>
                             </td>
                         </tr>
                     <?php endforeach; ?>
