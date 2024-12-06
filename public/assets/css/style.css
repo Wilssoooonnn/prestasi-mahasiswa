@@ -1,4 +1,4 @@
-.nav-item .nav-link {
+.custom-nav-link {
     display: flex !important;
     /* Gunakan Flexbox */
     align-items: center !important;
@@ -14,7 +14,7 @@
     /* Hilangkan underline */
 }
 
-.nav .nav-link:hover {
+.custom-nav-link:hover {
     background-color: #dddddd !important;
     /* Tambahkan hover efek */
     color: #0B1215 !important;
