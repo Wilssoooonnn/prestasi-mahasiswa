@@ -16,6 +16,7 @@ class AuthController
 
     public function showRegisterForm()
     {
+        // Tampilkan halaman register sebagai halaman default
         $judul = 'Register';
         include '../app/views/template/header.php';
         include '../app/views/auth/register.php';
