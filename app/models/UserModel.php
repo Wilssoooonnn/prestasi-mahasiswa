@@ -1,6 +1,6 @@
 <?php
 
-require_once '../config/Database.php'; // Memuat file Database.php
+require_once '../config/database.php'; // Memuat file Database.php
 
 class UserModel
 {
