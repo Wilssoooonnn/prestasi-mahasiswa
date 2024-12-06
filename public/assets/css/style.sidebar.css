@@ -21,3 +21,12 @@
     /* Ubah warna teks saat hover */
     border-radius: 8px;
 }
+
+.background-image .overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* Warna gelap dengan transparansi */
+    z-index: 1; /* Membuat overlay di atas background image */
+}
+
+.position-absolute.text-center {
+    z-index: 2; /* Membuat elemen teks dan gambar di atas overlay */
+}
