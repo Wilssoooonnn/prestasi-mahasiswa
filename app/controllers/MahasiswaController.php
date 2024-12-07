@@ -44,11 +44,31 @@ class MahasiswaController extends Controller
 
     public function kompetisi()
     {
-        // Kirim data kompetisi ke view
+        if (!isset($_SESSION['user'])) {
+            header('Location: login.php');
+            exit;
+        }
+
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+
+        // Ambil parameter page dari URL
+        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $limit = 10; // Jumlah data per halaman
+        $offset = ($page - 1) * $limit;
+
+        // Ambil data kompetisi dengan paginasi
+        $dataKompetisi = $mahasiswaModel->readKompetisiPaginated($_SESSION['user'], $offset, $limit);
+
+        // Hitung total data
+        $totalData = $mahasiswaModel->countKompetisiByUsername($_SESSION['user']);
+        $totalPages = ceil($totalData / $limit);
+
+        // Kirim data ke view
         $judul = 'Kompetisi';
         include '../app/views/template/header.php';
         include '../app/views/template/navigation_mahasiswa.php';
-        include '../app/views/mahasiswa/kompetisi.php'; // Ganti dengan path view yang sesuai
+        include '../app/views/mahasiswa/kompetisi.php';
         include '../app/views/template/footer.php';
     }
 

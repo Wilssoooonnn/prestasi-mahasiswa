@@ -155,4 +155,33 @@ class MahasiswaModel
         ];
         sqlsrv_query($this->db, $query, $params);
     }
+
+    public function readKompetisiPaginated($username, $offset, $limit)
+    {
+        try {
+            // Call the paginated stored procedure
+            $stmt = $this->executeStoredProcedure("GetKompetisiByNimPaginated", [$username, $offset, $limit]);
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
+
+    public function countKompetisiByUsername($username)
+    {
+        try {
+            // Call the stored procedure to count data
+            $stmt = $this->executeStoredProcedure("CountKompetisiByNim", [$username]);
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row ? $row['Total'] : 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
 }

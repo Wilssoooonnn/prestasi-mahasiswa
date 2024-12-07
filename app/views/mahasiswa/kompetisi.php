@@ -4,32 +4,9 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Redirect if user is not logged in
-if (!isset($_SESSION['user'])) {
-    header('Location: ' . BASE_URL . 'auth/login');
-    exit();
-}
-
-require_once '../app/models/MahasiswaModel.php';
-
-$mahasiswaModel = new MahasiswaModel();
-$dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
-
 ?>
 <div class="container mt-5">
     <h2>Data Kompetisi</h2>
-    <!-- CARD HEADER -->
-    <div class="card-header">
-        <div class="row g-2 align-items-center">
-            <div class="col d-flex">
-                <a href="<?= BASE_URL; ?>mahasiswa/dashboard" class="btn btn-primary">+ Tambah Data</a>
-            </div>
-            <div class="col d-flex justify-content-end">
-                <input type="search" class="form-control w-50" placeholder="Cari NIM">
-            </div>
-        </div>
-    </div>
-    <!-- CARD HEADER -->
     <div class="table-responsive mt-5">
         <table class="table table-hover">
             <thead class="table-primary">
@@ -72,27 +49,40 @@ $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
             </tbody>
         </table>
     </div>
-    <!-- Modal Detail -->
-    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="detailModalLabel">Detail Kompetisi</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>NIM:</strong> <span id="detailNIM"></span></p>
-                    <p><strong>Nama Mahasiswa:</strong> <span id="detailNama"></span></p>
-                    <p><strong>Nama Kompetisi:</strong> <span id="detailKompetisi"></span></p>
-                    <p><strong>Jenis Kompetisi:</strong> <span id="detailJenis"></span></p>
-                    <p><strong>Tingkat Kompetisi:</strong> <span id="detailTingkat"></span></p>
-                    <p><strong>Tempat Kompetisi:</strong> <span id="detailTempat"></span></p>
-                    <p><strong>URL Kompetisi:</strong> <a href="#" target="_blank" id="detailURL">Link</a></p>
-                    <p><strong>No Surat Tugas:</strong> <span id="detailSurat"></span></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
+
+    <!-- Paginasi -->
+    <nav aria-label="Pagination">
+        <ul class="pagination justify-content-center">
+            <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                <li class="page-item <?= ($i == $page) ? 'active' : '' ?>">
+                    <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                </li>
+            <?php endfor; ?>
+        </ul>
+    </nav>
+</div>
+
+<!-- Modal Detail -->
+<div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="detailModalLabel">Detail Kompetisi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>NIM:</strong> <span id="detailNIM"></span></p>
+                <p><strong>Nama Mahasiswa:</strong> <span id="detailNama"></span></p>
+                <p><strong>Nama Kompetisi:</strong> <span id="detailKompetisi"></span></p>
+                <p><strong>Jenis Kompetisi:</strong> <span id="detailJenis"></span></p>
+                <p><strong>Tingkat Kompetisi:</strong> <span id="detailTingkat"></span></p>
+                <p><strong>Tempat Kompetisi:</strong> <span id="detailTempat"></span></p>
+                <p><strong>URL Kompetisi:</strong> <a href="#" target="_blank" id="detailURL">Link</a></p>
+                <p><strong>No Surat Tugas:</strong> <span id="detailSurat"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
