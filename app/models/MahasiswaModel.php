@@ -107,4 +107,18 @@ class MahasiswaModel
             return [['Pesan' => 'Error retrieving data']];
         }
     }
+
+    public function editProfile($data)
+    {
+        $query = "UPDATE mahasiswa 
+                    SET nama = ?, alamat = ?, no_telp = ?, email = ? WHERE id = ?";
+        $params = [
+            $data['nama'],
+            $data['alamat'],
+            $data['no_telp'],
+            $data['email'],
+            $data['id']
+        ];
+        sqlsrv_query($this->db, $query, $params);
+    }
 }
