@@ -60,28 +60,28 @@
                             <h5 class="card-title mt-3">Profile Details</h5>
 
                             <div class="row mt-3">
-                                <div class="col-lg-3 col-md-4 label ">ID Pegawai</div>
-                                <div class="col-lg-9 col-md-8"><?= $dataAdmin[0]['id'];     ?></div>
+                                <div class="col-lg-3 col-md-4 label ">ID Pegawai </div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['id'];     ?></div>
                             </div>
 
                             <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                                <div class="col-lg-9 col-md-8"><?= $dataAdmin[0]['nama'];     ?></div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['nama'];     ?></div>
                             </div>
 
                             <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Address</div>
-                                <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022 (data statis) </div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['address'];    ?> </div>
                             </div>
 
                             <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Phone</div>
-                                <div class="col-lg-9 col-md-8">(436) 486-3538 x29071 (data statis)</div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['phone_number'];     ?></div>
                             </div>
 
                             <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Email</div>
-                                <div class="col-lg-9 col-md-8"><?= $dataAdmin[0]['email'];     ?></div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['email'];     ?></div>
                             </div>
 
                         </div>

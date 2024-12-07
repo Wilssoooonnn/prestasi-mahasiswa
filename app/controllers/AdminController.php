@@ -86,7 +86,7 @@ class AdminController
 
         // Ambil parameter dari request
         $page = isset($_POST['page']) ? (int)$_POST['page'] : 1;
-        $limit = 10; // Jumlah data per halaman
+        $limit = 7; // Jumlah data per halaman
         $offset = ($page - 1) * $limit;
 
         // Ambil data kompetisi dan total
