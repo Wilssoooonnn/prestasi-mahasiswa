@@ -55,13 +55,17 @@ function updateTable(data) {
                 <td>${row.Tingkat_Kompetisi}</td>
                 <td>${row.No_Surat_Tugas}</td>
                 <td>
-                <button class="btn btn-outline-success">Approve</button>
-                <button class="btn btn-outline-danger">Decline</button>
+                <button class="btn btn-outline-success">
+                    <i class="fi fi-rr-check"></i>
+                </button>
+                <button class="btn btn-outline-danger">
+                    <i class="fi fi-rr-cross"></i>
+                </button>
                 <button class="btn btn-outline-primary"
                     data-bs-toggle="modal"
                     data-bs-target="#detailModal"
                     onclick="loadDetailData(${JSON.stringify(row)})">
-                    <i class="fi fi-rr-menu-dots-vertical"></i>
+                    <i class="fi fi-rr-eye"></i>
                 </button>
                 </td>
             </tr>

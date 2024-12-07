@@ -286,13 +286,9 @@ $kompetisiModel = new KompetisiModel();
                     </form>
                     <div class="modal-footer mt-3">
                         <button type="button" class="btn btn-outline-secondary" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <!-- <button type="submit" class="btn btn-primary">Save</button> -->
                         <button type="submit" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal3">Save</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <script>
-    const baseURL = "<?= BASE_URL ?>";
-</script> -->
