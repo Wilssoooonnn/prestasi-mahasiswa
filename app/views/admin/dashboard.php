@@ -4,8 +4,8 @@
 
     <!-- Cards Section -->
     <div class="row mb-3">
-      <div class="col-md-3">
-            <div class="card shadow-sm">
+        <div class="col-md-3">
+            <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="col-md-3">
-            <div class="card shadow-sm">
+            <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
@@ -39,7 +39,7 @@
         </div>
 
         <div class="col-md-3">
-            <div class="card shadow-sm">
+            <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
@@ -56,7 +56,7 @@
         </div>
 
         <div class="col-md-3">
-            <div class="card shadow-sm">
+            <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
                         <div class="flex-shrink-0">
@@ -73,41 +73,68 @@
         </div>
     </div>
 
-    <!-- Table Section -->
-    <table class="table" style="width:100%">
-        <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">Judul Kompetisi</th>
-                <th scope="col">Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Brandon Jacob</td>
-                <td><span class="badge rounded-pill text-bg-success">Terverifikasi</span></td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Bridie Kessler</td>
-                <td><span class="badge rounded-pill text-bg-warning">Proses</span></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Ashleigh Langosh</td>
-                <td><span class="badge rounded-pill text-bg-success">Terverifikasi</span></td>
-            </tr>
-            <tr>
-                <th scope="row">4</th>
-                <td>Angus Grady</td>
-                <td><span class="badge rounded-pill text-bg-danger">Ditolak</span></td>
-            </tr>
-            <tr>
-                <th scope="row">5</th>
-                <td>Raheem Lehner</td>
-                <td><span class="badge rounded-pill text-bg-success">Terverifikasi</span></td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <div class="container mt-3">
+        <h2>Data Kompetisi</h2>
+        <!-- Card Header -->
+        <div class="card-header">
+            <div class="row g-2 align-items-center">
+                <div class="col d-flex">
+                    <input type="search" class="form-control w-50" placeholder="Cari NIM">
+                </div>
+                <div class="col d-flex justify-content-end">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">Tambah Data</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table Data -->
+        <div class="table-responsive">
+            <table class="table table-hover mt-3">
+                <thead class="table-primary">
+                    <tr>
+                        <th>NIM</th>
+                        <th>Nama Mahasiswa</th>
+                        <th>Nama Kompetisi</th>
+                        <th>Jenis Kompetisi</th>
+                        <th>Tingkat Kompetisi</th>
+                        <th>No Surat Tugas</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="kompetisiTableBody">
+                    <!-- Load data -->
+                </tbody>
+            </table>
+        </div>
+
+        <nav>
+            <ul class="pagination justify-content-center" id="pagination">
+                <!-- Load pagination -->
+            </ul>
+        </nav>
+
+
+        <!-- Modal Detail -->
+        <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="detailModalLabel">Detail Kompetisi</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p><strong>NIM:</strong></p>
+                        <p><strong>Nama Mahasiswa:</strong></p>
+                        <p><strong>Nama Kompetisi:</strong></p>
+                        <p><strong>Jenis Kompetisi:</strong></p>
+                        <p><strong>Tingkat Kompetisi:</strong></p>
+                        <p><strong>Tempat Kompetisi:</strong></p>
+                        <p><strong>URL Kompetisi:</strong> <a href="#" target="_blank" id="detailURL">Link</a></p>
+                        <p><strong>No Surat Tugas:</strong></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>

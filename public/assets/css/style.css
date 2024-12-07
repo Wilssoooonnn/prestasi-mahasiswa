@@ -1,0 +1,115 @@
+.custom-nav-link {
+    display: flex !important;
+    /* Gunakan Flexbox */
+    align-items: center !important;
+    /* Vertikal sejajar */
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    padding: 10px 15px !important;
+    /* Spasi nyaman */
+    transition: opacity 0.3s ease-in-out !important;
+    color: #0B1215 !important;
+    text-decoration: none !important;
+    /* Hilangkan underline */
+}
+
+.custom-nav-link:hover {
+    background-color: #dddddd !important;
+    /* Tambahkan hover efek */
+    color: #0B1215 !important;
+    /* Ubah warna teks saat hover */
+    border-radius: 8px;
+}
+
+.background-image .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Warna gelap dengan transparansi */
+    z-index: 1;
+    /* Membuat overlay di atas background image */
+}
+
+.position-absolute.text-center {
+    z-index: 2;
+    /* Membuat elemen teks dan gambar di atas overlay */
+}
+
+#sidebar {
+    transition: transform 0.3s ease-in-out;
+}
+
+#sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+#main-content.expanded {
+    margin-left: 0;
+}
+
+/* Hide sidebar */
+.hide-sidebar {
+    transform: translateX(-250px);
+    /* Geser sidebar ke kiri */
+    transition: transform 0.3s ease;
+    /* Animasi saat toggle */
+}
+
+/* Transition for main content */
+#main-content {
+    transition: margin-left 0.3s ease;
+    /* Animasi saat margin berubah */
+}
+
+/* Navbar harus berada di atas sidebar */
+nav.navbar {
+    position: fixed;
+    /* Tetap berada di atas */
+    top: 0;
+    width: 100%;
+    z-index: 1040;
+    /* Pastikan lebih tinggi dari sidebar */
+}
+
+
+/* Dropdown menu */
+.dropdown-menu {
+    z-index: 1050;
+    /* Lebih tinggi dari navbar */
+}
+
+/* Avatar dan notifikasi */
+.nav-link img,
+.nav-link i {
+    position: relative;
+    z-index: 1060;
+}
+
+/* Sidebar toggle animation */
+#sidebar {
+    transition: margin-left 0.3s ease;
+}
+
+#main-content {
+    transition: margin-left 0.3s ease;
+    padding-top: 70px;
+    /* Pastikan konten tidak tertutup navbar */
+}
+
+/* Styling untuk container gambar profil */
+.profile-img-container {
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    /* Menambahkan padding untuk border putih */
+    background-color: white;
+    /* Warna latar belakang untuk lingkaran putih */
+    border-radius: 50%;
+    /* Membuat lingkaran */
+}
+
+i[class^="fi-rr-"]:before,
+i[class*=" fi-rr-"]:before,
+span[class^="fi-rr-"]:before,
+w span[class*="fi-rr-"]:before {
+    line-height: 1.6 !important;
+}
