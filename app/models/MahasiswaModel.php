@@ -48,4 +48,63 @@ class MahasiswaModel
             return [];
         }
     }
+    public function readDataMahasiswaByUsername($username)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetMahasiswaDataByUsername", [$username]);
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            if (empty($result)) {  // Debugging
+                echo "No data returned from database.";
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
+
+    public function getNimByLogin($username)
+    {
+        try {
+            // Declare a variable to hold the NIM
+            $nim = 'nunll';
+
+            // Execute the stored procedure
+            $stmt = $this->executeStoredProcedure("GetNimByLogin", [$username, &$nim]);
+
+            // Return the NIM
+            return $nim;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return null;
+        }
+    }
+
+    public function readKompetisiByUsername($username)
+    {
+        try {
+            // Get the NIM by the provided username
+            $nim = $this->getNimByLogin($username);
+
+            if ($nim) {
+                // Now use the NIM to fetch the competition data
+                $stmt = $this->executeStoredProcedure("GetKompetisiByNim", [$username]);
+                $result = [];
+                while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                    $result[] = $row;
+                }
+                return $result;
+            } else {
+                // Return a message if NIM is not found
+
+                return [['Pesan' => 'Tidak Ada Data Prestasi']];
+            }
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [['Pesan' => 'Error retrieving data']];
+        }
+    }
 }

@@ -30,9 +30,9 @@ $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
         </div>
     </div>
     <!-- CARD HEADER -->
-    <div class="table-responsive">
-        <table class="table table-striped">
-            <thead>
+    <div class="table-responsive mt-5">
+        <table class="table table-hover">
+            <thead class="table-primary">
                 <tr>
                     <th>NIM</th>
                     <th>Nama Mahasiswa</th>
@@ -40,10 +40,9 @@ $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
                     <th>Jenis Kompetisi</th>
                     <th>Tingkat Kompetisi</th>
                     <th>Tempat Kompetisi</th>
-                    <th>Tanggal Mulai</th>
-                    <th>Tanggal Akhir</th>
-                    <th>URL Kompetisi</th>
                     <th>No Surat Tugas</th>
+                    <th>Status</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -56,10 +55,12 @@ $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
                             <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
-                            <td><?= htmlspecialchars($row['Tanggal_Mulai']) ?></td>
-                            <td><?= htmlspecialchars($row['Tanggal_Akhir']) ?></td>
-                            <td><a href="<?= htmlspecialchars($row['URL_Kompetisi']) ?>" target="_blank">Link</a></td>
                             <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
+                            <td>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailModal" onclick="loadDetailData('<?= json_encode($row) ?>')">
+                                    <i class="fi fi-rr-eye"></i>
+                                </button>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 <?php else : ?>
@@ -69,4 +70,28 @@ $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
                 <?php endif; ?>
             </tbody>
         </table>
+    </div>
+    <!-- Modal Detail -->
+    <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="detailModalLabel">Detail Kompetisi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>NIM:</strong> <span id="detailNIM"></span></p>
+                    <p><strong>Nama Mahasiswa:</strong> <span id="detailNama"></span></p>
+                    <p><strong>Nama Kompetisi:</strong> <span id="detailKompetisi"></span></p>
+                    <p><strong>Jenis Kompetisi:</strong> <span id="detailJenis"></span></p>
+                    <p><strong>Tingkat Kompetisi:</strong> <span id="detailTingkat"></span></p>
+                    <p><strong>Tempat Kompetisi:</strong> <span id="detailTempat"></span></p>
+                    <p><strong>URL Kompetisi:</strong> <a href="#" target="_blank" id="detailURL">Link</a></p>
+                    <p><strong>No Surat Tugas:</strong> <span id="detailSurat"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
