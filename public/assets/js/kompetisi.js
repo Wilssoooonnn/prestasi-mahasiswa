@@ -14,7 +14,7 @@ let currentPage = 1;
 // Fungsi untuk memuat data kompetisi dari server
 function loadKompetisi(page = 1) {
   currentPage = page; // Update halaman saat ini
-  fetch("<?= BASE_URL ?>admin/loadKompetisiAjax", {
+  fetch(baseURL + "admin/loadKompetisiAjax", {
     method: "POST",
     headers: {
       "Content-Type": "application/x-www-form-urlencoded",
