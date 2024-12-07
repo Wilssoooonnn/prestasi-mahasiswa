@@ -56,6 +56,7 @@ $dataKompetisi = $mahasiswaModel->readKompetisiByNim($_SESSION['user']);
                             <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
+                            <td><?= htmlspecialchars($row['Status']) ?></td>
                             <td>
                                 <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailModal" onclick="loadDetailData('<?= json_encode($row) ?>')">
                                     <i class="fi fi-rr-eye"></i>

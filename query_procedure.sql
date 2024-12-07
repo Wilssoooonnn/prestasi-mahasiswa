@@ -406,3 +406,57 @@ END;
 --    @Mahasiswa_id = @Mahasiswa_id OUTPUT;
 --PRINT @Mahasiswa_id;
 
+ALTER PROCEDURE GetKompetisiByNim 
+    @Username NVARCHAR(100)
+AS
+BEGIN
+    -- Deklarasi variabel untuk menyimpan NIM
+    DECLARE @Nim NVARCHAR(20);
+
+    -- Eksekusi prosedur untuk mendapatkan NIM berdasarkan username
+    EXEC GetNimByLogin @Username, @Nim OUTPUT;
+
+    -- Periksa apakah NIM ditemukan
+    IF @Nim IS NOT NULL
+    BEGIN
+        -- Query untuk mengambil data kompetisi mahasiswa
+        SELECT 
+            m.nim                                AS NIM,
+            m.nama                               AS Nama_Mahasiswa,
+            k.nama_kompetisi                     AS Nama_Kompetisi,
+            jk.nama                              AS Jenis_Kompetisi,
+            tk.nama                              AS Tingkat_Kompetisi,
+            k.tempat_kompetisi                   AS Tempat_Kompetisi,
+            FORMAT(k.tanggal_mulai, 'yyyy-MM-dd') AS Tanggal_Mulai,
+            FORMAT(k.tanggal_akhir, 'yyyy-MM-dd') AS Tanggal_Akhir,
+            k.url_kompetisi                      AS URL_Kompetisi,
+            k.no_surat_tugas                     AS No_Surat_Tugas,
+			FORMAT(k.tanggal_surat_tugas, 'yyyy-MM-dd') AS Tanggal_Surat_Tugas
+			k.file_surat_tugas					AS File_Surat_Tugas,
+			k.file_sertifikat					AS File_Sertifikat,
+			k.foto_kegiatan						AS Foto_Kegiatan,
+			k.file_poster						AS File_Poster
+
+        FROM 
+            mahasiswa m
+        JOIN 
+            kompetisi_mahasiswa km ON m.id = km.mahasiswa_id
+        JOIN 
+            kompetisi k ON km.kompetisi_id = k.id
+        JOIN 
+            jenis_kompetisi jk ON k.jenis_id = jk.id
+        JOIN 
+            tingkat_kompetisi tk ON k.tingkat_id = tk.id
+		join 
+			status s on k.status_id = s.id
+        WHERE 
+            m.nim = @Nim;
+    END
+    ELSE
+    BEGIN
+        -- Pesan jika NIM tidak ditemukan
+        SELECT 
+            'Tidak Ada Data Prestasi' AS Pesan;
+        RETURN;
+    END
+END;
