@@ -188,6 +188,8 @@ $kompetisiModel = new KompetisiModel();
         </div>
     </div>
 
+    <!-- modal slide 2 -->
+
     <div class="modal fade" id="insertModal2" tabindex="-1" aria-labelledby="insertModalLabel2" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -229,7 +231,63 @@ $kompetisiModel = new KompetisiModel();
                     <div class="modal-footer mt-3">
                         <button type="button" class="btn btn-outline-secondary" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                         <!-- <button type="submit" class="btn btn-primary">Save</button> -->
-                        <button type="submit" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal2">Save</button>
+                        <button type="button" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal3">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal slide 3 -->
+
+    <div class="modal fade" id="insertModal3" tabindex="-1" aria-labelledby="insertModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="insertModalLabel3">Data Kompetisi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="position-relative m-4">
+                            <div class="progress" style="height: 1px;">
+                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <button type="button" class="position-absolute top-0 start-0 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">1</button>
+                            <button type="button" class="position-absolute top-0 start-50 translate-middle btn btn-sm btn-primary rounded-pill" style="width: 2rem; height:2rem;">2</button>
+                            <button type="button" class="position-absolute top-0 start-100 translate-middle btn btn-sm btn-secondary rounded-pill" style="width: 2rem; height:2rem;">3</button>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label>NIM</label>
+                                <input type="text" class="form-control" name="nim" id="nim">
+                            </div>
+                            <div class="col">
+                                <label>Full Name</label>
+                                <input class="form-control" name="full_name" id="full_name">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label>Alamat</label>
+                                <input type="text" class="form-control" name="alamat" id="alamat">
+                            </div>
+                            <div class="col">
+                                <label>No Telp</label>
+                                <input type="text" class="form-control" name="no_telp" id="no_telp">
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col">
+                                <label>Email</label>
+                                <input type="text" class="form-control" name="email" id="email">
+                            </div>
+                        </div>
+                    </form>
+                    <div class="modal-footer mt-3">
+                        <button type="button" class="btn btn-outline-secondary" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <!-- <button type="submit" class="btn btn-primary">Save</button> -->
+                        <button type="submit" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal3">Save</button>
                     </div>
                 </div>
             </div>
