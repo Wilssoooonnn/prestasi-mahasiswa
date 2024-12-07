@@ -34,20 +34,6 @@ class AdminModel
         return $stmt;
     }
 
-    public function readAllKompetisi($username)
-    {
-        try {
-            $stmt = $this->executeStoredProcedure("GetKompetisi_All");
-            $result = [];
-            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
-                $result[] = $row;
-            }
-            return $result;
-        } catch (Exception $e) {
-            $this->logError($e->getMessage());
-            return [];
-        }
-    }
 
     public function readKompetisiPaginated($limit, $offset)
     {

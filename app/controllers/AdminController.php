@@ -44,7 +44,27 @@ class AdminController
 
     public function kompetisi()
     {
-        // Tampilkan halaman admin sebagai halaman default
+        if (!isset($_SESSION['user'])) {
+            header('Location: login.php');
+            exit;
+        }
+
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+
+        // Ambil parameter page dari URL
+        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $limit = 7; // Jumlah data per halaman
+        $offset = ($page - 1) * $limit;
+
+        // Ambil data kompetisi dengan paginasi
+        $dataKompetisi = $adminModel->readKompetisiPaginated($limit, $offset);
+
+        // Hitung total data
+        $totalData = $adminModel->getTotalKompetisiCount();
+        $totalPages = ceil($totalData / $limit);
+
+        // Kirim data ke view
         $judul = 'Kompetisi';
         include '../app/views/template/header.php';
         include '../app/views/template/navigation_admin.php';
@@ -79,29 +99,29 @@ class AdminController
         include '../app/views/template/footer.php';
     }
 
-    public function loadKompetisiAjax()
-    {
-        require_once '../app/models/AdminModel.php';
-        $adminModel = new AdminModel();
+    // public function loadKompetisiAjax()
+    // {
+    //     require_once '../app/models/AdminModel.php';
+    //     $adminModel = new AdminModel();
 
-        // Ambil parameter dari request
-        $page = isset($_POST['page']) ? (int)$_POST['page'] : 1;
-        $limit = 7; // Jumlah data per halaman
-        $offset = ($page - 1) * $limit;
+    //     // Ambil parameter dari request
+    //     $page = isset($_POST['page']) ? (int)$_POST['page'] : 1;
+    //     $limit = 7; // Jumlah data per halaman
+    //     $offset = ($page - 1) * $limit;
 
-        // Ambil data kompetisi dan total
-        $dataAllKompetisi = $adminModel->readKompetisiPaginated($limit, $offset);
-        $totalKompetisi = $adminModel->getTotalKompetisiCount();
-        $totalPages = ceil($totalKompetisi / $limit);
+    //     // Ambil data kompetisi dan total
+    //     $dataAllKompetisi = $adminModel->readKompetisiPaginated($limit, $offset);
+    //     $totalKompetisi = $adminModel->getTotalKompetisiCount();
+    //     $totalPages = ceil($totalKompetisi / $limit);
 
-        // Kirim data sebagai JSON
-        header('Content-Type: application/json');
-        echo json_encode([
-            'data' => $dataAllKompetisi,
-            'totalPages' => $totalPages,
-            'currentPage' => $page,
-        ]);
-    }
+    //     // Kirim data sebagai JSON
+    //     header('Content-Type: application/json');
+    //     echo json_encode([
+    //         'data' => $dataAllKompetisi,
+    //         'totalPages' => $totalPages,
+    //         'currentPage' => $page,
+    //     ]);
+    // }
 
     public function getDataAdmin()
     {

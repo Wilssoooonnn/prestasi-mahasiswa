@@ -2154,3 +2154,1128 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 )
 
 [2024-12-07 21:00:45] Error preparing stored procedure: CountKompetisiByNim
+[2024-12-07 23:07:51] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:51] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:07:53] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:53] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:07:54] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:54] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:07:55] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:55] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:07:55] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:55] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:07:57] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:57] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:07:57] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:57] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:07:58] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:58] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:07:59] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:07:59] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:09:16] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:09:16] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:09:16] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:09:16] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:09:18] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:09:18] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:09:18] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:09:18] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:09:19] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:09:19] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:10:07] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:10:07] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:12:21] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:12:21] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:12:21] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:12:21] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:48] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:48] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:48] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:48] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:51] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:51] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:51] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:51] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:51] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:51] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:51] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:51] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:51] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:51] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:51] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:51] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:52] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:52] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:52] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:52] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:52] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:52] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:52] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:52] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:53] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:53] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:53] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:53] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:54] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:54] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:54] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:54] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:54] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:54] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:54] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:54] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:54] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:54] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:54] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:54] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:55] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:55] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:55] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:55] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:55] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:55] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:55] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:55] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:56] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:56] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:13:56] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:13:56] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:10] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:10] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:10] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:10] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:12] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:12] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:12] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:12] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:36] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:36] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:36] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:36] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:40] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:40] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:40] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:40] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:42] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:42] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:42] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:42] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:45] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:45] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:14:45] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:14:45] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:15:16] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:15:16] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:15:48] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:15:48] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:06] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:06] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:08] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:08] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:09] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:09] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:10] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:10] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:11] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:11] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:11] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:11] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:12] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:12] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:13] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:13] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:16:13] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:16:13] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:19] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:19] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:22] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:22] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:24] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:24] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:25] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:25] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:26] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:26] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:27] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:27] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:27] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:27] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:36] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:36] Error executing stored procedure: GetKompetisi_All
+[2024-12-07 23:17:43] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-07 23:17:43] Error executing stored procedure: GetKompetisi_All
