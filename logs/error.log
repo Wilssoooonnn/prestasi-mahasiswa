@@ -2104,3 +2104,53 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 )
 
 [2024-12-07 03:06:13] Error executing stored procedure: GetAdminDataByUsername
+[2024-12-07 21:00:45] Array
+(
+    [0] => Array
+        (
+            [0] => 08S01
+            [SQLSTATE] => 08S01
+            [1] => 258
+            [code] => 258
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Timeout error [258]. 
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Timeout error [258]. 
+        )
+
+    [1] => Array
+        (
+            [0] => 08S01
+            [SQLSTATE] => 08S01
+            [1] => 258
+            [code] => 258
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+        )
+
+    [2] => Array
+        (
+            [0] => 08S01
+            [SQLSTATE] => 08S01
+            [1] => -2147467259
+            [code] => -2147467259
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+        )
+
+)
+
+[2024-12-07 21:00:45] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-07 21:00:45] Array
+(
+    [0] => Array
+        (
+            [0] => IMC06
+            [SQLSTATE] => IMC06
+            [1] => 0
+            [code] => 0
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The connection is marked by the client driver as unrecoverable. No attempt was made to restore the connection.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]The connection is broken and recovery is not possible. The connection is marked by the client driver as unrecoverable. No attempt was made to restore the connection.
+        )
+
+)
+
+[2024-12-07 21:00:45] Error preparing stored procedure: CountKompetisiByNim
