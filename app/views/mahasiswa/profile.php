@@ -60,23 +60,23 @@
               <h5 class="card-title mt-3">Profile Details</h5>
 
               <div class="row mt-3">
-                <div class="col-lg-3 col-md-4 label ">Nim </div>
+                <div class="col-lg-3 col-md-4 label ">NIM </div>
                 <div class="col-lg-9 col-md-8">: <?= $dataMhs[0]['nim'];     ?></div>
               </div>
 
               <div class="row mt-3">
-                <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                <div class="col-lg-3 col-md-4 label ">Nama</div>
                 <div class="col-lg-9 col-md-8">: <?= $dataMhs[0]['nama'];     ?></div>
               </div>
 
               <div class="row mt-3">
-                <div class="col-lg-3 col-md-4 label">Address</div>
-                <div class="col-lg-9 col-md-8">: <?= $dataMhs[0]['address'];    ?> </div>
+                <div class="col-lg-3 col-md-4 label">Alamat</div>
+                <div class="col-lg-9 col-md-8">: <?= $dataMhs[0]['alamat'];    ?> </div>
               </div>
 
               <div class="row mt-3">
-                <div class="col-lg-3 col-md-4 label">Phone</div>
-                <div class="col-lg-9 col-md-8">: <?= $dataMhs[0]['phone_number'];     ?></div>
+                <div class="col-lg-3 col-md-4 label">Nomor Telepon</div>
+                <div class="col-lg-9 col-md-8">: <?= $dataMhs[0]['no_telp'];     ?></div>
               </div>
 
               <div class="row mt-3">
@@ -89,33 +89,34 @@
             <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
               <!-- Profile Edit Form -->
-              <form>
+              <form action="profileUpdate" method="post" id="form-edit">
 
-                <div class="row mb-3">
-                  <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+              <input name="id" type="hidden" class="form-control" id="id" value="<?= $dataMhs[0]['id'];?>">  
+              <div class="row mb-3">                  
+                  <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
+                    <input name="fullName" type="text" class="form-control" id="fullName" value="<?= $dataMhs[0]['nama'];?>">
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
+                  <label for="Address" class="col-md-4 col-lg-3 col-form-label">Alamat</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
+                    <input name="address" type="text" class="form-control" id="Address" value="<?= $dataMhs[0]['alamat'];?>">
                   </div>
                 </div>
 
                 <div class="row mb-3">
-                  <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
+                  <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Nomor Telepon</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                    <input name="phone" type="text" class="form-control" id="Phone" value="<?= $dataMhs[0]['no_telp'];?>">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                   <div class="col-md-8 col-lg-9">
-                    <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
+                    <input name="email" type="email" class="form-control" id="Email" value="<?= $dataMhs[0]['email'];?>">
                   </div>
                 </div>
 

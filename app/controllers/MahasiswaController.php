@@ -86,4 +86,25 @@ class MahasiswaController extends Controller
         echo json_encode($dataKompetisi);
         exit;
     }
+
+    public function profileUpdate(){
+        require_once '../app/models/MahasiswaModel.php';
+        $data = [
+            'id' => $_POST['id'],
+            'nama' => $_POST['fullName'],
+            'alamat' => $_POST['address'],
+            'no_telp' => $_POST['phone'],
+            'email' => $_POST['email']
+        ];
+
+        $mahasiswaModel = new MahasiswaModel();
+        $mahasiswaModel->editProfile($data);
+
+        echo json_encode([
+            'status' => true,
+            'message' => 'Data berhasil diupdate.'
+        ]);
+        header("Location: profile");
+        exit;
+    }
 }
