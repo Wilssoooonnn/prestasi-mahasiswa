@@ -87,7 +87,8 @@ class MahasiswaController extends Controller
         exit;
     }
 
-    public function profileUpdate(){
+    public function profileUpdate()
+    {
         require_once '../app/models/MahasiswaModel.php';
         $data = [
             'id' => $_POST['id'],
@@ -99,6 +100,44 @@ class MahasiswaController extends Controller
 
         $mahasiswaModel = new MahasiswaModel();
         $mahasiswaModel->editProfile($data);
+
+        echo json_encode([
+            'status' => true,
+            'message' => 'Data berhasil diupdate.'
+        ]);
+        header("Location: profile");
+        exit;
+    }
+
+    public function changePassword()
+    {
+        require_once '../app/models/MahasiswaModel.php';
+
+        $hashedPassword = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
+        $data = [
+            'user' => $_POST['user'],
+            'newPassword' => $hashedPassword
+        ];
+
+        $mahasiswaModel = new MahasiswaModel();
+
+        // Mengecek apakah pengguna ada di database
+        $user = $mahasiswaModel->getUserByUsername($_SESSION['user']);
+
+        if ($user) {
+            // Verify the password
+            if (password_verify($_POST['password'], $user['password'])) {
+                if ($_POST['newpassword'] == $_POST['renewpassword']) {
+                    $mahasiswaModel->updatePassword($data);
+                } else {
+                    echo "Password yang Anda Masukkan Tidak Sama";
+                    return;
+                }
+            } else {
+                echo "Password yang Anda Masukkan Salah";
+                return;
+            }
+        }
 
         echo json_encode([
             'status' => true,
