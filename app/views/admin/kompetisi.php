@@ -171,11 +171,38 @@ $getTingkat = $kompetisiModel->getTingkatKomp();
                     <div class="row mt-3">
                         <div class="col">
                             <label>Nama Kompetisi</label>
-                            <input type="text" class="form-control" name="nama_kompetisi" id="nama_kompetisi" required>
+                            <input type="text" class="form-control" name="nama_kompetisi" id="nama_kompetisi">
                         </div>
                         <div class="col">
                             <label>Tempat Kompetisi</label>
-                            <input type="text" class="form-control" name="tempat_kompetisi" id="tempat_kompetisi" required>
+                            <input class="form-control" name="tempat_kompetisi" id="tempat_kompetisi">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label>Tanggal Mulai</label>
+                            <input type="date" class="form-control" name="tanggal_mulai" id="tanggal_mulai">
+                        </div>
+                        <div class="col">
+                            <label>Tanggal Akhir</label>
+                            <input type="date" class="form-control" name="tanggal_akhir" id="tanggal_akhir">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label>Nomor Surat Tugas</label>
+                            <input type="text" class="form-control" name="no_surat_tugas" id="no_surat_tugas">
+                        </div>
+                        <div class="col">
+                            <label>Tanggal Surat Tugas</label>
+                            <input type="date" class="form-control" name="tanggal_surat_tugas" id="tanggal_surat_tugas">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label>URL Kompetisi</label>
+                            <input type="text" class="form-control" name="url_kompetisi" id="url_kompetisi">
+
                         </div>
                     </div>
                 </form>
