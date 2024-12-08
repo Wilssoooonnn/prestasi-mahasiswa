@@ -146,4 +146,56 @@ class AdminModel
             return [];
         }
     }
+
+    public function editProfileAdmin($data)
+    {
+        try {
+            // Memanggil prosedur EditProfileAdmin untuk mengupdate data
+            $stmt = $this->executeStoredProcedure("EditProfileAdmin", [
+                $data['username'],
+                $data['fullName'],
+                $data['email'],
+                $data['newUsername']
+            ]);
+
+            return true;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return false;
+        }
+    }
+
+    public function getUserByUsername($username)
+    {
+        try {
+            // Execute the stored procedure
+            $stmt = $this->executeStoredProcedure("GetUserByUsername", [$username]);
+            if ($stmt) {
+                $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+                // Cek jika data ditemukan
+                if ($user) {
+                    return $user;
+                } else {
+                    // Jika tidak ada data yang ditemukan
+                    return null;
+                }
+            } else {
+                throw new Exception("Query execution failed.");
+            }
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return null;
+        }
+    }
+
+    public function updatePassword($data)
+    {
+        $query = "UPDATE users 
+                    SET password = ? WHERE username = ?";
+        $params = [
+            $data['newPassword'],
+            $data['user']
+        ];
+        sqlsrv_query($this->db, $query, $params);
+    }
 }

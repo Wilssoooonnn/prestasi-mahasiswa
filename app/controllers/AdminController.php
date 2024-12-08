@@ -126,4 +126,68 @@ class AdminController
             'kompetisiGagal' => $adminModel->getKompetisiGagalCount(),
         ];
     }
+
+    public function profileUpdate()
+    {
+        if (!isset($_SESSION['user'])) {
+            header('Location: login.php');
+            exit;
+        }
+
+        $data = [
+            'username' => $_SESSION['user'],
+            'fullName' => $_POST['fullName'],
+            'email' => $_POST['email'],
+            'newUsername' => $_POST['newusername']
+        ];
+
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+        $result = $adminModel->editProfileAdmin($data);
+
+        if ($result) {
+            $_SESSION['user'] = $data['newUsername'];
+            header('Location: profile');
+        } else {
+            echo "Update failed!";
+        }
+    }
+
+    public function changePassword()
+    {
+        require_once '../app/models/AdminModel.php';
+
+        $hashedPassword = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
+        $data = [
+            'user' => $_POST['user'],
+            'newPassword' => $hashedPassword
+        ];
+
+        $adminModel = new AdminModel();
+
+        // Mengecek apakah pengguna ada di database
+        $user = $adminModel->getUserByUsername($_SESSION['user']);
+
+        if ($user) {
+            // Verify the password
+            if (password_verify($_POST['password'], $user['password'])) {
+                if ($_POST['newpassword'] == $_POST['renewpassword']) {
+                    $adminModel->updatePassword($data);
+                } else {
+                    echo "Password yang Anda Masukkan Tidak Sama";
+                    return;
+                }
+            } else {
+                echo "Password yang Anda Masukkan Salah";
+                return;
+            }
+        }
+
+        echo json_encode([
+            'status' => true,
+            'message' => 'Data berhasil diupdate.'
+        ]);
+        header("Location: profile");
+        exit;
+    }
 }
