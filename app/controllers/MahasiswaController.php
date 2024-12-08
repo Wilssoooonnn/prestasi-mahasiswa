@@ -44,32 +44,38 @@ class MahasiswaController extends Controller
 
     public function kompetisi()
     {
-        if (!isset($_SESSION['user'])) {
-            header('Location: login.php');
-            exit;
-        }
-
-        require_once '../app/models/MahasiswaModel.php';
-        $mahasiswaModel = new MahasiswaModel();
-
-        // Ambil parameter page dari URL
-        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-        $limit = 10; // Jumlah data per halaman
-        $offset = ($page - 1) * $limit;
-
-        // Ambil data kompetisi dengan paginasi
-        $dataKompetisi = $mahasiswaModel->readKompetisiPaginated($_SESSION['user'], $offset, $limit);
-
-        // Hitung total data
-        $totalData = $mahasiswaModel->countKompetisiByUsername($_SESSION['user']);
-        $totalPages = ceil($totalData / $limit);
-
         // Kirim data ke view
         $judul = 'Kompetisi';
         include '../app/views/template/header.php';
         include '../app/views/template/navigation_mahasiswa.php';
         include '../app/views/mahasiswa/kompetisi.php';
         include '../app/views/template/footer.php';
+    }
+
+    public function loadKompetisiAjax()
+    {
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+
+        // Ambil parameter dari request
+        $page = isset($_POST['page']) ? $_POST['page'] : 1;
+        $limit = 7;
+        $offset = ($page - 1) * $limit;
+
+        // Ambil data kompetisi dan total
+        $dataAllKompetisi = $mahasiswaModel->readKompetisiPaginated($_SESSION['user'], 2, 2);
+        $totalKompetisi = $mahasiswaModel->countKompetisiByUsername($_SESSION['user']);
+        $totalPages = ceil($totalKompetisi / $limit);
+        echo "<pre>";
+        print_r($dataAllKompetisi);
+        echo "</pre>";
+        // Kirim data sebagai JSON
+        header('Content-Type: application/json');
+        echo json_encode([
+            'data' => $dataAllKompetisi,
+            'totalPages' => $totalPages,
+            'currentPage' => $page,
+        ]);
     }
 
     public function setting()

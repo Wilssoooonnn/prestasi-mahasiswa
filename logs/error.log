@@ -2154,3 +2154,48 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 )
 
 [2024-12-07 21:00:45] Error preparing stored procedure: CountKompetisiByNim
+[2024-12-08 00:55:38] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-08 00:55:38] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-08 00:55:43] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-08 00:55:43] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-08 00:56:04] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-08 00:56:04] Error executing stored procedure: GetKompetisiByNimPaginated

@@ -64,6 +64,18 @@ class AdminModel
         }
     }
 
+    public function getTotalKompetisiCount()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetKompetisi_Count");
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['total'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+
     public function readDataAdminByUsername($username)
     {
         try {
@@ -79,19 +91,6 @@ class AdminModel
         } catch (Exception $e) {
             $this->logError($e->getMessage());
             return [];
-        }
-    }
-
-
-    public function getTotalKompetisiCount()
-    {
-        try {
-            $stmt = $this->executeStoredProcedure("GetKompetisi_Count");
-            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
-            return $row['total'] ?? 0;
-        } catch (Exception $e) {
-            $this->logError($e->getMessage());
-            return 0;
         }
     }
 }

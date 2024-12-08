@@ -8,7 +8,8 @@
 
 <!-- Local JavaScript -->
 <script src="<?= BASE_URL; ?>/public/assets/js/jquery.js"></script>
-<script src="<?= BASE_URL; ?>/public/assets/js/kompetisi.js"></script>
+<script src="<?= BASE_URL; ?>/public/assets/js/kompetisiAdmin.js"></script>
+<!-- <script src="<?= BASE_URL; ?>/public/assets/js/kompetisiMahasiswa.js"></script> -->
 <!-- End Local JavaScript -->
 
 
