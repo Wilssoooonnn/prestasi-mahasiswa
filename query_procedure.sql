@@ -923,3 +923,60 @@ BEGIN
     END
 END;
 GO
+
+
+--===========================================================================
+
+
+CREATE PROCEDURE GetKompetisi_CountMhs
+    @username NVARCHAR(50)
+AS
+BEGIN
+    SELECT COUNT(*) AS total
+    FROM mahasiswa m
+    JOIN kompetisi_mahasiswa km ON m.id = km.mahasiswa_id
+    JOIN kompetisi k ON km.kompetisi_id = k.id
+    WHERE m.username = @username;
+END;
+GO
+
+
+
+CREATE PROCEDURE CountKompetisi_ProsesMhs
+    @username NVARCHAR(50)
+AS
+BEGIN
+    SELECT COUNT(*) AS JumlahKompetisi
+    FROM mahasiswa m
+    JOIN kompetisi_mahasiswa km ON m.id = km.mahasiswa_id
+    JOIN kompetisi k ON km.kompetisi_id = k.id
+    WHERE m.username = @username AND k.status_id = (SELECT id FROM status WHERE nama = 'Proses');
+END;
+GO
+
+
+
+CREATE PROCEDURE CountKompetisi_BerhasilMhs
+    @username NVARCHAR(50)
+AS
+BEGIN
+    SELECT COUNT(*) AS JumlahKompetisi
+    FROM mahasiswa m
+    JOIN kompetisi_mahasiswa km ON m.id = km.mahasiswa_id
+    JOIN kompetisi k ON km.kompetisi_id = k.id
+    WHERE m.username = @username AND k.status_id = (SELECT id FROM status WHERE nama = 'Berhasil');
+END;
+GO
+
+
+
+CREATE PROCEDURE CountKompetisi_GagalMhs
+    @username NVARCHAR(50)
+AS
+BEGIN
+    SELECT COUNT(*) AS JumlahKompetisi
+    FROM mahasiswa m
+    JOIN kompetisi_mahasiswa km ON m.id = km.mahasiswa_id
+    JOIN kompetisi k ON km.kompetisi_id = k.id
+    WHERE m.username = @username AND k.status_id = (SELECT id FROM status WHERE nama = 'Gagal');
+END;
