@@ -170,4 +170,22 @@ class MahasiswaController extends Controller
         header("Location: profile");
         exit;
     }
+
+    public function getKompetisiCounts_Mhs()
+    {
+        if (!isset($_SESSION['user'])) {
+            header('Location: login.php');
+            exit;
+        }
+
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+
+        return [
+            'totalKompetisi' => $mahasiswaModel->getTotalKompetisiCount_Mhs($_SESSION['user']),
+            'kompetisiProses' => $mahasiswaModel->getKompetisiProsesCount_Mhs($_SESSION['user']),
+            'kompetisiBerhasil' => $mahasiswaModel->getKompetisiBerhasilCount_Mhs($_SESSION['user']),
+            'kompetisiGagal' => $mahasiswaModel->getKompetisiGagalCount_Mhs($_SESSION['user']),
+        ];
+    }
 }

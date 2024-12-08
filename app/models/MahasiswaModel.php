@@ -189,4 +189,52 @@ class MahasiswaModel
             return 0;
         }
     }
+
+    public function getTotalKompetisiCount_Mhs($username)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetKompetisi_CountMhs", [$username]);
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['total'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+    
+    public function getKompetisiProsesCount_Mhs($username)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_ProsesMhs", [$username]);
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+    
+    public function getKompetisiBerhasilCount_Mhs($username)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_BerhasilMhs", [$username]);
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+    
+    public function getKompetisiGagalCount_Mhs($username)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_GagalMhs", [$username]);
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }    
 }
