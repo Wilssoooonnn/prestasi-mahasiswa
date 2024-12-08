@@ -108,18 +108,23 @@ class MahasiswaModel
         }
     }
 
-    public function editProfile($data)
+    public function editProfileMahasiswa($data)
     {
-        $query = "UPDATE mahasiswa 
-                    SET nama = ?, alamat = ?, no_telp = ?, email = ? WHERE id = ?";
-        $params = [
-            $data['nama'],
-            $data['alamat'],
-            $data['no_telp'],
-            $data['email'],
-            $data['id']
-        ];
-        sqlsrv_query($this->db, $query, $params);
+        try {
+            // Memanggil prosedur EditProfileMahasiswa untuk mengupdate data
+            $stmt = $this->executeStoredProcedure("EditProfileMahasiswa", [
+                $data['username'],
+                $data['fullName'],
+                $data['address'],
+                $data['phone'],
+                $data['email']
+            ]);
+
+            return true;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return false;
+        }
     }
 
     public function getUserByUsername($username)
