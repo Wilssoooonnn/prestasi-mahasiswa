@@ -113,4 +113,17 @@ class AdminController
         // Kirim data sebagai JSON
         echo json_encode($dataAdmin);
     }
+
+    public function getKompetisiCounts()
+    {
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+
+        return [
+            'totalKompetisi' => $adminModel->getTotalKompetisiCount(),
+            'kompetisiProses' => $adminModel->getKompetisiProsesCount(),
+            'kompetisiBerhasil' => $adminModel->getKompetisiBerhasilCount(),
+            'kompetisiGagal' => $adminModel->getKompetisiGagalCount(),
+        ];
+    }
 }

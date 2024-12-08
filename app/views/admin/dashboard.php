@@ -2,75 +2,63 @@
     <!-- Greeting -->
     <h1 class="mb-4">HALO, <?= $_SESSION['user']; ?></h1>
 
+    <?php //untuk counter kompetisi
+    require_once '../app/controllers/AdminController.php';
+    $controller = new AdminController();
+    $data = $controller->getKompetisiCounts();
+    ?>
+
     <!-- Cards Section -->
     <div class="row mb-3">
         <div class="col-md-3">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0">
-                            <i class="bi bi-cart4 fs-2 text-primary"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h6>Total Data Kompetisi</h6>
-                            <h4 class="mb-0">145</h4>
-                            <small class="text-success">12% increase</small>
-                        </div>
-                    </div>
+            <div class="card border-primary">
+                <div class="card-header bg-transparent border-primary" style="text-align: center; font-size: 16px;">
+                    Total Data Kompetisi
+                </div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-cart4 fs-2 text-primary"></i>
+                    <h4 class="mb-0" style="text-align: center; font-size: 22px;"><?= $data['totalKompetisi'] ?></h4>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0">
-                            <i class="bi bi-cart4 fs-2 text-primary"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h6>Data Terverifikasi</h6>
-                            <h4 class="mb-0">145</h4>
-                            <small class="text-success">12% increase</small>
-                        </div>
-                    </div>
+            <div class="card border-warning">
+                <div class="card-header bg-transparent border-warning" style="text-align: center; font-size: 16px;">
+                    Proses Validasi
+                </div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-cart4 fs-2 text-primary"></i>
+                    <h4 class="mb-0" style="text-align: center; font-size: 22px;"><?= $data['kompetisiProses'] ?></h4>
                 </div>
             </div>
         </div>
 
         <div class="col-md-3">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0">
-                            <i class="bi bi-currency-dollar fs-2 text-success"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h6>Data dalam Proses</h6>
-                            <h4 class="mb-0">$3,264</h4>
-                            <small class="text-success">8% increase</small>
-                        </div>
-                    </div>
+            <div class="card border-success">
+                <div class="card-header bg-transparent border-success" style="text-align: center; font-size: 16px;">
+                    Berhasil Validasi
+                </div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-cart4 fs-2 text-primary"></i>
+                    <h4 class="mb-0" style="text-align: center; font-size: 22px;"><?= $data['kompetisiBerhasil'] ?></h4>
                 </div>
             </div>
         </div>
 
+
         <div class="col-md-3">
-            <div class="card">
-                <div class="card-body">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0">
-                            <i class="bi bi-people-fill fs-2 text-danger"></i>
-                        </div>
-                        <div class="ms-3">
-                            <h6>Data Tertolak</h6>
-                            <h4 class="mb-0">1244</h4>
-                            <small class="text-danger">12% decrease</small>
-                        </div>
-                    </div>
+            <div class="card border-danger">
+                <div class="card-header bg-transparent border-danger" style="text-align: center; font-size: 16px;">
+                    Gagal Validasi
+                </div>
+                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                    <i class="bi bi-cart4 fs-2 text-primary"></i>
+                    <h4 class="mb-0" style="text-align: center; font-size: 22px;"><?= $data['kompetisiGagal'] ?></h4>
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="container mt-3">

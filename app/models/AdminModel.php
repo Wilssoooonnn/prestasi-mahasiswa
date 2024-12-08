@@ -95,6 +95,43 @@ class AdminModel
         }
     }
 
+    public function getKompetisiProsesCount()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_Proses");
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+
+    public function getKompetisiBerhasilCount()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_Berhasil");
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+
+    public function getKompetisiGagalCount()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_Gagal");
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+
+
     public function detailKompetisi($id)
     {
         try {
