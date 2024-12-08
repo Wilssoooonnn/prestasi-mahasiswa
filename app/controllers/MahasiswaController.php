@@ -1,6 +1,7 @@
 <?php
 
 require_once '../app/models/UserModel.php'; // Memuat model
+require_once '../app/models/MahasiswaModel.php';
 
 class MahasiswaController extends Controller
 {
@@ -24,7 +25,6 @@ class MahasiswaController extends Controller
         }
 
         // Ambil data Mahasiswa berdasarkan username
-        require_once '../app/models/MahasiswaModel.php';
         $mahasiswaModel = new MahasiswaModel();
         $dataMhs = $mahasiswaModel->readDataMahasiswaByUsername($_SESSION['user']);
         // Pastikan data Mahasiswa ada
@@ -49,7 +49,6 @@ class MahasiswaController extends Controller
             exit;
         }
 
-        require_once '../app/models/MahasiswaModel.php';
         $mahasiswaModel = new MahasiswaModel();
 
         // Ambil parameter page dari URL
@@ -98,7 +97,6 @@ class MahasiswaController extends Controller
         }
 
         // Ambil data kompetisi berdasarkan username
-        require_once '../app/models/MahasiswaModel.php';
         $mahasiswaModel = new MahasiswaModel();
         $dataKompetisi = $mahasiswaModel->readKompetisiByUsername($_SESSION['user']);
 
@@ -109,7 +107,6 @@ class MahasiswaController extends Controller
 
     public function profileUpdate()
     {
-        require_once '../app/models/MahasiswaModel.php';
         $data = [
             'id' => $_POST['id'],
             'nama' => $_POST['fullName'],
@@ -131,7 +128,6 @@ class MahasiswaController extends Controller
 
     public function changePassword()
     {
-        require_once '../app/models/MahasiswaModel.php';
 
         $hashedPassword = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
         $data = [
@@ -165,5 +161,48 @@ class MahasiswaController extends Controller
         ]);
         header("Location: profile");
         exit;
+    }
+
+    public function insertKompetisi()
+    {
+        $mahasiswaModel = new MahasiswaModel();
+        try {
+            // Proses data yang diterima dari POST
+            $data = [
+                'jenis_id' => isset($_POST['jenis_id']) ? $_POST['jenis_id'] : null,
+                'tingkat_id' => isset($_POST['tingkat_id']) ? $_POST['tingkat_id'] : null,
+                'nama_kompetisi' => isset($_POST['nama_kompetisi']) ? $_POST['nama_kompetisi'] : null,
+                'tempat_kompetisi' => isset($_POST['tempat_kompetisi']) ? $_POST['tempat_kompetisi'] : null,
+                'url_kompetisi' => isset($_POST['url_kompetisi']) ? $_POST['url_kompetisi'] : null,
+                'tanggal_mulai' => isset($_POST['tanggal_mulai']) ? $_POST['tanggal_mulai'] : null,
+                'tanggal_akhir' => isset($_POST['tanggal_akhir']) ? $_POST['tanggal_akhir'] : null,
+                'no_surat_tugas' => isset($_POST['no_surat_tugas']) ? $_POST['no_surat_tugas'] : null,
+                'tanggal_surat_tugas' => isset($_POST['tanggal_surat_tugas']) ? $_POST['tanggal_surat_tugas'] : null,
+                'file_surat_tugas' => isset($_FILES['file_surat_tugas']) ? $_FILES['file_surat_tugas']['name'] : null,
+                'file_sertifikat' => isset($_FILES['file_sertifikat']) ? $_FILES['file_sertifikat']['name'] : null,
+                'foto_kegiatan' => isset($_FILES['foto_kegiatan']) ? $_FILES['foto_kegiatan']['name'] : null,
+                'file_poster' => isset($_FILES['file_poster']) ? $_FILES['file_poster']['name'] : null,
+                // Data mahasiswa
+                'nim' => $_POST['nim'],
+                'full_name' => $_POST['full_name'],
+                'alamat' => $_POST['alamat'],
+                'no_telp' => $_POST['no_telp'],
+                'email' => $_POST['email']
+            ];
+            echo "<pre>";
+            print_r($data);
+            echo "</pre>";
+            // Memasukkan data ke dalam model
+            $result = $mahasiswaModel->insertKompetisi($data);
+            if ($result['success']) {
+                echo json_encode(['success' => true, 'message' => $result['message']]);
+            } else {
+                echo json_encode(['success' => false, 'message' => $result['message']]);
+            }
+        } catch (Exception $e) {
+            // Tangani error jika terjadi masalah
+            http_response_code(500);
+            echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+        }
     }
 }

@@ -11,7 +11,8 @@ class App
     {
         session_start();
         $url = $this->parseUrl();
-        // Cek apakah ada elemen di dalam URL, jika ada, tentukan controller dan method
+
+        // Cek apakah ada elemen di dalam URL
         if (!empty($url)) {
             // Cek apakah controller yang diminta ada
             $controllerFile = __DIR__ . '/../controllers/' . ucfirst($url[0]) . 'Controller.php';
@@ -19,7 +20,7 @@ class App
                 $this->controller = ucfirst($url[0]) . 'Controller'; // Menambahkan 'Controller' pada nama class
                 unset($url[0]);
             } else {
-                $this->controller = 'AuthController'; // Default controller
+                $this->controller = 'ErrorController'; // Redirect ke ErrorController jika controller tidak ditemukan
             }
         }
 
@@ -47,5 +48,6 @@ class App
             // Menghapus karakter yang tidak diinginkan pada URL
             return explode('/', filter_var(rtrim($_GET['url'], '/'), FILTER_SANITIZE_URL));
         }
+        return [];
     }
 }

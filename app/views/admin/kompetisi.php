@@ -68,14 +68,6 @@ $kompetisiModel = new KompetisiModel();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <!-- <p><strong>NIM :</strong> <span id="detailNIM"></span></p>
-                    <p><strong>Nama Mahasiswa :</strong> <span id="detailNama"></span></p>
-                    <p><strong>Nama Kompetisi :</strong> <span id="detailKompetisi"></span></p>
-                    <p><strong>Jenis Kompetisi :</strong> <span id="detailJenis"></span></p>
-                    <p><strong>Tingkat Kompetisi :</strong> <span id="detailTingkat"></span></p>
-                    <p><strong>Tempat Kompetisi :</strong> <span id="detailTempat"></span></p>
-                    <p><strong>URL Kompetisi :</strong> <a href="#" target="_blank" id="detailURL">Link</a></p>
-                    <p><strong>No Surat Tugas :</strong> <span id="detailSurat"></span></p> -->
                     <form>
                         <div class="row">
                             <div class="col">

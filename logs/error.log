@@ -2154,3 +2154,108 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 )
 
 [2024-12-07 21:00:45] Error preparing stored procedure: CountKompetisiByNim
+[2024-12-08 04:37:22] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8144
+            [code] => 8144
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+        )
+
+)
+
+[2024-12-08 04:37:22] Error executing stored procedure: InsertKompetisi
+[2024-12-08 04:38:26] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8144
+            [code] => 8144
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+        )
+
+)
+
+[2024-12-08 04:38:26] Error executing stored procedure: InsertKompetisi
+[2024-12-08 04:39:01] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8144
+            [code] => 8144
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+        )
+
+)
+
+[2024-12-08 04:39:01] Error executing stored procedure: InsertKompetisi
+[2024-12-08 04:39:22] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8144
+            [code] => 8144
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+        )
+
+)
+
+[2024-12-08 04:39:22] Error executing stored procedure: InsertKompetisi
+[2024-12-08 04:42:37] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8144
+            [code] => 8144
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+        )
+
+)
+
+[2024-12-08 04:42:37] Error executing stored procedure: InsertKompetisi
+[2024-12-08 04:44:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8144
+            [code] => 8144
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+        )
+
+)
+
+[2024-12-08 04:44:20] Error executing stored procedure: InsertKompetisi
+[2024-12-08 04:45:11] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8144
+            [code] => 8144
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+        )
+
+)
+
+[2024-12-08 04:45:11] Error executing stored procedure: InsertKompetisi

@@ -11,30 +11,7 @@ class KompetisiModel
         $this->db = (new Database())->connect();
     }
 
-    public function insertData($data)
-    {
-        $query = "INSERT INTO kompetisi (jenis_id, tingkat_id, nama_kompetisi, tempat_kompetisi, url_kompetisi, tanggal_mulai,
-                tanggal_akhir, no_surat_tugas, tanggal_surat_tugas, file_surat_tugas, file_sertifikat, foto_kegiatan, file_poster) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-        $params = [
-            $data['jenis_id'],
-            $data['tingkat_id'],
-            $data['nama_kompetisi'],
-            $data['tempat_kompetisi'],
-            $data['url_kompetisi'],
-            $data['tanggal_mulai'],
-            $data['tanggal_akhir'],
-            $data['no_surat_tugas'],
-            $data['tanggal_surat_tugas'],
-            $data['file_surat_tugas'],
-            $data['file_sertifikat'],
-            $data['foto_kegiatan'],
-            $data['file_poster']
-        ];
-
-        sqlsrv_query($this->db, $query, $params);
-    }
-
+    
     public function getData()
     {
         $query = "SELECT * FROM kompetisi";

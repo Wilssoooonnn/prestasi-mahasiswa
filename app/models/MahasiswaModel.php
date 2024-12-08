@@ -184,4 +184,43 @@ class MahasiswaModel
             return 0;
         }
     }
+
+    public function insertKompetisi($data)
+    {
+        try {
+            $params = [
+                $data['jenis_id'],
+                $data['tingkat_id'],
+                $data['nama_kompetisi'],
+                $data['tempat_kompetisi'],
+                $data['url_kompetisi'],
+                $data['tanggal_mulai'],
+                $data['tanggal_akhir'],
+                $data['no_surat_tugas'],
+                $data['tanggal_surat_tugas'],
+                $data['file_surat_tugas'],
+                $data['file_sertifikat'],
+                $data['foto_kegiatan'],
+                $data['file_poster'],
+                $data['nim'],
+                $data['full_name'],
+                $data['alamat'],
+                $data['no_telp'],
+                $data['email']
+            ];
+
+            // Proses penyimpanan ke database
+            $this->executeStoredProcedure('InsertKompetisi', $params);
+            return [
+                'success' => true,
+                'message' => 'Data kompetisi dan mahasiswa berhasil ditambahkan.'
+            ];
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [
+                'success' => false,
+                'message' => 'Terjadi kesalahan: ' . $e->getMessage()
+            ];
+        }
+    }
 }
