@@ -44,11 +44,31 @@ class MahasiswaController extends Controller
 
     public function kompetisi()
     {
-        // Kirim data kompetisi ke view
+        if (!isset($_SESSION['user'])) {
+            header('Location: login.php');
+            exit;
+        }
+
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+
+        // Ambil parameter page dari URL
+        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $limit = 10; // Jumlah data per halaman
+        $offset = ($page - 1) * $limit;
+
+        // Ambil data kompetisi dengan paginasi
+        $dataKompetisi = $mahasiswaModel->readKompetisiPaginated($_SESSION['user'], $offset, $limit);
+
+        // Hitung total data
+        $totalData = $mahasiswaModel->countKompetisiByUsername($_SESSION['user']);
+        $totalPages = ceil($totalData / $limit);
+
+        // Kirim data ke view
         $judul = 'Kompetisi';
         include '../app/views/template/header.php';
         include '../app/views/template/navigation_mahasiswa.php';
-        include '../app/views/mahasiswa/kompetisi.php'; // Ganti dengan path view yang sesuai
+        include '../app/views/mahasiswa/kompetisi.php';
         include '../app/views/template/footer.php';
     }
 
@@ -84,6 +104,70 @@ class MahasiswaController extends Controller
 
         // Kirim data kompetisi ke view
         echo json_encode($dataKompetisi);
+        exit;
+    }
+
+    public function profileUpdate()
+    {
+        if (!isset($_SESSION['user'])) {
+            header('Location: login.php');
+            exit;
+        }
+
+        $data = [
+            'username' => $_SESSION['user'],
+            'fullName' => $_POST['fullName'],
+            'address' => $_POST['address'],
+            'phone' => $_POST['phone'],
+            'email' => $_POST['email']
+        ];
+
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+        $result = $mahasiswaModel->editProfileMahasiswa($data);
+
+        if ($result) {
+            header('Location: profile');
+        } else {
+            echo "Update failed!";
+        }
+    }
+
+    public function changePassword()
+    {
+        require_once '../app/models/MahasiswaModel.php';
+
+        $hashedPassword = password_hash($_POST['newpassword'], PASSWORD_DEFAULT);
+        $data = [
+            'user' => $_POST['user'],
+            'newPassword' => $hashedPassword
+        ];
+
+        $mahasiswaModel = new MahasiswaModel();
+
+        // Mengecek apakah pengguna ada di database
+        $user = $mahasiswaModel->getUserByUsername($_SESSION['user']);
+
+        if ($user) {
+            // Verify the password
+            if (password_verify($_POST['password'], $user['password'])) {
+                if ($_POST['newpassword'] == $_POST['renewpassword']) {
+                    $mahasiswaModel->updatePassword($data);
+                } else {
+                    echo "Password yang Anda Masukkan Tidak Sama";
+                    return;
+                }
+            } else {
+                echo "Password yang Anda Masukkan Salah";
+                return;
+            }
+        }
+
+        echo json_encode([
+            'status' => true,
+            'message' => 'Data berhasil diupdate.'
+        ]);
+        header("Location: profile");
         exit;
     }
 }
