@@ -16,14 +16,14 @@
                 style="width: 120px; height: 120px; object-fit: cover;">
             </div>
 
-            <button class="btn btn-light rounded-circle position-absolute" id="profileImageUpload" style="width: 40px; height: 40px; left: 52%;">
+            <button class="btn btn-light rounded-circle position-absolute" id="profileImageUpload" style="width: 40px; height: 40px; left: 52%;top: 40%;">
               <i class="fi fi-rr-edit"></i>
             </button>
             <!-- Name and Role -->
             <div class="text-white text-center mt-3">
               <h2 class="mb-1"><?= $dataMhs[0]['nama']; ?></h2>
               <h5 class="mb-1"><?= $dataMhs[0]['nama_prodi']; ?></h2>
-              <p class="mb-0 fw-light"><?= $_SESSION['role']; ?></p>
+                <p class="mb-0 fw-light"><?= $_SESSION['role']; ?></p>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@
 
               <!-- Profile Edit Form -->
               <form action="profileUpdate" method="post" id="form-edit">
-              <div class="row mb-3">                  
+                <div class="row mb-3">
                   <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama</label>
                   <div class="col-md-8 col-lg-9">
                     <input type="text" name="fullName" class="form-control" id="fullName" value="<?= $dataMhs[0]['nama']; ?>">
@@ -113,14 +113,14 @@
                 <div class="row mb-3">
                   <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Nomor Telepon</label>
                   <div class="col-md-8 col-lg-9">
-                    <input type="text" name="phone" class="form-control" id="Phone" value="<?= $dataMhs[0]['no_telp'];?>">
+                    <input type="text" name="phone" class="form-control" id="Phone" value="<?= $dataMhs[0]['no_telp']; ?>">
                   </div>
                 </div>
 
                 <div class="row mb-3">
                   <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                   <div class="col-md-8 col-lg-9">
-                    <input type="email" name="email" class="form-control" id="Email" value="<?= $dataMhs[0]['email'];?>">
+                    <input type="email" name="email" class="form-control" id="Email" value="<?= $dataMhs[0]['email']; ?>">
                   </div>
                 </div>
 
@@ -135,8 +135,8 @@
               <!-- Change Password Form -->
               <form action="changePassword" method="post" id="form-changepassword">
 
-              <input name="user" type="hidden" class="form-control" id="user" value="<?= $_SESSION['user'];?>">    
-              <div class="row mb-3">
+                <input name="user" type="hidden" class="form-control" id="user" value="<?= $_SESSION['user']; ?>">
+                <div class="row mb-3">
                   <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Password Sekarang</label>
                   <div class="col-md-8 col-lg-9">
                     <input name="password" type="password" class="form-control" id="currentPassword">
