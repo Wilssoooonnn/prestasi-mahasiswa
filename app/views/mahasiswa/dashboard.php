@@ -1,4 +1,4 @@
-<div class="container bg-primary mt-3 p-5 rounded-3 d-flex">
+<div class="container bg-primary mt-3 mb-3 p-5 rounded-3 d-flex">
     <div class="row w-100 align-items-center">
         <div class="col-6"> <!-- Kolom untuk teks di sebelah kiri -->
             <h1 class="text-white">Welcome, <?= $_SESSION['user']; ?></h1>
@@ -9,3 +9,50 @@
         </div>
     </div>
 </div>
+<div>
+<?php
+require_once '../app/controllers/MahasiswaController.php';
+$controller = new MahasiswaController();
+$data = $controller->getKompetisiCounts_Mhs();
+?>
+
+<div class="row mb-3">
+    <div class="col-md-3">
+        <div class="card border-primary">
+            <div class="card-header bg-transparent border-primary" style="text-align: center;">Total Kompetisi</div>
+            <div class="card-body">
+                <h4 class="text-center"><?= $data['totalKompetisi'] ?></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-success">
+            <div class="card-header bg-transparent border-success" style="text-align: center;">Kompetisi Berhasil</div>
+            <div class="card-body">
+                <h4 class="text-center"><?= $data['kompetisiBerhasil'] ?></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-warning">
+            <div class="card-header bg-transparent border-warning" style="text-align: center;">Kompetisi Proses</div>
+            <div class="card-body">
+                <h4 class="text-center"><?= $data['kompetisiProses'] ?></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card border-danger">
+            <div class="card-header bg-transparent border-danger" style="text-align: center;">Kompetisi Gagal</div>
+            <div class="card-body">
+                <h4 class="text-center"><?= $data['kompetisiGagal'] ?></h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
