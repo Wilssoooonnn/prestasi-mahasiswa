@@ -2171,3 +2171,513 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 
 [2024-12-07 21:00:45] Error preparing stored procedure: CountKompetisiByNim
 >>>>>>> 05027d8f494e54072d026bdc54daebaafd31e5ca
+[2024-12-08 14:21:03] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+        )
+
+)
+
+[2024-12-08 14:21:03] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-08 14:21:03] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 14:21:03] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 14:21:17] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+        )
+
+)
+
+[2024-12-08 14:21:17] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-08 14:21:17] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 14:21:17] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 14:21:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+        )
+
+)
+
+[2024-12-08 14:21:20] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-08 14:21:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 14:21:20] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 14:21:23] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+        )
+
+)
+
+[2024-12-08 14:21:23] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-08 14:21:23] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 14:21:23] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 14:23:15] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetKompetisiByNimPaginated'.
+        )
+
+)
+
+[2024-12-08 14:23:15] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-08 14:23:15] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 14:23:15] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 14:24:47] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 14:24:47] Error executing stored procedure: CountKompetisiByNim
+User not found: alfin[2024-12-08 15:36:23] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:23] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:23] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:23] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:24] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:24] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:25] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:25] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:43] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:43] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:43] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:43] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:44] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:44] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:44] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:44] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:44] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:44] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:45] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:45] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:45] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:45] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:46] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:46] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:46] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:46] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:55] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:55] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:56] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:56] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:57] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:57] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:57] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:57] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:58] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:58] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:58] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:58] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:59] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:59] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:36:59] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:36:59] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:37:00] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:37:00] Error executing stored procedure: CountKompetisiByNim
+[2024-12-08 15:37:00] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisiByNim'.
+        )
+
+)
+
+[2024-12-08 15:37:00] Error executing stored procedure: CountKompetisiByNim

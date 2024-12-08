@@ -863,3 +863,63 @@ BEGIN
     END
 END;
 GO
+
+CREATE PROCEDURE GetUserIdFromUsername
+	@Username VARCHAR(100),
+    @User_id INT OUTPUT
+AS
+BEGIN
+    SELECT @User_id = id
+	FROM users
+	WHERE username = @Username
+END;
+GO
+
+CREATE PROCEDURE GetAdminIdFromUsername
+	@Username VARCHAR(100),
+    @Admin_id INT OUTPUT
+AS
+BEGIN
+    SELECT @Admin_id = id
+	FROM admin
+	WHERE username = @Username
+END;
+GO
+
+ALTER PROCEDURE EditProfileAdmin
+    @Username VARCHAR(100),
+    @FullName VARCHAR(100),
+    @Email VARCHAR(100),
+	@NewUsername VARCHAR(100)
+AS
+BEGIN
+    DECLARE @Admin_id INT;
+    EXEC GetAdminIdFromUsername @Username, @Admin_id OUTPUT;
+
+	DECLARE @User_id INT;
+    EXEC GetUserIdFromUsername @Username, @User_id OUTPUT;
+
+    IF @Admin_id IS NOT NULL AND @User_id IS NOT NULL
+    BEGIN
+        -- Melakukan update data admin
+        UPDATE admin
+        SET
+            nama = @FullName,
+			username = @NewUsername,
+            email = @Email
+        WHERE id = @Admin_id;
+
+		-- Melakukan update data users
+		UPDATE users
+        SET
+			username = @NewUsername
+        WHERE id = @User_id;
+
+        SELECT 'Data berhasil diupdate' AS Message;
+    END
+    ELSE
+    BEGIN
+        SELECT 'ID tidak ditemukan' AS Message;
+    END
+END;
+GO
