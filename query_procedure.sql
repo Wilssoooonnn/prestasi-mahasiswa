@@ -699,6 +699,7 @@ BEGIN
         RETURN;
     END
 END;
+GO
 
 --EXEC SetStatus_Berhasil @Id = 1
 --select * from kompetisi where id = 1
@@ -726,6 +727,7 @@ BEGIN
         RETURN;
     END
 END;
+GO
 
 --EXEC SetStatus_Gagal @Id = 4
 --select * from kompetisi where id = 4
@@ -793,7 +795,7 @@ BEGIN
 END;
 GO
 
-EXEC GetKompetisiByNim @Username = 'odin';
+--EXEC GetKompetisiByNim @Username = 'odin';
 
 
 
@@ -813,7 +815,7 @@ BEGIN
 			m.no_telp,
 			m.alamat,
 			m.email,
-			p.nama
+			p.nama as nama_prodi
 		FROM mahasiswa m
 		JOIN prodi p ON m.prodi_id = p.id
 		WHERE @Nim = m.nim
@@ -827,5 +829,37 @@ BEGIN
     END
 END;
 GO
+-- EXEC GetMahasiswaDataByUsername @Username = 'odin';
 
---EXEC GetMahasiswaDataByUsername @Username = 'odin';
+
+
+CREATE PROCEDURE EditProfileMahasiswa
+    @Username VARCHAR(100),
+    @FullName VARCHAR(100),
+    @Address VARCHAR(255),
+    @Phone VARCHAR(20),
+    @Email VARCHAR(100)
+AS
+BEGIN
+    DECLARE @Mahasiswa_id INT;
+    EXEC GetIdByLogin @Username, @Mahasiswa_id OUTPUT;
+
+    IF @Mahasiswa_id IS NOT NULL
+    BEGIN
+        -- Melakukan update data mahasiswa
+        UPDATE mahasiswa
+        SET
+            nama = @FullName,
+            alamat = @Address,
+            no_telp = @Phone,
+            email = @Email
+        WHERE id = @Mahasiswa_id;
+
+        SELECT 'Data berhasil diupdate' AS Message;
+    END
+    ELSE
+    BEGIN
+        SELECT 'ID tidak ditemukan' AS Message;
+    END
+END;
+GO
