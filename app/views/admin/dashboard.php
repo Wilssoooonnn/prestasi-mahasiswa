@@ -70,7 +70,7 @@
                     <input type="search" class="form-control w-50" placeholder="Cari NIM">
                 </div>
                 <div class="col d-flex justify-content-end">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">Tambah Data</button>
+                    <button type="button" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">Tambah Data</button>
                 </div>
             </div>
         </div>
@@ -111,14 +111,52 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p><strong>NIM:</strong></p>
-                        <p><strong>Nama Mahasiswa:</strong></p>
-                        <p><strong>Nama Kompetisi:</strong></p>
-                        <p><strong>Jenis Kompetisi:</strong></p>
-                        <p><strong>Tingkat Kompetisi:</strong></p>
-                        <p><strong>Tempat Kompetisi:</strong></p>
-                        <p><strong>URL Kompetisi:</strong> <a href="#" target="_blank" id="detailURL">Link</a></p>
-                        <p><strong>No Surat Tugas:</strong></p>
+                        <!-- <p><strong>NIM :</strong> <span id="detailNIM"></span></p>
+                    <p><strong>Nama Mahasiswa :</strong> <span id="detailNama"></span></p>
+                    <p><strong>Nama Kompetisi :</strong> <span id="detailKompetisi"></span></p>
+                    <p><strong>Jenis Kompetisi :</strong> <span id="detailJenis"></span></p>
+                    <p><strong>Tingkat Kompetisi :</strong> <span id="detailTingkat"></span></p>
+                    <p><strong>Tempat Kompetisi :</strong> <span id="detailTempat"></span></p>
+                    <p><strong>URL Kompetisi :</strong> <a href="#" target="_blank" id="detailURL">Link</a></p>
+                    <p><strong>No Surat Tugas :</strong> <span id="detailSurat"></span></p> -->
+                        <form>
+                            <div class="row">
+                                <div class="col">
+                                    <label>NIM</label>
+                                    <input type="text" class="form-control" name="nim" id="nim">
+                                </div>
+                                <div class="col">
+                                    <label>Nama Mahasiswa</label>
+                                    <input class="form-control" name="full_name" id="full_name">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label>Jenis Kompetisi</label>
+                                    <input class="form-control" name="jenis_kompetisi" id="jenis_kompetisi">
+                                </div>
+                                <div class="col">
+                                    <label>Tingkat Kompetisi</label>
+                                    <input type="text" class="form-control" name="tingkat_kompetisi" id="tingkat_kompetisi">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label>Tempat Kompetisi</label>
+                                    <input class="form-control" name="tempat_kompetisi" id="tempat_kompetisi">
+                                </div>
+                                <div class="col">
+                                    <label>URL Kompetisi</label>
+                                    <input type="text" class="form-control" name="url_kompetisi" id="url_kompetisi">
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col">
+                                    <label>Nomor Surat Tugas</label>
+                                    <input type="text" class="form-control" name="no_surat_tugas" id="no_surat_tugas">
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -126,3 +164,5 @@
                 </div>
             </div>
         </div>
+
+        

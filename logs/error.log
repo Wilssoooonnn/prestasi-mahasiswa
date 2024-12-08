@@ -2104,6 +2104,18 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 )
 
 [2024-12-07 03:06:13] Error executing stored procedure: GetAdminDataByUsername
+<<<<<<< HEAD
+[2024-12-07 06:42:03] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetAdminDataByUsername'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetAdminDataByUsername'.
+=======
 [2024-12-07 21:00:45] Array
 (
     [0] => Array
@@ -2134,10 +2146,14 @@ User not found: admin titan[2024-12-07 01:52:52] Array
             [code] => -2147467259
             [2] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
             [message] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+>>>>>>> 05027d8f494e54072d026bdc54daebaafd31e5ca
         )
 
 )
 
+<<<<<<< HEAD
+[2024-12-07 06:42:03] Error executing stored procedure: GetAdminDataByUsername
+=======
 [2024-12-07 21:00:45] Error executing stored procedure: GetKompetisiByNimPaginated
 [2024-12-07 21:00:45] Array
 (
@@ -2154,3 +2170,4 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 )
 
 [2024-12-07 21:00:45] Error preparing stored procedure: CountKompetisiByNim
+>>>>>>> 05027d8f494e54072d026bdc54daebaafd31e5ca
