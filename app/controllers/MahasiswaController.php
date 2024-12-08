@@ -109,24 +109,28 @@ class MahasiswaController extends Controller
 
     public function profileUpdate()
     {
-        require_once '../app/models/MahasiswaModel.php';
+        if (!isset($_SESSION['user'])) {
+            header('Location: login.php');
+            exit;
+        }
+
         $data = [
-            'id' => $_POST['id'],
-            'nama' => $_POST['fullName'],
-            'alamat' => $_POST['address'],
-            'no_telp' => $_POST['phone'],
+            'username' => $_SESSION['user'],
+            'fullName' => $_POST['fullName'],
+            'address' => $_POST['address'],
+            'phone' => $_POST['phone'],
             'email' => $_POST['email']
         ];
 
+        require_once '../app/models/MahasiswaModel.php';
         $mahasiswaModel = new MahasiswaModel();
-        $mahasiswaModel->editProfile($data);
+        $result = $mahasiswaModel->editProfileMahasiswa($data);
 
-        echo json_encode([
-            'status' => true,
-            'message' => 'Data berhasil diupdate.'
-        ]);
-        header("Location: profile");
-        exit;
+        if ($result) {
+            header('Location: profile');
+        } else {
+            echo "Update failed!";
+        }
     }
 
     public function changePassword()
