@@ -76,12 +76,12 @@
 
                             <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Nomor Telepon</div>
-                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['phone_number'];    ?> </div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['no_telp'];    ?> </div>
                             </div>
 
                             <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Alamat</div>
-                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['address'];    ?> </div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['alamat'];    ?> </div>
                             </div>
 
                             <div class="row mt-3">
@@ -107,6 +107,20 @@
                                     <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                                     <div class="col-md-8 col-lg-9">
                                         <input name="email" type="text" class="form-control" id="Email" value="<?= $dataAdmin[0]['email']; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="telp" class="col-md-4 col-lg-3 col-form-label">Nomor Telepon</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="telp" type="text" class="form-control" id="telp" value="<?= $dataAdmin[0]['no_telp']; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="alamat" class="col-md-4 col-lg-3 col-form-label">Alamat</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="alamat" type="text" class="form-control" id="alamat" value="<?= $dataAdmin[0]['alamat']; ?>">
                                     </div>
                                 </div>
 

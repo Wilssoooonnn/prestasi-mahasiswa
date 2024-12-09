@@ -138,6 +138,8 @@ class AdminController
             'username' => $_SESSION['user'],
             'fullName' => $_POST['fullName'],
             'email' => $_POST['email'],
+            'no_telp' => $_POST['telp'], 
+            'alamat' => $_POST['alamat'],
             'newUsername' => $_POST['newusername']
         ];
 

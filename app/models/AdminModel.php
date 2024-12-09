@@ -150,11 +150,12 @@ class AdminModel
     public function editProfileAdmin($data)
     {
         try {
-            // Memanggil prosedur EditProfileAdmin untuk mengupdate data
             $stmt = $this->executeStoredProcedure("EditProfileAdmin", [
                 $data['username'],
                 $data['fullName'],
                 $data['email'],
+                $data['no_telp'], 
+                $data['alamat'], 
                 $data['newUsername']
             ]);
 
