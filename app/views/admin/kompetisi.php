@@ -130,7 +130,7 @@ $kompetisiModel = new KompetisiModel();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="formDataDiri">
                         <div class="position-relative m-4">
                             <div class="progress" style="height: 1px;">
                                 <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -235,7 +235,7 @@ $kompetisiModel = new KompetisiModel();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="formUploadFile">
                         <div class="position-relative m-4">
                             <div class="progress" style="height: 1px;">
                                 <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -285,7 +285,7 @@ $kompetisiModel = new KompetisiModel();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="formDataKompetisi">
                         <div class="position-relative m-4">
                             <div class="progress" style="height: 1px;">
                                 <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>

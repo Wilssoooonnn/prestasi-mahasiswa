@@ -152,3 +152,87 @@ function showDetail(kompetisiId) {
     })
     .catch((error) => console.error("Error:", error));
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Tombol "Next" di modal pertama
+  document
+    .querySelector("#insertModal .btn-outline-primary")
+    .addEventListener("click", function () {
+      const form1 = new FormData(document.getElementById("formDataDiri"));
+      console.log("Data Form 1: ", Object.fromEntries(form1)); // Debugging
+      localStorage.setItem(
+        "form1Data",
+        JSON.stringify(Object.fromEntries(form1))
+      );
+      const nextModal = new bootstrap.Modal(
+        document.getElementById("insertModal2")
+      );
+      nextModal.show();
+    });
+
+  // Tombol "Next" di modal kedua
+  document
+    .querySelector("#insertModal2 .btn-outline-primary")
+    .addEventListener("click", function () {
+      const form2 = new FormData(document.getElementById("formUploadFile"));
+      console.log("Data Form 2: ", Object.fromEntries(form2)); // Debugging
+      localStorage.setItem(
+        "form2Data",
+        JSON.stringify(Object.fromEntries(form2))
+      );
+      const nextModal = new bootstrap.Modal(
+        document.getElementById("insertModal3")
+      );
+      nextModal.show();
+    });
+
+  // Tombol "Save" di modal ketiga
+  document
+    .querySelector("#insertModal3 .btn-outline-primary")
+    .addEventListener("click", function () {
+      const form1Data = JSON.parse(localStorage.getItem("form1Data"));
+      const form2Data = JSON.parse(localStorage.getItem("form2Data"));
+      const form3 = new FormData(document.getElementById("formDataKompetisi"));
+
+      console.log("Data Form 1 (From LocalStorage): ", form1Data); // Debugging
+      console.log("Data Form 2 (From LocalStorage): ", form2Data); // Debugging
+      console.log("Data Form 3: ", Object.fromEntries(form3)); // Debugging
+
+      // Menggabungkan semua data
+      const finalData = new FormData();
+      Object.entries(form1Data).forEach(([key, value]) => {
+        console.log(`Appending ${key}: ${value}`); // Debugging
+        finalData.append(key, value);
+      });
+      Object.entries(form2Data).forEach(([key, value]) => {
+        console.log(`Appending ${key}: ${value}`); // Debugging
+        finalData.append(key, value);
+      });
+      form3.forEach((value, key) => {
+        console.log(`Appending ${key}: ${value}`); // Debugging
+        finalData.append(key, value);
+      });
+
+      // Debugging sebelum mengirim data
+      console.log("Final Data to be sent: ", finalData);
+
+      // Mengirim data ke server
+      fetch(baseURL + "admin/insertKompetisi", {
+        method: "POST",
+        body: finalData,
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log("Server Response: ", data); // Debugging response server
+          if (data.success) {
+            alert("Data berhasil ditambahkan!");
+            window.location.reload();
+          } else {
+            alert("Terjadi kesalahan: " + data.message);
+          }
+        })
+        .catch((error) => {
+          console.error("Error:", error); // Debugging error
+        });
+    });
+});

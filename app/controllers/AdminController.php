@@ -212,12 +212,16 @@ class AdminController
         print_r($dataMhs);
         echo "</pre>";
     }
-    function insertKompetisi()
+    public function insertKompetisi()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Ambil data dari form POST
+            // Validasi input
+            if (empty($_POST['jenis_id']) || empty($_POST['tingkat_id'])) {
+                die('Jenis Kompetisi dan Tingkat Kompetisi harus diisi.');
+            }
+
             $data = [
-                'username' => $_SESSION['user'], // Username dari sesi
+                'username' => $_SESSION['user'], // Pastikan session user valid
                 'jenis_id' => $_POST['jenis_id'],
                 'tingkat_id' => $_POST['tingkat_id'],
                 'nama_kompetisi' => $_POST['nama_kompetisi'],
@@ -234,28 +238,32 @@ class AdminController
                 'dosen_id' => $_POST['dosen_id'],
             ];
 
-            // Upload files ke direktori yang diinginkan
+            // Upload files
             $uploadDir = '../uploads/';
-            move_uploaded_file($_FILES['file_surat_tugas']['tmp_name'], $uploadDir . $data['file_surat_tugas']);
-            move_uploaded_file($_FILES['file_sertifikat']['tmp_name'], $uploadDir . $data['file_sertifikat']);
-            move_uploaded_file($_FILES['foto_kegiatan']['tmp_name'], $uploadDir . $data['foto_kegiatan']);
-            move_uploaded_file($_FILES['file_poster']['tmp_name'], $uploadDir . $data['file_poster']);
+            if (
+                !move_uploaded_file($_FILES['file_surat_tugas']['tmp_name'], $uploadDir . $data['file_surat_tugas']) ||
+                !move_uploaded_file($_FILES['file_sertifikat']['tmp_name'], $uploadDir . $data['file_sertifikat']) ||
+                !move_uploaded_file($_FILES['foto_kegiatan']['tmp_name'], $uploadDir . $data['foto_kegiatan']) ||
+                !move_uploaded_file($_FILES['file_poster']['tmp_name'], $uploadDir . $data['file_poster'])
+            ) {
+                die('Error saat mengunggah file.');
+            }
 
             try {
-                // Eksekusi stored procedure melalui model
+                // Eksekusi stored procedure
                 $adminModel = new AdminModel();
                 $adminModel->insertKompetisi($data);
 
-                // Redirect atau tampilkan pesan sukses
+                // Redirect setelah sukses
                 header('Location: /kompetisi?success=1');
                 exit;
             } catch (Exception $e) {
-                // Tangani error
-                echo "Error inserting kompetisi: " . $e->getMessage();
+                die('Error inserting kompetisi: ' . $e->getMessage());
             }
         } else {
-            // Tampilkan halaman form
-            include '../app/views/kompetisi/form.php';
+            echo "<script>";
+            echo "alert('Gagal!');";
+            echo "</script>";
         }
     }
 }
