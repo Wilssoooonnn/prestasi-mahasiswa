@@ -1,10 +1,8 @@
 <?php
-// app/core/App.php 
-
 class App
 {
-    protected $controller = 'AuthController'; // Default controller
-    protected $method = 'login'; // Default method
+    protected $controller = 'LandingPageController'; // Default controller
+    protected $method = 'landingPage'; // Default method
     protected $params = [];
 
     public function __construct()

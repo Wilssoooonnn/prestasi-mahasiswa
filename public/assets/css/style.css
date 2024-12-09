@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('<?= base_url() ?>assets/fonts/moon_get-Heavy.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .custom-nav-link {
     display: flex !important;
     /* Gunakan Flexbox */
