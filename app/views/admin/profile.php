@@ -75,6 +75,16 @@
                             </div>
 
                             <div class="row mt-3">
+                                <div class="col-lg-3 col-md-4 label">Nomor Telepon</div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['phone_number'];    ?> </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-lg-3 col-md-4 label">Alamat</div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['address'];    ?> </div>
+                            </div>
+
+                            <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label">Username</div>
                                 <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['username'];     ?></div>
                             </div>
