@@ -1,3 +1,9 @@
+<?php
+require_once '../app/controllers/MahasiswaController.php';
+$controller = new MahasiswaController();
+$data = $controller->getKompetisiCounts_Mhs();
+?>
+<!-- Greeting -->
 <div class="container bg-primary mt-3 mb-3 p-5 rounded-3 d-flex">
     <div class="row w-100 align-items-center">
         <div class="col-6"> <!-- Kolom untuk teks di sebelah kiri -->
@@ -9,12 +15,6 @@
         </div>
     </div>
 </div>
-<div>
-<?php
-require_once '../app/controllers/MahasiswaController.php';
-$controller = new MahasiswaController();
-$data = $controller->getKompetisiCounts_Mhs();
-?>
 
 <div class="row mb-3">
     <div class="col-md-3">
@@ -53,6 +53,3 @@ $data = $controller->getKompetisiCounts_Mhs();
         </div>
     </div>
 </div>
-
-</div>
-
