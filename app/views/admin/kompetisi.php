@@ -15,7 +15,6 @@ require_once '../app/models/KompetisiModel.php';
 
 $adminModel = new AdminModel();
 $kompetisiModel = new KompetisiModel();
-// $dataAllKompetisi = $adminModel->readAllKompetisi($_SESSION['user']);
 
 ?>
 <div class="container mt-3">
