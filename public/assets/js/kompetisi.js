@@ -72,7 +72,7 @@ function updateTable(data) {
                 <button class="btn btn-outline-primary"
                     data-bs-toggle="modal"
                     data-bs-target="#detailModal"
-                    onclick="loadDetailData(${JSON.stringify(row)})">
+                    onclick="showDetail(${row.id})">
                     <i class="fi fi-rr-eye"></i>
                 </button>
                 </td>
@@ -126,3 +126,29 @@ document.addEventListener("DOMContentLoaded", () => {
     loadKompetisiMahasiswa();
   }
 });
+function showDetail(kompetisiId) {
+  // Fetch the competition details from the server using its ID
+  fetch(baseURL + "admin/getKompetisiDetail?id=" + kompetisiId)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.error) {
+        console.error("Error fetching competition details:", data.error);
+      } else {
+        // Update modal fields with the fetched data
+        document.getElementById("detailNIM").textContent = data.NIM;
+        document.getElementById("detailNama").textContent = data.Nama_Mahasiswa;
+        document.getElementById("detailKompetisi").textContent =
+          data.Nama_Kompetisi;
+        document.getElementById("detailJenis").textContent =
+          data.Jenis_Kompetisi;
+        document.getElementById("detailTingkat").textContent =
+          data.Tingkat_Kompetisi;
+        document.getElementById("detailTempat").textContent =
+          data.Tempat_Kompetisi;
+        document.getElementById("detailURL").href = data.URL_Kompetisi;
+        document.getElementById("detailSurat").textContent =
+          data.No_Surat_Tugas;
+      }
+    })
+    .catch((error) => console.error("Error:", error));
+}

@@ -37,7 +37,7 @@ class AdminModel
     public function readAllKompetisi($username)
     {
         try {
-            $stmt = $this->executeStoredProcedure("GetKompetisi_All");
+            $stmt = $this->executeStoredProcedure("GetKompetisiAllPaginated");
             $result = [];
             while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
                 $result[] = $row;
@@ -52,7 +52,7 @@ class AdminModel
     public function readKompetisiPaginated($limit, $offset)
     {
         try {
-            $stmt = $this->executeStoredProcedure("GetKompetisi_All", [$limit, $offset]);
+            $stmt = $this->executeStoredProcedure("GetKompetisiAllPaginated", [$limit, $offset]);
             $result = [];
             while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
                 $result[] = $row;
@@ -197,5 +197,39 @@ class AdminModel
             $data['user']
         ];
         sqlsrv_query($this->db, $query, $params);
+    }
+
+    public function insertKompetisi($data)
+    {
+        try {
+            // Prepare the parameters for the stored procedure
+            $params = [
+                [&$data['username'], SQLSRV_PARAM_IN],
+                [&$data['jenis_id'], SQLSRV_PARAM_IN],
+                [&$data['tingkat_id'], SQLSRV_PARAM_IN],
+                [&$data['nama_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['tempat_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['url_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_mulai'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_akhir'], SQLSRV_PARAM_IN],
+                [&$data['no_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['file_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['file_sertifikat'], SQLSRV_PARAM_IN],
+                [&$data['foto_kegiatan'], SQLSRV_PARAM_IN],
+                [&$data['file_poster'], SQLSRV_PARAM_IN],
+                [&$data['dosen_id'], SQLSRV_PARAM_IN],
+            ];
+
+            // Execute the stored procedure
+            $stmt = $this->executeStoredProcedure("InsertKompetisi_Mhs", $params);
+
+            // If successful, return a success message
+            return "Data kompetisi, dosen, dan mahasiswa berhasil ditambahkan.";
+        } catch (Exception $e) {
+            // Log and rethrow the error
+            $this->logError($e->getMessage());
+            throw new Exception("Failed to insert kompetisi data: " . $e->getMessage());
+        }
     }
 }
