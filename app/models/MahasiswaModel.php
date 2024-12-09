@@ -198,7 +198,7 @@ class MahasiswaModel
                 $data['tanggal_akhir'],
                 $data['no_surat_tugas'],
                 $data['tanggal_surat_tugas'],
-                $data['file_surat_tugas'],
+                $data['file_surat_tugas'], // Make sure file paths are passed here
                 $data['file_sertifikat'],
                 $data['foto_kegiatan'],
                 $data['file_poster'],
@@ -209,8 +209,9 @@ class MahasiswaModel
                 $data['email']
             ];
 
-            // Proses penyimpanan ke database
+            // Execute stored procedure or SQL query to insert the data into the database
             $this->executeStoredProcedure('InsertKompetisi', $params);
+
             return [
                 'success' => true,
                 'message' => 'Data kompetisi dan mahasiswa berhasil ditambahkan.'

@@ -2259,3 +2259,18 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 )
 
 [2024-12-08 04:45:11] Error executing stored procedure: InsertKompetisi
+[2024-12-08 19:43:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8144
+            [code] => 8144
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function InsertKompetisi has too many arguments specified.
+        )
+
+)
+
+[2024-12-08 19:43:20] Error executing stored procedure: InsertKompetisi

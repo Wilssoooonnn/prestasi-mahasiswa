@@ -165,44 +165,76 @@ class MahasiswaController extends Controller
 
     public function insertKompetisi()
     {
-        $mahasiswaModel = new MahasiswaModel();
-        try {
-            // Proses data yang diterima dari POST
-            $data = [
-                'jenis_id' => isset($_POST['jenis_id']) ? $_POST['jenis_id'] : null,
-                'tingkat_id' => isset($_POST['tingkat_id']) ? $_POST['tingkat_id'] : null,
-                'nama_kompetisi' => isset($_POST['nama_kompetisi']) ? $_POST['nama_kompetisi'] : null,
-                'tempat_kompetisi' => isset($_POST['tempat_kompetisi']) ? $_POST['tempat_kompetisi'] : null,
-                'url_kompetisi' => isset($_POST['url_kompetisi']) ? $_POST['url_kompetisi'] : null,
-                'tanggal_mulai' => isset($_POST['tanggal_mulai']) ? $_POST['tanggal_mulai'] : null,
-                'tanggal_akhir' => isset($_POST['tanggal_akhir']) ? $_POST['tanggal_akhir'] : null,
-                'no_surat_tugas' => isset($_POST['no_surat_tugas']) ? $_POST['no_surat_tugas'] : null,
-                'tanggal_surat_tugas' => isset($_POST['tanggal_surat_tugas']) ? $_POST['tanggal_surat_tugas'] : null,
-                'file_surat_tugas' => isset($_FILES['file_surat_tugas']) ? $_FILES['file_surat_tugas']['name'] : null,
-                'file_sertifikat' => isset($_FILES['file_sertifikat']) ? $_FILES['file_sertifikat']['name'] : null,
-                'foto_kegiatan' => isset($_FILES['foto_kegiatan']) ? $_FILES['foto_kegiatan']['name'] : null,
-                'file_poster' => isset($_FILES['file_poster']) ? $_FILES['file_poster']['name'] : null,
-                // Data mahasiswa
-                'nim' => $_POST['nim'],
-                'full_name' => $_POST['full_name'],
-                'alamat' => $_POST['alamat'],
-                'no_telp' => $_POST['no_telp'],
-                'email' => $_POST['email']
-            ];
-            echo "<pre>";
-            print_r($data);
-            echo "</pre>";
-            // Memasukkan data ke dalam model
-            $result = $mahasiswaModel->insertKompetisi($data);
-            if ($result['success']) {
-                echo json_encode(['success' => true, 'message' => $result['message']]);
-            } else {
-                echo json_encode(['success' => false, 'message' => $result['message']]);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            try {
+                // Validate required fields
+                if (
+                    empty($_POST['jenis_id']) || empty($_POST['tingkat_id']) || empty($_POST['nama_kompetisi']) ||
+                    empty($_POST['tempat_kompetisi']) || empty($_POST['tanggal_mulai']) || empty($_POST['tanggal_akhir']) ||
+                    empty($_POST['no_surat_tugas']) || empty($_POST['tanggal_surat_tugas']) || empty($_POST['nim']) ||
+                    empty($_POST['full_name']) || empty($_POST['alamat']) || empty($_POST['no_telp']) || empty($_POST['email'])
+                ) {
+                    throw new Exception("Some required fields are missing.");
+                }
+
+                $data = [
+                    'jenis_id' => $_POST['jenis_id'],
+                    'tingkat_id' => $_POST['tingkat_id'],
+                    'nama_kompetisi' => $_POST['nama_kompetisi'],
+                    'tempat_kompetisi' => $_POST['tempat_kompetisi'],
+                    'url_kompetisi' => $_POST['url_kompetisi'],
+                    'tanggal_mulai' => $_POST['tanggal_mulai'],
+                    'tanggal_akhir' => $_POST['tanggal_akhir'],
+                    'no_surat_tugas' => $_POST['no_surat_tugas'],
+                    'tanggal_surat_tugas' => $_POST['tanggal_surat_tugas'],
+                    'nim' => $_POST['nim'],
+                    'full_name' => $_POST['full_name'],
+                    'alamat' => $_POST['alamat'],
+                    'no_telp' => $_POST['no_telp'],
+                    'email' => $_POST['email']
+                ];
+
+                // Handle file uploads
+                $uploadedFiles = $this->uploadFiles($_FILES);
+
+                // Merge uploaded file paths with data
+                $data = array_merge($data, $uploadedFiles);
+
+                // Call model function to insert data into the database
+                $mahasiswaModel = new MahasiswaModel();
+                $result = $mahasiswaModel->insertKompetisi($data);
+
+                if ($result['success']) {
+                    // Redirect to the kompetisi list or success page
+                    header('Location: /mahasiswa/kompetisi');
+                    exit();
+                } else {
+                    echo $result['message'];
+                }
+            } catch (Exception $e) {
+                echo "Terjadi kesalahan: " . $e->getMessage();
             }
-        } catch (Exception $e) {
-            // Tangani error jika terjadi masalah
-            http_response_code(500);
-            echo json_encode(['success' => false, 'message' => $e->getMessage()]);
         }
+    }
+
+    private function uploadFiles($files)
+    {
+        $uploadedFiles = [];
+        $uploadDir = 'uploads/'; // Make sure this is writable
+
+        foreach ($files as $fileKey => $file) {
+            if (isset($file['name']) && $file['error'] === UPLOAD_ERR_OK) {
+                $targetPath = $uploadDir . basename($file['name']);
+                if (move_uploaded_file($file['tmp_name'], $targetPath)) {
+                    $uploadedFiles[$fileKey] = $targetPath; // Store the file path
+                } else {
+                    throw new Exception("File upload failed for " . $file['name']);
+                }
+            } else {
+                throw new Exception("File upload error: " . $file['name']);
+            }
+        }
+
+        return $uploadedFiles; // Return paths of successfully uploaded files
     }
 }
