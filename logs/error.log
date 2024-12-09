@@ -3596,3 +3596,198 @@ User not found: alfin[2024-12-08 15:36:23] Array
 )
 
 [2024-12-09 03:57:22] Error executing stored procedure: CountKompetisiByNim
+[2024-12-09 07:29:58] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8146
+            [code] => 8146
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+        )
+
+)
+
+[2024-12-09 07:29:58] Error executing stored procedure: GetKompetisi_All
+[2024-12-09 07:30:01] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8146
+            [code] => 8146
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+        )
+
+)
+
+[2024-12-09 07:30:01] Error executing stored procedure: GetKompetisi_All
+[2024-12-09 07:30:05] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8146
+            [code] => 8146
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+        )
+
+)
+
+[2024-12-09 07:30:05] Error executing stored procedure: GetKompetisi_All
+[2024-12-09 07:30:06] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8146
+            [code] => 8146
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+        )
+
+)
+
+[2024-12-09 07:30:06] Error executing stored procedure: GetKompetisi_All
+[2024-12-09 07:30:07] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 07:30:07] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 07:30:07] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 07:30:07] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 07:30:07] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 07:30:07] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 07:30:07] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8146
+            [code] => 8146
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+        )
+
+)
+
+[2024-12-09 07:30:07] Error executing stored procedure: GetKompetisi_All
+[2024-12-09 07:31:32] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 07:31:32] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 07:31:32] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 07:31:32] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 07:31:32] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 07:31:32] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 07:31:33] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8146
+            [code] => 8146
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+        )
+
+)
+
+[2024-12-09 07:31:33] Error executing stored procedure: GetKompetisi_All
+[2024-12-09 07:31:34] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8146
+            [code] => 8146
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure GetKompetisi_All has no parameters and arguments were supplied.
+        )
+
+)
+
+[2024-12-09 07:31:34] Error executing stored procedure: GetKompetisi_All

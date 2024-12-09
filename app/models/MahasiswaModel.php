@@ -201,7 +201,7 @@ class MahasiswaModel
             return 0;
         }
     }
-    
+
     public function getKompetisiProsesCount_Mhs($username)
     {
         try {
@@ -213,7 +213,7 @@ class MahasiswaModel
             return 0;
         }
     }
-    
+
     public function getKompetisiBerhasilCount_Mhs($username)
     {
         try {
@@ -225,7 +225,7 @@ class MahasiswaModel
             return 0;
         }
     }
-    
+
     public function getKompetisiGagalCount_Mhs($username)
     {
         try {
@@ -236,5 +236,5 @@ class MahasiswaModel
             $this->logError($e->getMessage());
             return 0;
         }
-    }    
+    }
 }

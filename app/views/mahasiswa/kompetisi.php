@@ -11,8 +11,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <table class="table table-hover">
             <thead class="table-primary">
                 <tr>
-                    <th>NIM</th>
-                    <th>Nama Mahasiswa</th>
+                    <th>ID</th>
                     <th>Nama Kompetisi</th>
                     <th>Jenis Kompetisi</th>
                     <th>Tingkat Kompetisi</th>
@@ -26,8 +25,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <?php if (!empty($dataKompetisi)) : ?>
                     <?php foreach ($dataKompetisi as $row) : ?>
                         <tr>
-                            <td><?= htmlspecialchars($row['NIM']) ?></td>
-                            <td><?= htmlspecialchars($row['Nama_Mahasiswa']) ?></td>
+                            <td><?= htmlspecialchars($row['kompetisi_id']) ?></td>
                             <td><?= htmlspecialchars($row['Nama_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
@@ -37,6 +35,12 @@ if (session_status() === PHP_SESSION_NONE) {
                             <td>
                                 <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailModal" onclick="loadDetailData('<?= json_encode($row) ?>')">
                                     <i class="fi fi-rr-eye"></i>
+                                </button>
+                                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal" onclick="">
+                                    <i class="fi fi-rr-pencil"></i>
+                                </button>
+                                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                    <i class="fi fi-rr-trash"></i>
                                 </button>
                             </td>
                         </tr>
@@ -71,14 +75,61 @@ if (session_status() === PHP_SESSION_NONE) {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- <p><strong>NIM :</strong> <span id="detailNIM"></span></p>
-                    <p><strong>Nama Mahasiswa :</strong> <span id="detailNama"></span></p>
-                    <p><strong>Nama Kompetisi :</strong> <span id="detailKompetisi"></span></p>
-                    <p><strong>Jenis Kompetisi :</strong> <span id="detailJenis"></span></p>
-                    <p><strong>Tingkat Kompetisi :</strong> <span id="detailTingkat"></span></p>
-                    <p><strong>Tempat Kompetisi :</strong> <span id="detailTempat"></span></p>
-                    <p><strong>URL Kompetisi :</strong> <a href="#" target="_blank" id="detailURL">Link</a></p>
-                    <p><strong>No Surat Tugas :</strong> <span id="detailSurat"></span></p> -->
+                <form>
+                    <div class="row">
+                        <div class="col">
+                            <label>NIM</label>
+                            <input type="text" class="form-control" name="nim" id="nim">
+                        </div>
+                        <div class="col">
+                            <label>Nama Mahasiswa</label>
+                            <input class="form-control" name="full_name" id="full_name">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label>Jenis Kompetisi</label>
+                            <input class="form-control" name="jenis_kompetisi" id="jenis_kompetisi">
+                        </div>
+                        <div class="col">
+                            <label>Tingkat Kompetisi</label>
+                            <input type="text" class="form-control" name="tingkat_kompetisi" id="tingkat_kompetisi">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label>Tempat Kompetisi</label>
+                            <input class="form-control" name="tempat_kompetisi" id="tempat_kompetisi">
+                        </div>
+                        <div class="col">
+                            <label>URL Kompetisi</label>
+                            <input type="text" class="form-control" name="url_kompetisi" id="url_kompetisi">
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col">
+                            <label>Nomor Surat Tugas</label>
+                            <input type="text" class="form-control" name="no_surat_tugas" id="no_surat_tugas">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Edit -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editlModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editModalLabel">Edit Kompetisi</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
                 <form>
                     <div class="row">
                         <div class="col">
