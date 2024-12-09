@@ -173,6 +173,7 @@ class MahasiswaController extends Controller
 
     public function getKompetisiCounts_Mhs()
     {
+
         if (!isset($_SESSION['user'])) {
             header('Location: login.php');
             exit;
@@ -187,5 +188,78 @@ class MahasiswaController extends Controller
             'kompetisiBerhasil' => $mahasiswaModel->getKompetisiBerhasilCount_Mhs($_SESSION['user']),
             'kompetisiGagal' => $mahasiswaModel->getKompetisiGagalCount_Mhs($_SESSION['user']),
         ];
+    }
+
+    public function insertKompetisi()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Direktori upload
+            $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/prestasi-mahasiswa/uploads/';
+
+            // Validasi input
+            if (empty($_POST['jenis_id']) || empty($_POST['tingkat_id'])) {
+                echo json_encode(['success' => false, 'message' => 'Jenis Kompetisi dan Tingkat Kompetisi harus diisi.']);
+                exit;
+            }
+
+            // Pastikan direktori upload ada dan bisa ditulis
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0755, true);
+            }
+
+            // Data input
+            $data = [
+                'username' => $_SESSION['user'], // Pastikan session user valid
+                'jenis_id' => $_POST['jenis_id'],
+                'tingkat_id' => $_POST['tingkat_id'],
+                'nama_kompetisi' => $_POST['nama_kompetisi'],
+                'tempat_kompetisi' => $_POST['tempat_kompetisi'],
+                'tanggal_mulai' => $_POST['tanggal_mulai'],
+                'tanggal_akhir' => $_POST['tanggal_akhir'],
+                'no_surat_tugas' => $_POST['no_surat_tugas'],
+                'tanggal_surat_tugas' => $_POST['tanggal_surat_tugas'],
+                'url_kompetisi' => $_POST['url_kompetisi'],
+                'file_surat_tugas' => null,
+                'file_sertifikat' => null,
+                'foto_kegiatan' => null,
+                'file_poster' => null,
+                'dosen_id' => $_POST['dosen_id']
+            ];
+
+            // Handle file uploads
+            $files = [
+                'file_surat_tugas',
+                'file_sertifikat',
+                'foto_kegiatan',
+                'file_poster'
+            ];
+
+            foreach ($files as $file) {
+                if (isset($_FILES[$file]) && $_FILES[$file]['error'] === UPLOAD_ERR_OK) {
+                    $tmpName = $_FILES[$file]['tmp_name'];
+                    $fileName = uniqid() . '_' . basename($_FILES[$file]['name']); // Generate unique file name
+                    $destination = $uploadDir . $fileName;
+
+                    if (move_uploaded_file($tmpName, $destination)) {
+                        $data[$file] = $fileName; // Save file name to the data array
+                    } else {
+                        echo json_encode(['success' => false, 'message' => "Error saat mengupload file $file."]);
+                        exit;
+                    }
+                }
+            }
+
+            // Simpan data ke database
+            try {
+                require_once '../app/models/MahasiswaModel.php';
+                $mahasiswaModel = new MahasiswaModel(); // Instantiate the model
+                $mahasiswaModel->insertKompetisi($data); // Call the method
+                echo json_encode(['success' => true, 'message' => 'Data berhasil disimpan!']);
+            } catch (Exception $e) {
+                echo json_encode(['success' => false, 'message' => 'Error saat menyimpan data: ' . $e->getMessage()]);
+            }
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
+        }
     }
 }

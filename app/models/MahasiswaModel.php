@@ -237,4 +237,35 @@ class MahasiswaModel
             return 0;
         }
     }
+    public function insertKompetisi($data)
+    {
+        try {
+            // Prepare the parameters for the stored procedure
+            $params = [
+                [&$data['username'], SQLSRV_PARAM_IN],
+                [&$data['jenis_id'], SQLSRV_PARAM_IN],
+                [&$data['tingkat_id'], SQLSRV_PARAM_IN],
+                [&$data['nama_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['tempat_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['url_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_mulai'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_akhir'], SQLSRV_PARAM_IN],
+                [&$data['no_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['file_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['file_sertifikat'], SQLSRV_PARAM_IN],
+                [&$data['foto_kegiatan'], SQLSRV_PARAM_IN],
+                [&$data['file_poster'], SQLSRV_PARAM_IN],
+                [&$data['dosen_id'], SQLSRV_PARAM_IN],
+            ];
+
+            // Execute the stored procedure
+            $stmt = $this->executeStoredProcedure("InsertKompetisi_Mhs", $params);
+            return "Data kompetisi berhasil ditambahkan.";
+        } catch (Exception $e) {
+            // Log and rethrow the error
+            $this->logError($e->getMessage());
+            throw new Exception("Failed to insert kompetisi data: " . $e->getMessage());
+        }
+    }
 }
