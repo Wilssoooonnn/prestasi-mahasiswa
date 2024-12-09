@@ -232,4 +232,19 @@ class AdminModel
             throw new Exception("Failed to insert kompetisi data: " . $e->getMessage());
         }
     }
+
+    function getDataDosen()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetDataDosen");
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
 }

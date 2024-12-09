@@ -4316,3 +4316,453 @@ User not found: alfin[2024-12-08 15:36:23] Array
 )
 
 [2024-12-09 07:06:55] Error executing stored procedure: EditProfileAdmin
+[2024-12-09 07:53:23] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 07:53:23] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 07:53:23] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 07:53:23] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 07:53:23] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 07:53:23] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 08:09:03] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 08:09:03] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 08:09:03] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 08:09:03] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 08:09:03] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 08:09:03] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 09:06:19] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 09:06:19] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 09:06:19] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 09:06:19] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 09:06:19] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 09:06:19] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 09:06:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 09:06:20] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 09:06:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 09:06:20] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 09:06:20] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 09:06:20] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 09:55:04] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 09:55:04] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 09:55:04] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 09:55:04] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 09:55:04] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 09:55:04] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 09:55:21] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 09:55:21] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 09:55:21] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 09:55:21] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 09:55:21] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 09:55:21] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 11:08:56] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 11:08:56] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 11:08:56] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 11:08:56] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 11:08:56] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 11:08:56] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 11:09:01] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 11:09:01] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 11:09:01] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 11:09:01] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 11:09:01] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 11:09:01] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 11:13:36] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 11:13:36] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 11:13:36] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 11:13:36] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 11:13:36] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 11:13:36] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-09 11:13:38] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-09 11:13:38] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-09 11:13:38] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-09 11:13:38] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-09 11:13:38] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-09 11:13:38] Error executing stored procedure: CountKompetisi_Gagal

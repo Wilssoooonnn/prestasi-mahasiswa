@@ -152,87 +152,138 @@ function showDetail(kompetisiId) {
     })
     .catch((error) => console.error("Error:", error));
 }
-
 document.addEventListener("DOMContentLoaded", function () {
-  // Tombol "Next" di modal pertama
-  document
-    .querySelector("#insertModal .btn-outline-primary")
-    .addEventListener("click", function () {
-      const form1 = new FormData(document.getElementById("formDataDiri"));
-      console.log("Data Form 1: ", Object.fromEntries(form1)); // Debugging
-      localStorage.setItem(
-        "form1Data",
-        JSON.stringify(Object.fromEntries(form1))
-      );
-      const nextModal = new bootstrap.Modal(
-        document.getElementById("insertModal2")
-      );
-      nextModal.show();
-    });
-
-  // Tombol "Next" di modal kedua
-  document
-    .querySelector("#insertModal2 .btn-outline-primary")
-    .addEventListener("click", function () {
-      const form2 = new FormData(document.getElementById("formUploadFile"));
-      console.log("Data Form 2: ", Object.fromEntries(form2)); // Debugging
-      localStorage.setItem(
-        "form2Data",
-        JSON.stringify(Object.fromEntries(form2))
-      );
-      const nextModal = new bootstrap.Modal(
-        document.getElementById("insertModal3")
-      );
-      nextModal.show();
-    });
-
-  // Tombol "Save" di modal ketiga
-  document
-    .querySelector("#insertModal3 .btn-outline-primary")
-    .addEventListener("click", function () {
-      const form1Data = JSON.parse(localStorage.getItem("form1Data"));
-      const form2Data = JSON.parse(localStorage.getItem("form2Data"));
-      const form3 = new FormData(document.getElementById("formDataKompetisi"));
-
-      console.log("Data Form 1 (From LocalStorage): ", form1Data); // Debugging
-      console.log("Data Form 2 (From LocalStorage): ", form2Data); // Debugging
-      console.log("Data Form 3: ", Object.fromEntries(form3)); // Debugging
-
-      // Menggabungkan semua data
-      const finalData = new FormData();
-      Object.entries(form1Data).forEach(([key, value]) => {
-        console.log(`Appending ${key}: ${value}`); // Debugging
-        finalData.append(key, value);
-      });
-      Object.entries(form2Data).forEach(([key, value]) => {
-        console.log(`Appending ${key}: ${value}`); // Debugging
-        finalData.append(key, value);
-      });
-      form3.forEach((value, key) => {
-        console.log(`Appending ${key}: ${value}`); // Debugging
-        finalData.append(key, value);
+  function handleFormSubmission() {
+    // Tombol "Next" di modal pertama
+    document
+      .querySelector("#insertModal .btn-outline-primary")
+      .addEventListener("click", function () {
+        const form1 = new FormData(document.getElementById("formDataDiri"));
+        if (validateForm1(form1)) {
+          console.log("Data Form 1: ", Object.fromEntries(form1)); // Debugging
+          localStorage.setItem(
+            "form1Data",
+            JSON.stringify(Object.fromEntries(form1))
+          );
+          showModal("insertModal2");
+        } else {
+          alert("Pastikan semua field di Form 1 terisi!");
+        }
       });
 
-      // Debugging sebelum mengirim data
-      console.log("Final Data to be sent: ", finalData);
+    // Tombol "Save" di modal kedua
+    document
+      .querySelector("#insertModal2 .btn-outline-primary")
+      .addEventListener("click", function () {
+        const form1Data = JSON.parse(localStorage.getItem("form1Data"));
+        const form2 = new FormData(document.getElementById("formUploadFile"));
 
-      // Mengirim data ke server
-      fetch(baseURL + "admin/insertKompetisi", {
-        method: "POST",
-        body: finalData,
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log("Server Response: ", data); // Debugging response server
-          if (data.success) {
-            alert("Data berhasil ditambahkan!");
-            window.location.reload();
-          } else {
-            alert("Terjadi kesalahan: " + data.message);
+        if (validateForm2(form2)) {
+          console.log("Data Form 1 (From LocalStorage): ", form1Data); // Debugging
+          console.log("Data Form 2: ", Object.fromEntries(form2)); // Debugging
+
+          // Combine form1Data and form2 into one FormData
+          const finalData = new FormData();
+
+          // Append data from form1Data to finalData
+          if (form1Data) {
+            Object.entries(form1Data).forEach(([key, value]) => {
+              finalData.append(key, value);
+            });
           }
-        })
-        .catch((error) => {
-          console.error("Error:", error); // Debugging error
+
+          // Append form2 data (files) to finalData
+          form2.forEach((value, key) => {
+            finalData.append(key, value);
+          });
+
+          console.log("Final Data before submit: ", finalData);
+          submitFormData(finalData);
+        } else {
+          alert("Pastikan semua file di Form 2 terupload!");
+        }
+      });
+  }
+
+  function showModal(modalId) {
+    const modal = new bootstrap.Modal(document.getElementById(modalId));
+    modal.show();
+  }
+
+  function validateForm1(formData) {
+    // Validate the first form fields
+    return (
+      formData.get("jenis_id") &&
+      formData.get("tingkat_id") &&
+      formData.get("nama_kompetisi")
+    );
+  }
+
+  function validateForm2(formData) {
+    // Validate the second form fields (file inputs)
+    return (
+      formData.get("file_surat_tugas") &&
+      formData.get("file_sertifikat") &&
+      formData.get("foto_kegiatan") &&
+      formData.get("file_poster")
+    );
+  }
+
+  function submitFormData(finalData) {
+    fetch(baseURL + "mahasiswa/insertKompetisi", {
+      method: "POST",
+      body: finalData,
+    })
+      .then((response) => {
+        // Check if the response is not OK
+        if (!response.ok) {
+          throw new Error(
+            "Network response was not ok: " + response.statusText
+          );
+        }
+
+        // Read the response text first to inspect if it's valid JSON or HTML
+        return response.text().then((text) => {
+          // Try parsing the response text as JSON
+          try {
+            const data = JSON.parse(text);
+            console.log("Parsed JSON:", data);
+          } catch (error) {
+            // If parsing fails, log the raw response text for debugging
+            console.error("Response is not valid JSON:", text);
+            alert(
+              "The server responded with an error or unexpected data. Check the server logs."
+            );
+          }
         });
-    });
+      })
+      .catch((error) => {
+        alert("Error occurred: " + error.message);
+        console.error("Error details:", error);
+      });
+  }
+
+  handleFormSubmission();
 });
+
+// function submitFormData(finalData) {
+//   fetch("/mahasiswa/insertKompetisi", {
+//     method: "POST",
+//     body: finalData,
+//   })
+//     .then((response) => {
+//       if (!response.ok) {
+//         throw new Error(
+//           "Network response was not ok: " + response.statusText
+//         );
+//       }
+//       return response.json();
+//     })
+//     .then((data) => {
+//       console.log("Parsed JSON:", data);
+//     })
+//     .catch((error) => {
+//       alert("Error occurred: " + error.message);
+//       console.error("Error details:", error);
+//     });
+// }

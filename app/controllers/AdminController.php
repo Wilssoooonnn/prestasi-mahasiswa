@@ -194,9 +194,7 @@ class AdminController
     function getKompetisiDetail()
     {
         // Load the model that contains the detailKompetisi method
-        require_once '../app/models/AdminModel.php';
         require_once '../app/models/MahasiswaModel.php';
-        $adminModel = new AdminModel();
         $mahasiswaModel = new MahasiswaModel();
 
         $dataMhs = $mahasiswaModel->readDataMahasiswaByUsername('odin');
