@@ -268,4 +268,34 @@ class MahasiswaModel
             throw new Exception("Failed to insert kompetisi data: " . $e->getMessage());
         }
     }
+
+    public function getLeaderboard()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetLeaderboard");
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
+
+    public function getLeaderboardOffset()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetLeaderboard_Offset");
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
 }
