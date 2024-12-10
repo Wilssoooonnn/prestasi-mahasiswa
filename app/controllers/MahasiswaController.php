@@ -43,26 +43,6 @@ class MahasiswaController extends Controller
 
     public function kompetisi()
     {
-        if (!isset($_SESSION['user'])) {
-            header('Location: login.php');
-            exit;
-        }
-
-        require_once '../app/models/MahasiswaModel.php';
-        $mahasiswaModel = new MahasiswaModel();
-
-        // Ambil parameter page dari URL
-        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-        $limit = 10; // Jumlah data per halaman
-        $offset = ($page - 1) * $limit;
-
-        // Ambil data kompetisi dengan paginasi
-        $dataKompetisi = $mahasiswaModel->readKompetisiPaginated($_SESSION['user'], $offset, $limit);
-
-        // Hitung total data
-        $totalData = $mahasiswaModel->countKompetisiByUsername($_SESSION['user']);
-        $totalPages = ceil($totalData / $limit);
-
         // Kirim data ke view
         $view = new Controller();
         $view->view('template/header', ['judul' => 'Kompetisi | Mahasiswa']);
@@ -276,86 +256,98 @@ class MahasiswaController extends Controller
     public function updateKompetisi()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Direktori upload
             $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/prestasi-mahasiswa/uploads/';
 
-            // Validasi input
-            if (empty($_POST['jenis_id']) || empty($_POST['tingkat_id'])) {
-                echo json_encode(['success' => false, 'message' => 'Jenis Kompetisi dan Tingkat Kompetisi harus diisi.']);
-                exit;
+            // Validasi input wajib
+            $requiredFields = ['jenis_id', 'tingkat_id', 'id_kompetisi', 'nama_kompetisi'];
+            foreach ($requiredFields as $field) {
+                if (empty($_POST[$field])) {
+                    echo json_encode(['success' => false, 'message' => "Field $field harus diisi."]);
+                    exit;
+                }
             }
 
-            // Pastikan direktori upload ada dan bisa ditulis
+            // Pastikan folder upload ada
             if (!is_dir($uploadDir)) {
                 mkdir($uploadDir, 0755, true);
             }
 
-            // Menyimpan data form dan memeriksa file
             $data = [
-                'jenis_id' => $_POST['jenis_id'],
-                'tingkat_id' => $_POST['tingkat_id'],
-                'nama_kompetisi' => $_POST['nama_kompetisi'],
-                'tempat_kompetisi' => $_POST['tempat_kompetisi'],
+                'jenis_id' => htmlspecialchars($_POST['jenis_id']),
+                'tingkat_id' => htmlspecialchars($_POST['tingkat_id']),
+                'nama_kompetisi' => htmlspecialchars($_POST['nama_kompetisi']),
+                'tempat_kompetisi' => htmlspecialchars($_POST['tempat_kompetisi']),
                 'tanggal_mulai' => $_POST['tanggal_mulai'],
                 'tanggal_akhir' => $_POST['tanggal_akhir'],
-                'no_surat_tugas' => $_POST['no_surat_tugas'],
+                'no_surat_tugas' => htmlspecialchars($_POST['no_surat_tugas']),
                 'tanggal_surat_tugas' => $_POST['tanggal_surat_tugas'],
-                'url_kompetisi' => $_POST['url_kompetisi'],
-                'dosen_id' => $_POST['dosen_id'],
-                'id_kompetisi' => $_POST['id_kompetisi'],
+                'url_kompetisi' => htmlspecialchars($_POST['url_kompetisi']),
+                'dosen_id' => htmlspecialchars($_POST['dosen_id']),
+                'id_kompetisi' => htmlspecialchars($_POST['id_kompetisi']),
             ];
 
-            // Menggunakan data lama jika file tidak diupload ulang
-            $filesToUpdate = [
-                'file_surat_tugas' => isset($_FILES['file_surat_tugas_new']) && $_FILES['file_surat_tugas_new']['error'] === UPLOAD_ERR_OK ? $_FILES['file_surat_tugas_new'] : null,
-                'file_sertifikat' => isset($_FILES['file_sertifikat_new']) && $_FILES['file_sertifikat_new']['error'] === UPLOAD_ERR_OK ? $_FILES['file_sertifikat_new'] : null,
-                'foto_kegiatan' => isset($_FILES['foto_kegiatan_new']) && $_FILES['foto_kegiatan_new']['error'] === UPLOAD_ERR_OK ? $_FILES['foto_kegiatan_new'] : null,
-                'file_poster' => isset($_FILES['file_poster_new']) && $_FILES['file_poster_new']['error'] === UPLOAD_ERR_OK ? $_FILES['file_poster_new'] : null
-            ];
-
-            // Cek dan proses file upload, atau pakai file lama jika tidak ada upload baru
-            foreach ($filesToUpdate as $key => $file) {
-                if ($file !== null) {
-                    // Proses file baru yang diupload
-                    $tmpName = $file['tmp_name'];
-                    $fileName = uniqid() . '_' . basename($file['name']); // Generate unique file name
+            // Pemrosesan file
+            $fileKeys = ['file_surat_tugas', 'file_sertifikat', 'foto_kegiatan', 'file_poster'];
+            foreach ($fileKeys as $key) {
+                if (isset($_FILES[$key . '_new']) && $_FILES[$key . '_new']['error'] === UPLOAD_ERR_OK) {
+                    $tmpName = $_FILES[$key . '_new']['tmp_name'];
+                    $fileName = uniqid() . '_' . basename($_FILES[$key . '_new']['name']);
                     $destination = $uploadDir . $fileName;
 
-                    // Cek jika ada file lama, hapus file lama sebelum upload file baru
-                    if (isset($_POST[$key . '_old'])) {
-                        $oldFilePath = $uploadDir . $_POST[$key . '_old']; // Path file lama
-                        if (file_exists($oldFilePath)) {
-                            unlink($oldFilePath); // Menghapus file lama
-                        }
-                    }
-
                     if (move_uploaded_file($tmpName, $destination)) {
-                        $data[$key] = $fileName; // Update nama file yang baru
+                        // Hapus file lama jika ada
+                        if (isset($_POST[$key . '_old']) && file_exists($uploadDir . $_POST[$key . '_old'])) {
+                            unlink($uploadDir . $_POST[$key . '_old']);
+                        }
+                        $data[$key] = $fileName;
                     } else {
-                        echo json_encode(['success' => false, 'message' => "Error saat mengupload file $key."]);
+                        echo json_encode(['success' => false, 'message' => "Gagal mengupload file $key."]);
                         exit;
                     }
+                } elseif (isset($_POST[$key . '_old'])) {
+                    $data[$key] = $_POST[$key . '_old'];
                 } else {
-                    // Jika tidak ada file baru, pakai file lama (gunakan hanya nama file, bukan path absolut)
-                    if (isset($_POST[$key . '_old'])) {
-                        $data[$key] = basename($_POST[$key . '_old']); // Hanya ambil nama file, bukan path lengkap
-                    } else {
-                        $data[$key] = null; // Jika tidak ada file lama, set null
-                    }
+                    $data[$key] = null;
                 }
             }
 
             // Simpan data ke database
             try {
                 require_once '../app/models/MahasiswaModel.php';
-                $mahasiswaModel = new MahasiswaModel(); // Instantiate the model
-                $mahasiswaModel->updateKompetisi($data); // Call the method
-                echo json_encode(['success' => true, 'message' => 'Data berhasil disimpan!']);
+                $mahasiswaModel = new MahasiswaModel();
+                $mahasiswaModel->updateKompetisi($data);
+                echo json_encode(['success' => true, 'message' => 'Data berhasil diperbarui!']);
             } catch (Exception $e) {
                 echo json_encode(['success' => false, 'message' => 'Error saat menyimpan data: ' . $e->getMessage()]);
             }
         } else {
             echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
         }
+    }
+
+
+    public function loadKompetisiAjax()
+    {
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+
+        $username = $_SESSION['user'];
+        // Ambil parameter dari request
+        $page = isset($_POST['page']) ? (int)$_POST['page'] : 1;
+        $limit = 7; // Jumlah data per halaman
+        $offset = ($page - 1) * $limit;
+
+        // Ambil data kompetisi dan total
+        $dataAllKompetisi = $mahasiswaModel->readKompetisiPaginated($username,  $offset, $limit);
+        $totalKompetisi = $mahasiswaModel->countKompetisiByUsername($username);
+        $totalPages = ceil($totalKompetisi / $limit);
+
+        // Kirim data sebagai JSON
+        header('Content-Type: application/json');
+        echo json_encode([
+            'data' => $dataAllKompetisi,
+            'totalPages' => $totalPages,
+            'currentPage' => $page,
+        ]);
     }
 }

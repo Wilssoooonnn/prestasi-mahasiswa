@@ -5158,3 +5158,33 @@ User not found: alfinUser not found: alfin[2024-12-10 14:03:13] Array
 )
 
 [2024-12-10 21:55:01] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 22:37:47] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-10 22:37:47] Error executing stored procedure: GetKompetisiByNimPaginated
+[2024-12-10 22:38:51] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 10744
+            [code] => 10744
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The number of rows provided for a FETCH clause must be greater then zero.
+        )
+
+)
+
+[2024-12-10 22:38:51] Error executing stored procedure: GetKompetisiByNimPaginated

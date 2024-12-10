@@ -19,6 +19,8 @@ function loadKompetisi(page = 1) {
 
 function loadKompetisiMahasiswa(page = 1) {
   currentPage = page;
+  console.log("Fetching page:", page); // Log untuk memeriksa halaman yang dimuat
+
   fetch(baseURL + "mahasiswa/loadKompetisiAjax", {
     method: "POST",
     headers: {
@@ -26,14 +28,22 @@ function loadKompetisiMahasiswa(page = 1) {
     },
     body: `page=${page}`,
   })
-    .then((response) => response.json())
+    .then((response) => {
+      console.log("Response status:", response.status); // Log status respons
+      return response.json();
+    })
     .then((data) => {
-      updateTable(data.data, "mahasiswaTableBody");
-      updatePagination(
-        data.totalPages,
-        data.currentPage,
-        "loadKompetisiMahasiswa"
-      );
+      console.log("Data received:", data); // Log data diterima dari server
+      if (data.data) {
+        updateTableMahasiswa(data.data, "kompetisiTableBodyMahasiswa");
+        updatePaginationMahasiswa(
+          data.totalPages,
+          data.currentPage,
+          "loadKompetisiMahasiswa"
+        );
+      } else {
+        console.error("Data structure invalid:", data); // Log jika struktur data tidak sesuai
+      }
     })
     .catch((error) =>
       console.error("Error loading mahasiswa kompetisi data:", error)
@@ -43,6 +53,7 @@ function loadKompetisiMahasiswa(page = 1) {
 // Fungsi untuk memperbarui isi tabel
 function updateTable(data) {
   const tbody = document.getElementById("kompetisiTableBody");
+  console.log(data);
   if (data.length === 0) {
     tbody.innerHTML = `
                 <tr>
@@ -84,7 +95,7 @@ function updateTable(data) {
                 <button class="btn btn-outline-danger"
                     data-bs-toggle="modal"
                     data-bs-target="#DeclineModal"
-                    onclick="setDeclineModal(${row.kompetisi_id})">
+                    onclick="setDeclineModal(${row})">
                     <i class="fi fi-rr-cross"></i>
                 </button>
                 <button class="btn btn-outline-primary"
@@ -92,6 +103,68 @@ function updateTable(data) {
                     data-bs-target="#detailModal"
                     onclick="showDetail(${row.NIM},${row.kompetisi_id})">
                     <i class="fi fi-rr-eye"></i>
+                </button>
+                </td>
+            </tr>
+        `
+    )
+    .join("");
+}
+
+// Fungsi untuk memperbarui isi tabel
+function updateTableMahasiswa(data) {
+  const tbody = document.getElementById("kompetisiTableBodyMahasiswa");
+  console.log("Data for mahasiswa table:", data); // Log data diterima untuk tabel
+
+  if (data.length === 0) {
+    tbody.innerHTML = `
+                <tr>
+                    <td colspan="7" class="text-center">Tidak ada data kompetisi</td>
+                </tr>
+            `;
+    return;
+  }
+
+  tbody.innerHTML = data
+    .map(
+      (row) => `
+            <tr>
+                <td>${row.kompetisi_id}</td>
+                <td>${row.NIM}</td>
+                <td>${row.Nama_Mahasiswa}</td>
+                <td>${row.Nama_Kompetisi}</td>
+                <td>${row.Jenis_Kompetisi}</td>
+                <td>${row.Tingkat_Kompetisi}</td>
+                <td>${row.No_Surat_Tugas}</td>
+                <td class="text-center">
+                    <span class="${
+                      row.Status === "Proses"
+                        ? "badge bg-warning text-white"
+                        : row.Status === "Berhasil"
+                        ? "badge bg-success text-white"
+                        : "badge bg-danger text-white"
+                    }">
+                        ${row.Status}
+                    </span>
+                </td>
+                <td>
+                <button class="btn btn-outline-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#detailModal"
+                    onclick="showDetail(${row.NIM},${row.kompetisi_id})">
+                <i class="fi fi-rr-eye"></i>
+                </button>
+                <button class="btn btn-outline-warning"
+                    data-bs-toggle="modal"
+                    data-bs-target="#editModal"
+                    onclick="prefillEditModal(${row.kompetisi_id})">
+                    <i class="fi fi-rr-pencil"></i>
+                </button>
+                <button class="btn btn-outline-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#DeclineModal"
+                    onclick="setDeclineModal(${row.kompetisi_id})">
+                    <i class="fi fi-rr-trash"></i>
                 </button>
                 </td>
             </tr>
@@ -136,11 +209,45 @@ function updatePagination(totalPages, currentPage, loadFunction) {
   pagination.innerHTML = paginationHTML;
 }
 
+function updatePaginationMahasiswa(totalPages, currentPage, loadFunction) {
+  const pagination = document.getElementById("paginationMahasiswa");
+  let paginationHTML = "";
+
+  // Tombol Previous
+  if (currentPage > 1) {
+    paginationHTML += `
+      <li class="page-item">
+        <a class="page-link" href="#" onclick="${loadFunction}(${
+      currentPage - 1
+    })">Previous</a>
+      </li>`;
+  }
+
+  // Halaman Tengah
+  for (let i = 1; i <= totalPages; i++) {
+    paginationHTML += `
+      <li class="page-item ${i === currentPage ? "active" : ""}">
+        <a class="page-link" href="#" onclick="${loadFunction}(${i})">${i}</a>
+      </li>`;
+  }
+
+  // Tombol Next
+  if (currentPage < totalPages) {
+    paginationHTML += `
+      <li class="page-item">
+        <a class="page-link" href="#" onclick="${loadFunction}(${
+      currentPage + 1
+    })">Next</a>
+      </li>`;
+  }
+
+  pagination.innerHTML = paginationHTML;
+}
 document.addEventListener("DOMContentLoaded", () => {
   if (document.getElementById("kompetisiTableBody")) {
     loadKompetisi();
   }
-  if (document.getElementById("mahasiswaTableBody")) {
+  if (document.getElementById("kompetisiTableBodyMahasiswa")) {
     loadKompetisiMahasiswa();
   }
 });
@@ -336,93 +443,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error("Error details:", error);
       });
   }
-
-  function handleFormUpdate() {
-    // Tombol "Next" di modal pertama
-    document
-      .querySelector("#editModal .btn-outline-primary")
-      .addEventListener("click", function () {
-        const form1 = new FormData(
-          document.getElementById("formUpdateDataDiri")
-        );
-        if (validateForm1(form1)) {
-          console.log("Data Form 1: ", Object.fromEntries(form1)); // Debugging
-          localStorage.setItem(
-            "form1Data",
-            JSON.stringify(Object.fromEntries(form1))
-          );
-          showModal("editModal2");
-        } else {
-          alert("Pastikan semua field di Form 1 terisi!");
-        }
-      });
-
-    // Tombol "Save" di modal kedua
-    document
-      .querySelector("#editModal2 .btn-outline-primary")
-      .addEventListener("click", function () {
-        const form1Data = JSON.parse(localStorage.getItem("form1Data"));
-        const form2 = new FormData(document.getElementById("formUpdateFile"));
-
-        console.log("Data Form 1 (From LocalStorage): ", form1Data); // Debugging
-        console.log("Data Form 2: ", Object.fromEntries(form2)); // Debugging
-
-        // Combine form1Data and form2 into one FormData
-        const finalData = new FormData();
-
-        // Append data from form1Data to finalData
-        if (form1Data) {
-          Object.entries(form1Data).forEach(([key, value]) => {
-            finalData.append(key, value);
-          });
-        }
-
-        // Append form2 data (files) to finalData
-        form2.forEach((value, key) => {
-          finalData.append(key, value);
-        });
-
-        console.log("Final Data before update: ", finalData);
-        submitFormUpdate(finalData);
-      });
-  }
-
-  function submitFormUpdate(finalData) {
-    fetch(baseURL + "mahasiswa/updateKompetisi", {
-      method: "POST",
-      body: finalData,
-    })
-      .then((response) => {
-        // Check if the response is not OK
-        if (!response.ok) {
-          throw new Error(
-            "Network response was not ok: " + response.statusText
-          );
-        }
-
-        // Read the response text first to inspect if it's valid JSON or HTML
-        return response.text().then((text) => {
-          // Try parsing the response text as JSON
-          try {
-            const data = JSON.parse(text);
-            console.log("Parsed JSON:", data);
-          } catch (error) {
-            // If parsing fails, log the raw response text for debugging
-            console.error("Response is not valid JSON:", text);
-            alert(
-              "The server responded with an error or unexpected data. Check the server logs."
-            );
-          }
-        });
-      })
-      .catch((error) => {
-        alert("Error occurred: " + error.message);
-        console.error("Error details:", error);
-      });
-  }
-
   handleFormSubmission();
-  handleFormUpdate();
 });
 /*
 
@@ -513,3 +534,74 @@ function declineStatus(kompetisiId) {
       console.error("Terjadi kesalahan:", error);
     });
 }
+
+/*
+
+Edit Kompetisi
+
+*/
+function prefillEditModal(data) {
+  document.getElementById("jenis_id").value = data.jenis_id;
+  document.getElementById("tingkat_id").value = data.tingkat_id;
+  document.getElementById("nama_kompetisi").value = data.nama_kompetisi;
+  document.getElementById("tempat_kompetisi").value = data.tempat_kompetisi;
+  document.getElementById("tanggal_mulai").value = data.tanggal_mulai;
+  document.getElementById("tanggal_akhir").value = data.tanggal_akhir;
+  document.getElementById("no_surat_tugas").value = data.no_surat_tugas;
+  document.getElementById("tanggal_surat_tugas").value =
+    data.tanggal_surat_tugas;
+  document.getElementById("url_kompetisi").value = data.url_kompetisi;
+  document.getElementById("dosen_id").value = data.dosen_id;
+}
+
+function handleEditSubmission() {
+  const form1Data = JSON.parse(localStorage.getItem("form1Data"));
+  const form2 = new FormData(document.getElementById("formUploadFile"));
+
+  if (validateForm2(form2)) {
+    // Gabungkan form1Data dan form2Data
+    const finalData = new FormData();
+    if (form1Data) {
+      Object.entries(form1Data).forEach(([key, value]) => {
+        finalData.append(key, value);
+      });
+    }
+
+    // Tambahkan data form2
+    form2.forEach((value, key) => {
+      finalData.append(key, value);
+    });
+
+    // Kirim ke endpoint update
+    fetch(baseURL + "mahasiswa/updateKompetisi", {
+      method: "POST",
+      body: finalData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Error: " + response.statusText);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.success) {
+          console.log("Data berhasil diperbarui: ", data);
+          closeAllModals();
+          showModal("successModal");
+        } else {
+          alert("Terjadi kesalahan saat memperbarui data!");
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        alert("Gagal memperbarui data: " + error.message);
+      });
+  } else {
+    alert("Pastikan semua file diunggah dengan benar!");
+  }
+}
+
+// Pasang event listener pada tombol save
+document
+  .getElementById("saveButton")
+  .addEventListener("click", handleEditSubmission);
