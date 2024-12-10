@@ -42,6 +42,7 @@ $kompetisiModel = new KompetisiModel();
                     <th>Jenis Kompetisi</th>
                     <th>Tingkat Kompetisi</th>
                     <th>No Surat Tugas</th>
+                    <th>Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
