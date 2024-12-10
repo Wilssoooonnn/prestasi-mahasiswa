@@ -4258,3 +4258,153 @@ User not found: titan[2024-12-10 02:13:03] Array
 [2024-12-10 02:20:47] Error executing stored procedure: CountKompetisi_Gagal
 [2024-12-10 12:14:47] Error di ApproveKompetisi: ID Kompetisi tidak valid.
 [2024-12-10 12:15:00] Error di ApproveKompetisi: ID Kompetisi tidak valid.
+[2024-12-10 13:58:49] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetLeaderboard'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetLeaderboard'.
+        )
+
+)
+
+[2024-12-10 13:58:49] Error executing stored procedure: GetLeaderboard
+[2024-12-10 13:58:49] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetLeaderboard_Offset'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetLeaderboard_Offset'.
+        )
+
+)
+
+[2024-12-10 13:58:49] Error executing stored procedure: GetLeaderboard_Offset
+User not found: alfinUser not found: alfin[2024-12-10 14:03:13] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-10 14:03:13] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-10 14:03:13] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-10 14:03:13] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-10 14:03:13] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-10 14:03:13] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-10 14:03:21] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetDataKompetisiByNim'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetDataKompetisiByNim'.
+        )
+
+)
+
+[2024-12-10 14:03:21] Error executing stored procedure: GetDataKompetisiByNim
+[2024-12-10 14:06:46] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 14:06:46] Error executing stored procedure: GetDataKompetisiByNim
+[2024-12-10 15:21:30] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 15:21:30] Error executing stored procedure: GetDataKompetisiByNim
+[2024-12-10 15:21:57] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 15:21:57] Error executing stored procedure: GetDataKompetisiByNim
+[2024-12-10 15:23:06] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 15:23:06] Error executing stored procedure: GetDataKompetisiByNim
