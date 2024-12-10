@@ -262,4 +262,24 @@ class MahasiswaController extends Controller
             echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
         }
     }
+
+    //fungsi top 3 leaderboard
+    public function getLeaderboard()
+    {
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+        // echo "<pre>";
+        // var_dump($mahasiswaModel->getLeaderboard());
+        return $mahasiswaModel->getLeaderboard();
+    }
+
+    //fungsi leaderboard
+    public function getLeaderboardOffset()
+    {
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+        // echo "<pre>";
+        // var_dump($mahasiswaModel->getLeaderboard());
+        return $mahasiswaModel->getLeaderboardOffset();
+    }
 }

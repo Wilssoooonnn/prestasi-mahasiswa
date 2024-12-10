@@ -1,3 +1,10 @@
+<?php
+require_once '../app/controllers/MahasiswaController.php';
+$controller = new MahasiswaController();
+$data = $controller->getLeaderboard();
+$dataOff = $controller->getLeaderboardOffset();
+?>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
     <div class="container-fluid py-1">
@@ -42,7 +49,7 @@
     <div class="container w-100 bg-primary rounded-3 p-5">
         <object data="<?= BASE_URL; ?>assets/images/header.svg" type="image/svg+xml" style="width: 80vh;"></object>
         <p class="lead text-white mt-4">Track your academic and extracurricular achievements and see where you rank!</p>
-        <a href="#signupSection" class="btn btn-outline-light btn-lg">Start Now</a>
+        <a href="auth/login" class="btn btn-outline-light btn-lg">Start Now</a>
     </div>
 </section>
 
@@ -55,41 +62,41 @@
     <!-- Display Top 3 Achievers in Cards -->
     <div class="container d-flex justify-content-center gap-5" style="border:none !important">
         <!-- Top 1 Achiever -->
-        <div class="card" style="width: 18rem; border: none;">
+        <div class="card text-center" style="width: 18rem; border: none;">
             <iframe src="https://lottie.host/embed/e737a588-abbf-4972-b82a-208d934d4f4c/EfR1kYDNOT.lottie"></iframe>
             <div class="card-body">
-                <h5 class="card-title">John Doe</h5>
-                <p class="card-text">Top Achiever in Computer Science with 50 achievements.</p>
+                <h5 class="card-title"><?= $data[0]['Nama']; ?></h5>
+                <p class="card-text">Top Achiever in <?= $data[0]['Prodi']; ?> with <?= $data[0]['TotalBerhasil']; ?> achievements.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Achievements : 50</li>
-                <li class="list-group-item">Program Studi : Computer Science</li>
+                <li class="list-group-item">Achievements : <?= $data[0]['TotalBerhasil']; ?></li>
+                <li class="list-group-item">Program Studi : <?= $data[0]['Prodi']; ?></li>
             </ul>
         </div>
 
         <!-- Top 2 Achiever -->
-        <div class="card" style="width: 18rem; border: none;">
+        <div class="card text-center" style="width: 18rem; border: none;">
             <iframe src="https://lottie.host/embed/e737a588-abbf-4972-b82a-208d934d4f4c/EfR1kYDNOT.lottie"></iframe>
             <div class="card-body">
-                <h5 class="card-title">Jane Smith</h5>
-                <p class="card-text">Second place in Engineering with 47 achievements and 280 points.</p>
+                <h5 class="card-title"><?= $data[1]['Nama']; ?></h5>
+                <p class="card-text">Second place in <?= $data[1]['Prodi']; ?> with <?= $data[1]['TotalBerhasil']; ?> achievements.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Achievements : 47</li>
-                <li class="list-group-item">Program Studi : Engineering</li>
+                <li class="list-group-item">Achievements : <?= $data[1]['TotalBerhasil']; ?></li>
+                <li class="list-group-item">Program Studi : <?= $data[1]['Prodi']; ?></li>
             </ul>
         </div>
 
         <!-- Top 3 Achiever -->
-        <div class="card" style="width: 18rem; border: none;">
+        <div class="card text-center" style="width: 18rem; border: none;">
             <iframe src="https://lottie.host/embed/e737a588-abbf-4972-b82a-208d934d4f4c/EfR1kYDNOT.lottie"></iframe>
             <div class="card-body">
-                <h5 class="card-title">Bob Johnson</h5>
-                <p class="card-text">Ranked third in Biology with 45 achievements and 260 points.</p>
+                <h5 class="card-title"><?= $data[2]['Nama']; ?></h5>
+                <p class="card-text">Ranked third in <?= $data[2]['Prodi']; ?> with <?= $data[2]['TotalBerhasil']; ?> achievements.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Achievements : 45</li>
-                <li class="list-group-item">Program Studi : Biology</li>
+                <li class="list-group-item">Achievements : <?= $data[2]['TotalBerhasil']; ?></li>
+                <li class="list-group-item">Program Studi : <?= $data[2]['Prodi']; ?></li>
             </ul>
         </div>
     </div>
@@ -98,42 +105,42 @@
     <table class="table table-hover mt-5">
         <thead class="table-primary">
             <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Program Studi</th>
-                <th>Total Achievements</th>
+                <th class="text-center">#</th>
+                <th class="text-center">Name</th>
+                <th class="text-center">Program Studi</th>
+                <th class="text-center">Total Achievements</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</td>
-                <td>John Doe</td>
-                <td>Computer Science</td>
-                <td>50</td>
+                <td class="text-center">4</td>
+                <td class="text-center"><?= $dataOff[0]['Nama']; ?></td>
+                <td class="text-center"><?= $dataOff[0]['Prodi']; ?></td>
+                <td class="text-center"><?= $dataOff[0]['TotalBerhasil']; ?></td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>Jane Smith</td>
-                <td>Engineering</td>
-                <td>47</td>
+                <td class="text-center">5</td>
+                <td class="text-center"><?= $dataOff[1]['Nama']; ?></td>
+                <td class="text-center"><?= $dataOff[1]['Prodi']; ?></td>
+                <td class="text-center"><?= $dataOff[1]['TotalBerhasil']; ?></td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>Bob Johnson</td>
-                <td>Biology</td>
-                <td>45</td>
+                <td class="text-center">6</td>
+                <td class="text-center"><?= $dataOff[2]['Nama']; ?></td>
+                <td class="text-center"><?= $dataOff[2]['Prodi']; ?></td>
+                <td class="text-center"><?= $dataOff[2]['TotalBerhasil']; ?></td>
             </tr>
             <tr>
-                <td>4</td>
-                <td>Alice Brown</td>
-                <td>Mathematics</td>
-                <td>43</td>
+                <td class="text-center">7</td>
+                <td class="text-center"><?= $dataOff[3]['Nama']; ?></td>
+                <td class="text-center"><?= $dataOff[3]['Prodi']; ?></td>
+                <td class="text-center"><?= $dataOff[3]['TotalBerhasil']; ?></td>
             </tr>
             <tr>
-                <td>5</td>
-                <td>Sarah White</td>
-                <td>Physics</td>
-                <td>42</td>
+                <td class="text-center">8</td>
+                <td class="text-center"><?= $dataOff[4]['Nama']; ?></td>
+                <td class="text-center"><?= $dataOff[4]['Prodi']; ?></td>
+                <td class="text-center"><?= $dataOff[4]['TotalBerhasil']; ?></td>
             </tr>
         </tbody>
     </table>
