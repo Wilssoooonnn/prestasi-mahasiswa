@@ -10,88 +10,89 @@ $kompetisiModel = new KompetisiModel();
 $adminModel = new AdminModel();
 
 ?>
-<h2>Data Kompetisi</h2>
-<div class="card-header">
-    <div class="row g-2 align-items-center">
-        <div class="col d-flex">
-            <input type="search" class="form-control w-50" placeholder="Cari NIM">
-        </div>
-        <div class="col d-flex justify-content-end">
-            <button type="button" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">Tambah Data</button>
+<div class="container mt-5">
+    <h2>Data Kompetisi</h2>
+    <div class="card-header">
+        <div class="row g-2 align-items-center">
+            <div class="col d-flex">
+                <input type="search" class="form-control w-50" placeholder="Cari NIM">
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">Tambah Data</button>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="table-responsive mt-5">
-    <table class="table table-hover">
-        <thead class="table-primary">
-            <tr>
-                <th>ID</th>
-                <th>Nama Kompetisi</th>
-                <th>Jenis Kompetisi</th>
-                <th>Tingkat Kompetisi</th>
-                <th>Tempat Kompetisi</th>
-                <th>No Surat Tugas</th>
-                <th>Status</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php if (!empty($dataKompetisi)) : ?>
-                <?php foreach ($dataKompetisi as $row) : ?>
-                    <tr>
-                        <td><?= htmlspecialchars($row['kompetisi_id']) ?></td>
-                        <td><?= htmlspecialchars($row['Nama_Kompetisi']) ?></td>
-                        <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
-                        <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
-                        <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
-                        <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
-                        <td class="text-center">
-                            <span class="<?php
-                                            if ($row['Status'] == 'Proses') {
-                                                echo 'badge bg-warning text-white';
-                                            } else if ($row['Status'] == 'Berhasil') {
-                                                echo 'badge bg-success text-white';
-                                            } else {
-                                                echo 'badge bg-danger text-white';
-                                            }
-                                            ?>">
-                                <?= htmlspecialchars($row['Status']) ?>
-                            </span>
-                        </td>
-
-                        <td>
-                            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailModal" onclick="loadDetailData('<?= json_encode($row) ?>')">
-                                <i class="fi fi-rr-eye"></i>
-                            </button>
-                            <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal" onclick="">
-                                <i class="fi fi-rr-pencil"></i>
-                            </button>
-                            <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                <i class="fi fi-rr-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            <?php else : ?>
+    <div class="table-responsive mt-5">
+        <table class="table table-hover">
+            <thead class="table-primary">
                 <tr>
-                    <td colspan="10" class="text-center">Tidak ada data kompetisi</td>
+                    <th>ID</th>
+                    <th>Nama Kompetisi</th>
+                    <th>Jenis Kompetisi</th>
+                    <th>Tingkat Kompetisi</th>
+                    <th>Tempat Kompetisi</th>
+                    <th>No Surat Tugas</th>
+                    <th>Status</th>
+                    <th>Action</th>
                 </tr>
-            <?php endif; ?>
-        </tbody>
-    </table>
-</div>
+            </thead>
+            <tbody>
+                <?php if (!empty($dataKompetisi)) : ?>
+                    <?php foreach ($dataKompetisi as $row) : ?>
+                        <tr>
+                            <td><?= htmlspecialchars($row['kompetisi_id']) ?></td>
+                            <td><?= htmlspecialchars($row['Nama_Kompetisi']) ?></td>
+                            <td><?= htmlspecialchars($row['Jenis_Kompetisi']) ?></td>
+                            <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
+                            <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
+                            <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
+                            <td class="text-center">
+                                <span class="<?php
+                                                if ($row['Status'] == 'Proses') {
+                                                    echo 'badge bg-warning text-white';
+                                                } else if ($row['Status'] == 'Berhasil') {
+                                                    echo 'badge bg-success text-white';
+                                                } else {
+                                                    echo 'badge bg-danger text-white';
+                                                }
+                                                ?>">
+                                    <?= htmlspecialchars($row['Status']) ?>
+                                </span>
+                            </td>
 
-<!-- Paginasi -->
-<nav aria-label="Pagination">
-    <ul class="pagination justify-content-center">
-        <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
-            <li class="page-item <?= ($i == $page) ? 'active' : '' ?>">
-                <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
-            </li>
-        <?php endfor; ?>
-    </ul>
-</nav>
+                            <td>
+                                <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailModal" onclick="loadDetailData('<?= json_encode($row) ?>')">
+                                    <i class="fi fi-rr-eye"></i>
+                                </button>
+                                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal" onclick="">
+                                    <i class="fi fi-rr-pencil"></i>
+                                </button>
+                                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                    <i class="fi fi-rr-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else : ?>
+                    <tr>
+                        <td colspan="10" class="text-center">Tidak ada data kompetisi</td>
+                    </tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Paginasi -->
+    <nav aria-label="Pagination">
+        <ul class="pagination justify-content-center">
+            <?php for ($i = 1; $i <= $totalPages; $i++) : ?>
+                <li class="page-item <?= ($i == $page) ? 'active' : '' ?>">
+                    <a class="page-link" href="?page=<?= $i ?>"><?= $i ?></a>
+                </li>
+            <?php endfor; ?>
+        </ul>
+    </nav>
 </div>
 
 <!-- Modal Detail -->
