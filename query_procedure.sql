@@ -199,25 +199,25 @@ EXEC GetKompetisi_Count;
 
 
 -- HITUNG PROSES KOMPETISI
-CREATE PROCEDURE CountKompetisi_Proses
+ALTER PROCEDURE CountKompetisi_Proses
 AS
 BEGIN
     SELECT COUNT(*) AS JumlahKompetisi
     FROM kompetisi
-    WHERE status_id = (SELECT id FROM status WHERE nama = 'Proses');
+    WHERE status_id = 1;
 END;
-GO
 EXEC CountKompetisi_Proses;
 
 
 
 -- HITUNG BERHASIL KOMPETISI
-CREATE PROCEDURE CountKompetisi_Berhasil
+
+ALTER PROCEDURE CountKompetisi_Berhasil
 AS
 BEGIN
     SELECT COUNT(*) AS JumlahKompetisi
     FROM kompetisi
-    WHERE status_id = (SELECT id FROM status WHERE nama = 'Berhasil');
+    WHERE status_id = 2;
 END;
 GO
 EXEC CountKompetisi_Berhasil;
@@ -225,12 +225,12 @@ EXEC CountKompetisi_Berhasil;
 
 
 -- HITUNG GAGAL KOMPETISI
-CREATE PROCEDURE CountKompetisi_Gagal
+ALTER PROCEDURE [dbo].[CountKompetisi_Gagal]
 AS
 BEGIN
     SELECT COUNT(*) AS JumlahKompetisi
     FROM kompetisi
-    WHERE status_id = (SELECT id FROM status WHERE nama = 'Gagal');
+    WHERE status_id = 3;
 END;
 GO
 EXEC CountKompetisi_Gagal;
@@ -980,3 +980,70 @@ BEGIN
     JOIN kompetisi k ON km.kompetisi_id = k.id
     WHERE m.username = @username AND k.status_id = (SELECT id FROM status WHERE nama = 'Gagal');
 END;
+
+
+--====================================================================
+
+
+CRATE PROCEDURE GetLeaderboard
+AS
+BEGIN
+	SELECT TOP 3
+		km.mahasiswa_id AS Mahasiswa_id,
+		m.nama AS Nama,
+		p.nama AS Prodi,
+		count(km.kompetisi_id) AS TotalBerhasil
+	FROM 
+		kompetisi_mahasiswa km
+	JOIN 
+		kompetisi k ON km.kompetisi_id = k.id
+	JOIN 
+		mahasiswa m ON km.mahasiswa_id = m.id
+	JOIN 
+		prodi p ON m.prodi_id = p.id
+	WHERE 
+		k.status_id = 2
+	GROUP BY 
+		km.mahasiswa_id, m.nama, p.nama
+	ORDER BY 
+		TotalBerhasil DESC;
+END;
+exec GetLeaderboard
+
+
+
+ALTER PROCEDURE [dbo].[GetKompetisi_Count]
+AS
+BEGIN
+    SELECT COUNT(*) AS total
+    FROM kompetisi;
+END;
+GO
+
+
+
+CREATE PROCEDURE GetLeaderboard_Offset
+AS
+BEGIN
+	SELECT 
+		km.mahasiswa_id AS Mahasiswa_id,
+		m.nama AS Nama,
+		p.nama AS Prodi,
+		count(km.kompetisi_id) AS TotalBerhasil
+	FROM 
+		kompetisi_mahasiswa km
+	JOIN 
+		kompetisi k ON km.kompetisi_id = k.id
+	JOIN 
+		mahasiswa m ON km.mahasiswa_id = m.id
+	JOIN 
+		prodi p ON m.prodi_id = p.id
+	WHERE 
+		k.status_id = 2
+	GROUP BY 
+		km.mahasiswa_id, m.nama, p.nama
+	ORDER BY 
+		TotalBerhasil DESC
+	OFFSET 3 ROWS FETCH NEXT 5 ROWS ONLY;
+END;
+exec GetLeaderboard_Offset
