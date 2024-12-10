@@ -201,7 +201,6 @@ function showDetail(nim, kompetisiId) {
       alert("Terjadi kesalahan saat memuat detail kompetisi.");
     });
 }
-
 // Insert Kompetisi
 document.addEventListener("DOMContentLoaded", function () {
   function handleFormSubmission() {
@@ -257,8 +256,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function showModal(modalId) {
-    const modal = new bootstrap.Modal(document.getElementById(modalId));
+    const modal = new bootstrap.Modal(document.getElementById(modalId), {
+      backdrop: false, // Hilangkan modal-backdrop
+    });
     modal.show();
+  }
+
+  function closeAllModals() {
+    // Tutup semua modal aktif
+    const modals = document.querySelectorAll(".modal.show");
+    modals.forEach((modal) => {
+      const instance = bootstrap.Modal.getInstance(modal);
+      if (instance) instance.hide();
+    });
   }
 
   function validateForm1(formData) {
@@ -287,27 +297,22 @@ document.addEventListener("DOMContentLoaded", function () {
       body: finalData,
     })
       .then((response) => {
-        // Check if the response is not OK
         if (!response.ok) {
           throw new Error(
             "Network response was not ok: " + response.statusText
           );
         }
 
-        // Read the response text first to inspect if it's valid JSON or HTML
-        return response.text().then((text) => {
-          // Try parsing the response text as JSON
-          try {
-            const data = JSON.parse(text);
-            console.log("Parsed JSON:", data);
-          } catch (error) {
-            // If parsing fails, log the raw response text for debugging
-            console.error("Response is not valid JSON:", text);
-            alert(
-              "The server responded with an error or unexpected data. Check the server logs."
-            );
-          }
-        });
+        return response.json();
+      })
+      .then((data) => {
+        if (data.success) {
+          console.log("Data berhasil disimpan: ", data);
+          closeAllModals(); // Tutup semua modal
+          showModal("successModal"); // Tampilkan modal sukses
+        } else {
+          alert("Terjadi kesalahan saat menyimpan data!");
+        }
       })
       .catch((error) => {
         alert("Error occurred: " + error.message);
@@ -317,6 +322,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   handleFormSubmission();
 });
+
 function setApproveModal(kompetisiId) {
   const approveButton = document.getElementById("approveButton");
   approveButton.setAttribute("onclick", `approveStatus(${kompetisiId})`);
