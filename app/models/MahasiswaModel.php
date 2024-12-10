@@ -269,6 +269,36 @@ class MahasiswaModel
         }
     }
 
+    public function getLeaderboard()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetLeaderboard");
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
+
+    public function getLeaderboardOffset()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetLeaderboard_Offset");
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
+
     public function updateKompetisi($data)
     {
         try {

@@ -120,3 +120,27 @@ span[class^="fi-rr-"]:before,
 w span[class*="fi-rr-"]:before {
     line-height: 1.6 !important;
 }
+
+/* Style Landing Page */
+
+.vertical-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.vertical-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vertical-card .icon img {
+    transition: transform 0.3s ease;
+}
+
+.vertical-card:hover .icon img {
+    transform: scale(1.1);
+}
+
+.vertical-card .card-footer {
+    background-color: #f8f9fa;
+}

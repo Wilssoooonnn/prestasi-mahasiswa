@@ -47,7 +47,20 @@ $adminModel = new AdminModel();
                             <td><?= htmlspecialchars($row['Tingkat_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['Tempat_Kompetisi']) ?></td>
                             <td><?= htmlspecialchars($row['No_Surat_Tugas']) ?></td>
-                            <td><?= htmlspecialchars($row['Status']) ?></td>
+                            <td class="text-center">
+                                <span class="<?php
+                                                if ($row['Status'] == 'Proses') {
+                                                    echo 'badge bg-warning text-white';
+                                                } else if ($row['Status'] == 'Berhasil') {
+                                                    echo 'badge bg-success text-white';
+                                                } else {
+                                                    echo 'badge bg-danger text-white';
+                                                }
+                                                ?>">
+                                    <?= htmlspecialchars($row['Status']) ?>
+                                </span>
+                            </td>
+
                             <td>
                                 <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailModal" onclick="loadDetailData('<?= json_encode($row) ?>')">
                                     <i class="fi fi-rr-eye"></i>
@@ -481,6 +494,23 @@ $adminModel = new AdminModel();
             <div class="modal-footer mt-3">
                 <button type="button" class="btn btn-outline-secondary" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button type="button" class="btn btn-outline-primary" class="btn btn-primary" id="saveButton">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalLabel">Berhasil!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Data kompetisi Anda berhasil disimpan.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Tutup</button>
             </div>
         </div>
     </div>

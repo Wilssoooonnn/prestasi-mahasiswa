@@ -6,12 +6,11 @@ class MahasiswaController extends Controller
 {
     public function dashboard()
     {
-        // Tampilkan halaman mahasiswa sebagai halaman default
-        $judul = 'Mahasiswa';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_mahasiswa.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Dashboard | Mahasiswa']);
+        $view->view('template/navigation_mahasiswa');
         include '../app/views/mahasiswa/dashboard.php';
-        include '../app/views/template/footer.php';
+        $view->view('template/footer');
     }
 
 
@@ -35,11 +34,11 @@ class MahasiswaController extends Controller
         }
 
         // Kirim data Mahasiswa ke view
-        $judul = 'Profile';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_mahasiswa.php';
-        include '../app/views/mahasiswa/profile.php';  // Ganti dengan path view yang sesuai
-        include '../app/views/template/footer.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Profile | Mahasiswa']);
+        $view->view('template/navigation_mahasiswa');
+        include '../app/views/mahasiswa/profile.php';
+        $view->view('template/footer');
     }
 
     public function kompetisi()
@@ -65,29 +64,20 @@ class MahasiswaController extends Controller
         $totalPages = ceil($totalData / $limit);
 
         // Kirim data ke view
-        $judul = 'Kompetisi';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_mahasiswa.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Kompetisi | Mahasiswa']);
+        $view->view('template/navigation_mahasiswa');
         include '../app/views/mahasiswa/kompetisi.php';
-        include '../app/views/template/footer.php';
-    }
-
-    public function setting()
-    {
-        $judul = 'Mahasiswa';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_mahasiswa.php';
-        include '../app/views/mahasiswa/setting.php';
-        include '../app/views/template/footer.php';
+        $view->view('template/footer');
     }
 
     public function help()
     {
-        $judul = 'Mahasiswa';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_mahasiswa.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Help | Mahasiswa']);
+        $view->view('template/navigation_mahasiswa');
         include '../app/views/mahasiswa/help.php';
-        include '../app/views/template/footer.php';
+        $view->view('template/footer');
     }
     public function getKompetisiData()
     {
@@ -261,6 +251,26 @@ class MahasiswaController extends Controller
         } else {
             echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
         }
+    }
+
+    //fungsi top 3 leaderboard
+    public function getLeaderboard()
+    {
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+        // echo "<pre>";
+        // var_dump($mahasiswaModel->getLeaderboard());
+        return $mahasiswaModel->getLeaderboard();
+    }
+
+    //fungsi leaderboard
+    public function getLeaderboardOffset()
+    {
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+        // echo "<pre>";
+        // var_dump($mahasiswaModel->getLeaderboard());
+        return $mahasiswaModel->getLeaderboardOffset();
     }
 
     public function updateKompetisi()

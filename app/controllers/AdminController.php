@@ -2,16 +2,15 @@
 
 require_once '../app/models/UserModel.php'; // Memuat model
 
-class AdminController
+class AdminController extends Controller
 {
     public function dashboard()
     {
-        // Tampilkan halaman admin sebagai halaman default
-        $judul = 'Admin';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_admin.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Dashboard | Admin']);
+        $view->view('template/navigation_admin');
         include '../app/views/admin/dashboard.php';
-        include '../app/views/template/footer.php';
+        $view->view('template/footer');
     }
 
     public function profile()
@@ -35,40 +34,29 @@ class AdminController
         }
 
         // Kirim data admin ke view
-        $judul = 'Profile';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_admin.php';
-        include '../app/views/admin/profile.php';  // Ganti dengan path view yang sesuai
-        include '../app/views/template/footer.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Profile | Admin']);
+        $view->view('template/navigation_admin');
+        include '../app/views/admin/profile.php';
+        $view->view('template/footer');
     }
 
     public function kompetisi()
     {
         // Tampilkan halaman admin sebagai halaman default
-        $judul = 'Kompetisi';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_admin.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Kompetisi | Admin']);
+        $view->view('template/navigation_admin');
         include '../app/views/admin/kompetisi.php';
-        include '../app/views/template/footer.php';
+        $view->view('template/footer');
     }
     public function help()
     {
-        // Tampilkan halaman admin sebagai halaman default
-        $judul = 'Help';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_admin.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Help | Admin']);
+        $view->view('template/navigation_admin');
         include '../app/views/admin/help.php';
-        include '../app/views/template/footer.php';
-    }
-
-    public function setting()
-    {
-        // Tampilkan halaman admin sebagai halaman default
-        $judul = 'Setting';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_admin.php';
-        include '../app/views/admin/setting.php';
-        include '../app/views/template/footer.php';
+        $view->view('template/footer');
     }
     public function tes()
     {
@@ -193,13 +181,13 @@ class AdminController
         exit;
     }
 
-    function getKompetisiDetail()
+    function getKompetisiDetail($nim, $kompetisiId)
     {
         // Load the model that contains the detailKompetisi method
-        require_once '../app/models/MahasiswaModel.php';
-        $mahasiswaModel = new MahasiswaModel();
+        require_once '../app/models/AdminModel.php';
+        $AdminModel = new AdminModel();
 
-        $dataMhs = $mahasiswaModel->readDataMahasiswaByUsername('odin');
+        $dataMhs = $AdminModel->GetDataKompetisi($nim, $kompetisiId);
 
         // Pastikan data Mahasiswa ada
         if (empty($dataMhs)) {
@@ -207,10 +195,8 @@ class AdminController
             echo "Mahasiswa data not found!";
             exit;
         }
-
-        echo "<pre>";
-        print_r($dataMhs);
-        echo "</pre>";
+        // kirim data sebagai JSON
+        echo json_encode($dataMhs);
     }
     public function insertKompetisi()
     {
@@ -265,5 +251,49 @@ class AdminController
             echo "alert('Gagal!');";
             echo "</script>";
         }
+    }
+
+    public function approveKompetisi($kompetisiId)
+    {
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+
+        $data = $adminModel->ApproveKompetisi($kompetisiId);
+
+        header('Content-Type: application/json'); // Pastikan header JSON dikirimkan
+        if ($data) {
+            echo json_encode([
+                'success' => true,
+                'message' => 'Data berhasil diupdate.'
+            ]);
+        } else {
+            echo json_encode([
+                'success' => false,
+                'message' => 'Gagal mengupdate data.'
+            ]);
+        }
+        exit; // Hentikan eksekusi setelah output
+    }
+
+    public function declineKompetisi($kompetisiId)
+    {
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+
+        $data = $adminModel->DeclineKompetisi($kompetisiId);
+
+        header('Content-Type: application/json'); // Pastikan header JSON dikirimkan
+        if ($data) {
+            echo json_encode([
+                'success' => true,
+                'message' => 'Data berhasil diupdate.'
+            ]);
+        } else {
+            echo json_encode([
+                'success' => false,
+                'message' => 'Gagal mengupdate data.'
+            ]);
+        }
+        exit; // Hentikan eksekusi setelah output
     }
 }
