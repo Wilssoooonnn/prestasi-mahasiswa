@@ -193,13 +193,13 @@ class AdminController
         exit;
     }
 
-    function getKompetisiDetail()
+    function getKompetisiDetail($nim, $kompetisiId)
     {
         // Load the model that contains the detailKompetisi method
-        require_once '../app/models/MahasiswaModel.php';
-        $mahasiswaModel = new MahasiswaModel();
+        require_once '../app/models/AdminModel.php';
+        $AdminModel = new AdminModel();
 
-        $dataMhs = $mahasiswaModel->readDataMahasiswaByUsername('odin');
+        $dataMhs = $AdminModel->GetDataKompetisi($nim, $kompetisiId);
 
         // Pastikan data Mahasiswa ada
         if (empty($dataMhs)) {
@@ -207,10 +207,8 @@ class AdminController
             echo "Mahasiswa data not found!";
             exit;
         }
-
-        echo "<pre>";
-        print_r($dataMhs);
-        echo "</pre>";
+        // kirim data sebagai JSON
+        echo json_encode($dataMhs);
     }
     public function insertKompetisi()
     {
