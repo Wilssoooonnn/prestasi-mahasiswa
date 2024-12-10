@@ -4256,3 +4256,5 @@ User not found: titan[2024-12-10 02:13:03] Array
 )
 
 [2024-12-10 02:20:47] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-10 12:14:47] Error di ApproveKompetisi: ID Kompetisi tidak valid.
+[2024-12-10 12:15:00] Error di ApproveKompetisi: ID Kompetisi tidak valid.
