@@ -257,7 +257,6 @@ class AdminController extends Controller
     {
         require_once '../app/models/AdminModel.php';
         $adminModel = new AdminModel();
-
         $data = $adminModel->ApproveKompetisi($kompetisiId);
 
         header('Content-Type: application/json'); // Pastikan header JSON dikirimkan

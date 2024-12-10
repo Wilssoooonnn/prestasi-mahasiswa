@@ -65,9 +65,11 @@ function updateTable(data) {
                 <td>${row.No_Surat_Tugas}</td>
                 <td class="text-center">
                     <span class="${
-                        row.Status === 'Proses' ? 'badge bg-warning text-white'
-                            : row.Status === 'Berhasil' ? 'badge bg-success text-white'
-                            : 'badge bg-danger text-white'
+                      row.Status === "Proses"
+                        ? "badge bg-warning text-white"
+                        : row.Status === "Berhasil"
+                        ? "badge bg-success text-white"
+                        : "badge bg-danger text-white"
                     }">
                         ${row.Status}
                     </span>
@@ -210,7 +212,13 @@ function showDetail(nim, kompetisiId) {
       alert("Terjadi kesalahan saat memuat detail kompetisi.");
     });
 }
-// Insert Kompetisi
+/*
+
+
+Insert Kompetisi
+
+
+*/
 document.addEventListener("DOMContentLoaded", function () {
   function handleFormSubmission() {
     // Tombol "Next" di modal pertama
@@ -416,7 +424,11 @@ document.addEventListener("DOMContentLoaded", function () {
   handleFormSubmission();
   handleFormUpdate();
 });
+/*
 
+Approve Kompetisi
+
+*/
 function setApproveModal(kompetisiId) {
   const approveButton = document.getElementById("approveButton");
   approveButton.setAttribute("onclick", `approveStatus(${kompetisiId})`);
@@ -435,9 +447,14 @@ function approveStatus(kompetisiId) {
     })
     .then((data) => {
       const approveButton = document.getElementById("approveButton");
+      const approveMessage = document.getElementById("approveMessage");
+      const closeButton = document.getElementById("closeButton");
       if (data.success) {
         console.log(data.message);
-        approveButton.innerText = "Berhasil";
+        approveButton.className = "btn btn-success";
+        approveButton.innerText = "Disetujui";
+        approveMessage.innerText = "Data berhasil diterima.";
+        closeButton.style.display = "none";
         setTimeout(() => {
           const modal = bootstrap.Modal.getInstance(
             document.getElementById("ApproveModal")
@@ -454,7 +471,6 @@ function approveStatus(kompetisiId) {
       console.error("Terjadi kesalahan:", error);
     });
 }
-
 
 function setDeclineModal(kompetisiId) {
   const declineButton = document.getElementById("declineButton");
@@ -474,9 +490,13 @@ function declineStatus(kompetisiId) {
     })
     .then((data) => {
       const declineButton = document.getElementById("declineButton");
+      const declineMessage = document.getElementById("declineMessage");
+      const closeButton = document.getElementById("closeButtonDecline");
       if (data.success) {
         console.log(data.message);
-        declineButton.innerText = "Berhasil Digagalkan";
+        declineButton.innerText = "Digagalkan";
+        declineMessage.innerText = "Data berhasil digagalkan.";
+        closeButton.style.display = "none";
         setTimeout(() => {
           const modal = bootstrap.Modal.getInstance(
             document.getElementById("DeclineModal")

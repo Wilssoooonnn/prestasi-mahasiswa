@@ -66,10 +66,10 @@ $kompetisiModel = new KompetisiModel();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p class="text-center">Apakah Anda yakin ingin menyetujui data kompetisi ini?</p>
+                    <p class="text-center" id="approveMessage">Apakah Anda yakin ingin menyetujui data kompetisi ini?</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Tutup</button>
+                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal" id="closeButton">Tutup</button>
                     <button type="button" class="btn btn-primary" id="approveButton">Approve</button>
                 </div>
             </div>
@@ -86,11 +86,11 @@ $kompetisiModel = new KompetisiModel();
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h class="text-center">Apakah anda yakin ingin menolak data kompetisi ini?</h>
+                    <h class="text-center" id="declineMessage">Apakah anda yakin ingin menolak data kompetisi ini?</h>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-primary" id="declineButton">Decline</button>
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" id="closeButtonDecline">Tutup</button>
+                    <button type="button" class="btn btn-danger" id="declineButton">Decline</button>
                 </div>
             </div>
         </div>
