@@ -103,7 +103,7 @@ class AuthController
     {
         session_start();
         session_destroy();
-        header('Location: ' . BASE_URL . 'auth/login'); // Arahkan kembali ke halaman login setelah logout
+        header('Location: ' . BASE_URL . 'landingPage'); // Arahkan kembali ke halaman login setelah logout
         exit();
     }
 }
