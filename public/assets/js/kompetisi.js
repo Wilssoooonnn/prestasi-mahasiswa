@@ -63,7 +63,15 @@ function updateTable(data) {
                 <td>${row.Jenis_Kompetisi}</td>
                 <td>${row.Tingkat_Kompetisi}</td>
                 <td>${row.No_Surat_Tugas}</td>
-                <td>${row.Status}</td>
+                <td class="text-center">
+                    <span class="${
+                        row.Status === 'Proses' ? 'badge bg-warning text-white'
+                            : row.Status === 'Berhasil' ? 'badge bg-success text-white'
+                            : 'badge bg-danger text-white'
+                    }">
+                        ${row.Status}
+                    </span>
+                </td>
                 <td>
                 <button class="btn btn-outline-success"
                     data-bs-toggle="modal"
@@ -73,7 +81,8 @@ function updateTable(data) {
                 </button>
                 <button class="btn btn-outline-danger"
                     data-bs-toggle="modal"
-                    data-bs-target="#DeclineModal">
+                    data-bs-target="#DeclineModal"
+                    onclick="setDeclineModal(${row.kompetisi_id})">
                     <i class="fi fi-rr-cross"></i>
                 </button>
                 <button class="btn btn-outline-primary"
@@ -354,6 +363,45 @@ function approveStatus(kompetisiId) {
       } else {
         console.error(data.message);
         approveButton.innerText = "Gagal";
+      }
+    })
+    .catch((error) => {
+      console.error("Terjadi kesalahan:", error);
+    });
+}
+
+
+function setDeclineModal(kompetisiId) {
+  const declineButton = document.getElementById("declineButton");
+  declineButton.setAttribute("onclick", `declineStatus(${kompetisiId})`);
+}
+
+// Fungsi untuk mengirim permintaan approve
+function declineStatus(kompetisiId) {
+  console.log("Menolak kompetisi ID:", kompetisiId);
+
+  fetch(baseURL + "admin/declineKompetisi/" + kompetisiId)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const declineButton = document.getElementById("declineButton");
+      if (data.success) {
+        console.log(data.message);
+        declineButton.innerText = "Berhasil Digagalkan";
+        setTimeout(() => {
+          const modal = bootstrap.Modal.getInstance(
+            document.getElementById("DeclineModal")
+          );
+          modal.hide(); // Tutup modal
+          location.reload(); // Muat ulang halaman
+        }, 1000);
+      } else {
+        console.error(data.message);
+        declineButton.innerText = "Gagal";
       }
     })
     .catch((error) => {

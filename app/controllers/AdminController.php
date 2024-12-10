@@ -274,4 +274,26 @@ class AdminController extends Controller
         }
         exit; // Hentikan eksekusi setelah output
     }
+
+    public function declineKompetisi($kompetisiId)
+    {
+        require_once '../app/models/AdminModel.php';
+        $adminModel = new AdminModel();
+
+        $data = $adminModel->DeclineKompetisi($kompetisiId);
+
+        header('Content-Type: application/json'); // Pastikan header JSON dikirimkan
+        if ($data) {
+            echo json_encode([
+                'success' => true,
+                'message' => 'Data berhasil diupdate.'
+            ]);
+        } else {
+            echo json_encode([
+                'success' => false,
+                'message' => 'Gagal mengupdate data.'
+            ]);
+        }
+        exit; // Hentikan eksekusi setelah output
+    }
 }

@@ -287,4 +287,28 @@ class AdminModel
             return false;
         }
     }
+
+    function DeclineKompetisi($kompetisiId)
+    {
+        try {
+            // Memastikan ID kompetisi valid sebelum menjalankan stored procedure
+            if (empty($kompetisiId) || !is_numeric($kompetisiId)) {
+                throw new Exception('ID Kompetisi tidak valid.');
+            }
+
+            // Menjalankan prosedur tersimpan untuk menyetujui kompetisi
+            $stmt = $this->executeStoredProcedure("SetStatus_Gagal", [$kompetisiId]);
+
+            // Verifikasi apakah query berhasil
+            if ($stmt) {
+                return true;
+            } else {
+                throw new Exception('Proses decline kompetisi gagal.');
+            }
+        } catch (Exception $e) {
+            // Menangani dan mencatat error dengan pesan yang lebih jelas
+            $this->logError("Error di DeclineKompetisi: " . $e->getMessage());
+            return false;
+        }
+    }
 }
