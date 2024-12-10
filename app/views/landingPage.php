@@ -59,12 +59,11 @@
             <iframe src="https://lottie.host/embed/e737a588-abbf-4972-b82a-208d934d4f4c/EfR1kYDNOT.lottie"></iframe>
             <div class="card-body">
                 <h5 class="card-title">John Doe</h5>
-                <p class="card-text">Top Achiever in Computer Science with 50 achievements and 300 points.</p>
+                <p class="card-text">Top Achiever in Computer Science with 50 achievements.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Achievements: 50</li>
-                <li class="list-group-item">Points: 300</li>
-                <li class="list-group-item">Major: Computer Science</li>
+                <li class="list-group-item">Achievements : 50</li>
+                <li class="list-group-item">Program Studi : Computer Science</li>
             </ul>
         </div>
 
@@ -76,9 +75,8 @@
                 <p class="card-text">Second place in Engineering with 47 achievements and 280 points.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Achievements: 47</li>
-                <li class="list-group-item">Points: 280</li>
-                <li class="list-group-item">Major: Engineering</li>
+                <li class="list-group-item">Achievements : 47</li>
+                <li class="list-group-item">Program Studi : Engineering</li>
             </ul>
         </div>
 
@@ -90,22 +88,20 @@
                 <p class="card-text">Ranked third in Biology with 45 achievements and 260 points.</p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">Achievements: 45</li>
-                <li class="list-group-item">Points: 260</li>
-                <li class="list-group-item">Major: Biology</li>
+                <li class="list-group-item">Achievements : 45</li>
+                <li class="list-group-item">Program Studi : Biology</li>
             </ul>
         </div>
     </div>
 
     <!-- Leaderboard Table -->
-    <table class="table table-striped leaderboard-table mt-5">
-        <thead>
+    <table class="table table-hover mt-5">
+        <thead class="table-primary">
             <tr>
                 <th>#</th>
                 <th>Name</th>
-                <th>Major</th>
+                <th>Program Studi</th>
                 <th>Total Achievements</th>
-                <th>Points</th>
             </tr>
         </thead>
         <tbody>
@@ -114,35 +110,30 @@
                 <td>John Doe</td>
                 <td>Computer Science</td>
                 <td>50</td>
-                <td>300</td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>Jane Smith</td>
                 <td>Engineering</td>
                 <td>47</td>
-                <td>280</td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>Bob Johnson</td>
                 <td>Biology</td>
                 <td>45</td>
-                <td>260</td>
             </tr>
             <tr>
                 <td>4</td>
                 <td>Alice Brown</td>
                 <td>Mathematics</td>
                 <td>43</td>
-                <td>250</td>
             </tr>
             <tr>
                 <td>5</td>
                 <td>Sarah White</td>
                 <td>Physics</td>
                 <td>42</td>
-                <td>240</td>
             </tr>
         </tbody>
     </table>
@@ -154,7 +145,7 @@
     <h2 class="text-center mb-4">Why Choose Us?</h2>
     <div class="row text-center">
         <div class="col-md-4">
-            <div class="card">
+            <div class="card bg-transparent border-primary">
                 <div class="card-body">
                     <h5 class="card-title">Comprehensive Tracking</h5>
                     <p class="card-text">Track all your achievements across academics and extracurriculars in one place.</p>
@@ -162,7 +153,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
+            <div class="card bg-transparent border-primary">
                 <div class="card-body">
                     <h5 class="card-title">Competitive Leaderboard</h5>
                     <p class="card-text">See where you rank among your peers and strive to be at the top.</p>
@@ -170,7 +161,7 @@
             </div>
         </div>
         <div class="col-md-4">
-            <div class="card">
+            <div class="card bg-transparent border-primary">
                 <div class="card-body">
                     <h5 class="card-title">Instant Recognition</h5>
                     <p class="card-text">Earn badges and certificates as you reach milestones in your achievements.</p>
