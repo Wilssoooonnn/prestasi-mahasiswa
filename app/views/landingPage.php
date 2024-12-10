@@ -147,36 +147,59 @@ $dataOff = $controller->getLeaderboardOffset();
 </section>
 
 
-<!-- Advantages Section -->
-<section id="advantages" class="container py-5">
-    <h2 class="text-center mb-4">Why Choose Us?</h2>
-    <div class="row text-center">
-        <div class="col-md-4">
-            <div class="card bg-transparent border-primary">
-                <div class="card-body">
-                    <h5 class="card-title">Comprehensive Tracking</h5>
-                    <p class="card-text">Track all your achievements across academics and extracurriculars in one place.</p>
+<section id="vertical-cards" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Why Choose Us</h2>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-4">
+                <div class="card vertical-card h-100">
+                    <div class="card-body text-center">
+                        <div class="icon mb-3">
+                            <img src="<?= BASE_URL; ?>public/assets/images/head-logo.svg" alt="Quality" class="img-fluid" style="width: 60px;">
+                        </div>
+                        <h5 class="card-title">High Quality</h5>
+                        <p class="card-text">We deliver top-notch products that meet your expectations with unmatched precision.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card bg-transparent border-primary">
-                <div class="card-body">
-                    <h5 class="card-title">Competitive Leaderboard</h5>
-                    <p class="card-text">See where you rank among your peers and strive to be at the top.</p>
+            <!-- Card 2 -->
+            <div class="col-md-4">
+                <div class="card vertical-card h-100">
+                    <div class="card-body text-center">
+                        <div class="icon mb-3">
+                            <img src="icon-support.png" alt="Support" class="img-fluid" style="width: 60px;">
+                        </div>
+                        <h5 class="card-title">24/7 Support</h5>
+                        <p class="card-text">Our team is always available to assist you anytime, ensuring a seamless experience.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card bg-transparent border-primary">
-                <div class="card-body">
-                    <h5 class="card-title">Instant Recognition</h5>
-                    <p class="card-text">Earn badges and certificates as you reach milestones in your achievements.</p>
+            <!-- Card 3 -->
+            <div class="col-md-4">
+                <div class="card vertical-card h-100">
+                    <div class="card-body text-center">
+                        <div class="icon mb-3">
+                            <img src="icon-value.png" alt="Value" class="img-fluid" style="width: 60px;">
+                        </div>
+                        <h5 class="card-title">Great Value</h5>
+                        <p class="card-text">We offer competitive pricing without compromising on quality and service.</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="#" class="btn btn-primary">Learn More</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
 
 <!-- Testimonial Section -->
 <section class="testimonial">
