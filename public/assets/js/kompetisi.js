@@ -67,7 +67,8 @@ function updateTable(data) {
                 <td>
                 <button class="btn btn-outline-success"
                     data-bs-toggle="modal"
-                    data-bs-target="#ApproveModal">
+                    data-bs-target="#ApproveModal"
+                    onclick="setApproveModal(${row.kompetisi_id})">
                     <i class="fi fi-rr-check"></i>
                 </button>
                 <button class="btn btn-outline-danger"
@@ -316,18 +317,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
   handleFormSubmission();
 });
+function setApproveModal(kompetisiId) {
+  const approveButton = document.getElementById("approveButton");
+  approveButton.setAttribute("onclick", `approveStatus(${kompetisiId})`);
+}
 
+// Fungsi untuk mengirim permintaan approve
 function approveStatus(kompetisiId) {
+  console.log("Menyetujui kompetisi ID:", kompetisiId);
+
   fetch(baseURL + "admin/approveKompetisi/" + kompetisiId)
-    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then((data) => {
+      const approveButton = document.getElementById("approveButton");
       if (data.success) {
-        console.log("Data berhasil disetujui");
-        document.getElementById("approveButton").innerHTML = "Berhasil";
+        console.log(data.message);
+        approveButton.innerText = "Berhasil";
+        setTimeout(() => {
+          const modal = bootstrap.Modal.getInstance(
+            document.getElementById("ApproveModal")
+          );
+          modal.hide(); // Tutup modal
+          location.reload(); // Muat ulang halaman
+        }, 1000);
       } else {
-        console.log("Gagal disetujui");
-        document.getElementById("approveButton").innerHTML = "Gagal";
+        console.error(data.message);
+        approveButton.innerText = "Gagal";
       }
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => {
+      console.error("Terjadi kesalahan:", error);
+    });
 }
