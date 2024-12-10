@@ -2,15 +2,14 @@
 
 require_once '../app/models/UserModel.php'; // Memuat model
 
-class AuthController
+class AuthController extends Controller
 {
     public function index()
     {
-        // Tampilkan halaman login sebagai halaman default
-        $judul = 'Login';
-        include '../app/views/template/header.php';
-        include '../app/views/auth/login.php';
-        include '../app/views/template/footer.php';
+        $view = new Controller();
+        $view->view('template/header', ['judul' => 'Login']);
+        $view->view('auth/login');
+        $view->view('template/footer');
     }
 
     public function showRegisterForm()

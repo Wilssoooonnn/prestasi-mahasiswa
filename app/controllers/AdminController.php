@@ -2,7 +2,7 @@
 
 require_once '../app/models/UserModel.php'; // Memuat model
 
-class AdminController
+class AdminController extends Controller
 {
     public function dashboard()
     {
