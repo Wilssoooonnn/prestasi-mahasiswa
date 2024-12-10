@@ -65,7 +65,7 @@ $adminModel = new AdminModel();
                                 <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#detailModal" onclick="loadDetailData('<?= json_encode($row) ?>')">
                                     <i class="fi fi-rr-eye"></i>
                                 </button>
-                                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal" onclick="">
+                                <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $row['kompetisi_id'] ?>" onclick="">
                                     <i class="fi fi-rr-pencil"></i>
                                 </button>
                                 <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
@@ -74,7 +74,7 @@ $adminModel = new AdminModel();
                             </td>
                         </tr>
                         <!-- Modal Edit -->
-                        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editlModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="editModal<?= $row['kompetisi_id'] ?>" tabindex="-1" aria-labelledby="editlModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
