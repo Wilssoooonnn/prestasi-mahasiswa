@@ -263,7 +263,92 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
+  function handleFormUpdate() {
+    // Tombol "Next" di modal pertama
+    document
+      .querySelector("#editModal .btn-outline-primary")
+      .addEventListener("click", function () {
+        const form1 = new FormData(
+          document.getElementById("formUpdateDataDiri")
+        );
+        if (validateForm1(form1)) {
+          console.log("Data Form 1: ", Object.fromEntries(form1)); // Debugging
+          localStorage.setItem(
+            "form1Data",
+            JSON.stringify(Object.fromEntries(form1))
+          );
+          showModal("editModal2");
+        } else {
+          alert("Pastikan semua field di Form 1 terisi!");
+        }
+      });
+
+    // Tombol "Save" di modal kedua
+    document
+      .querySelector("#editModal2 .btn-outline-primary")
+      .addEventListener("click", function () {
+        const form1Data = JSON.parse(localStorage.getItem("form1Data"));
+        const form2 = new FormData(document.getElementById("formUpdateFile"));
+
+        console.log("Data Form 1 (From LocalStorage): ", form1Data); // Debugging
+        console.log("Data Form 2: ", Object.fromEntries(form2)); // Debugging
+
+        // Combine form1Data and form2 into one FormData
+        const finalData = new FormData();
+
+        // Append data from form1Data to finalData
+        if (form1Data) {
+          Object.entries(form1Data).forEach(([key, value]) => {
+            finalData.append(key, value);
+          });
+        }
+
+        // Append form2 data (files) to finalData
+        form2.forEach((value, key) => {
+          finalData.append(key, value);
+        });
+
+        console.log("Final Data before update: ", finalData);
+        submitFormUpdate(finalData);
+      });
+  }
+
+  function submitFormUpdate(finalData) {
+    fetch(baseURL + "mahasiswa/updateKompetisi", {
+      method: "POST",
+      body: finalData,
+    })
+      .then((response) => {
+        // Check if the response is not OK
+        if (!response.ok) {
+          throw new Error(
+            "Network response was not ok: " + response.statusText
+          );
+        }
+
+        // Read the response text first to inspect if it's valid JSON or HTML
+        return response.text().then((text) => {
+          // Try parsing the response text as JSON
+          try {
+            const data = JSON.parse(text);
+            console.log("Parsed JSON:", data);
+          } catch (error) {
+            // If parsing fails, log the raw response text for debugging
+            console.error("Response is not valid JSON:", text);
+            alert(
+              "The server responded with an error or unexpected data. Check the server logs."
+            );
+          }
+        });
+      })
+      .catch((error) => {
+        alert("Error occurred: " + error.message);
+        console.error("Error details:", error);
+      });
+  }
+
   handleFormSubmission();
+  handleFormUpdate();
 });
 
 // function submitFormData(finalData) {
