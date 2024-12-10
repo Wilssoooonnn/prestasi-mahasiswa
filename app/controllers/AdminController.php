@@ -1,17 +1,16 @@
 <?php
 
 require_once '../app/models/UserModel.php'; // Memuat model
-
-class AdminController
+require_once '../app/core/Controller.php'; // Memuat model
+class AdminController extends Controller
 {
     public function dashboard()
     {
-        // Tampilkan halaman admin sebagai halaman default
-        $judul = 'Admin';
-        include '../app/views/template/header.php';
-        include '../app/views/template/navigation_admin.php';
-        include '../app/views/admin/dashboard.php';
-        include '../app/views/template/footer.php';
+        $view = new Controller();
+        $view->view('/template/header', ['judul' => 'Dashboard']);
+        $view->view('/template/navigation_admin');
+        $view->view('admin/dashboard');
+        $view->view('/template/footer');
     }
 
     public function profile()
