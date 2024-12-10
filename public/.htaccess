@@ -6,4 +6,5 @@ Options -Indexes
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^(.*)$ index.php?url=$1 [L]
+    RewriteRule ^uploads/(.*)$ http://localhost/prestasi-mahasiswa/uploads/$1 [L]
 </IfModule>

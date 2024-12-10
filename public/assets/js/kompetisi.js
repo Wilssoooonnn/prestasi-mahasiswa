@@ -56,23 +56,29 @@ function updateTable(data) {
     .map(
       (row) => `
             <tr>
+                <td>${row.kompetisi_id}</td>
                 <td>${row.NIM}</td>
                 <td>${row.Nama_Mahasiswa}</td>
                 <td>${row.Nama_Kompetisi}</td>
                 <td>${row.Jenis_Kompetisi}</td>
                 <td>${row.Tingkat_Kompetisi}</td>
                 <td>${row.No_Surat_Tugas}</td>
+                <td>${row.Status}</td>
                 <td>
-                <button class="btn btn-outline-success">
+                <button class="btn btn-outline-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#ApproveModal">
                     <i class="fi fi-rr-check"></i>
                 </button>
-                <button class="btn btn-outline-danger">
+                <button class="btn btn-outline-danger"
+                    data-bs-toggle="modal"
+                    data-bs-target="#DeclineModal">
                     <i class="fi fi-rr-cross"></i>
                 </button>
                 <button class="btn btn-outline-primary"
                     data-bs-toggle="modal"
                     data-bs-target="#detailModal"
-                    onclick="showDetail(${row.id})">
+                    onclick="showDetail(${row.NIM},${row.kompetisi_id})">
                     <i class="fi fi-rr-eye"></i>
                 </button>
                 </td>
@@ -126,32 +132,76 @@ document.addEventListener("DOMContentLoaded", () => {
     loadKompetisiMahasiswa();
   }
 });
-function showDetail(kompetisiId) {
-  // Fetch the competition details from the server using its ID
-  fetch(baseURL + "admin/getKompetisiDetail?id=" + kompetisiId)
-    .then((response) => response.json())
+function showDetail(nim, kompetisiId) {
+  console.log(
+    "Requesting data for NIM:",
+    nim,
+    "and Kompetisi ID:",
+    kompetisiId
+  );
+
+  fetch(baseURL + "admin/getKompetisiDetail/" + nim + "/" + kompetisiId)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
     .then((data) => {
-      if (data.error) {
-        console.error("Error fetching competition details:", data.error);
+      console.log("Data received:", data);
+
+      // Pastikan data yang diterima tidak kosong atau error
+      if (data && !data.error) {
+        // Tampilkan detail informasi kompetisi
+        document.getElementById("detailNIM").innerText =
+          data[0]["NIM"] || "N/A";
+        document.getElementById("detailNama").innerText =
+          data[0]["Nama_Mahasiswa"] || "N/A";
+        document.getElementById("detailKompetisi").innerText =
+          data[0]["Nama_Kompetisi"] || "N/A";
+        document.getElementById("detailJenis").innerText =
+          data[0]["Jenis_Kompetisi"] || "N/A";
+        document.getElementById("detailTingkat").innerText =
+          data[0]["Tingkat_Kompetisi"] || "N/A";
+        document.getElementById("detailTempat").innerText =
+          data[0]["Tempat_Kompetisi"] || "N/A";
+        document.getElementById("detailURL").href =
+          data[0]["URL_Kompetisi"] || "#";
+        document.getElementById("detailSurat").innerText =
+          data[0]["No_Surat_Tugas"] || "N/A";
+
+        // Mengambil dan menampilkan gambar-gambar
+        const imageContainer = document.getElementById("imageContainer");
+        imageContainer.innerHTML = ""; // Bersihkan gambar sebelumnya jika ada
+
+        if (data[0]["images"] && Array.isArray(data[0]["images"])) {
+          data[0]["images"].forEach((imageUrl) => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            const img = document.createElement("img");
+            img.classList.add("card-img-top");
+            img.src = imageUrl
+              ? imageUrl
+              : baseURL + "public/assets/images/images-default.jpg";
+            img.alt = "Image"; // Set Alt text
+            card.appendChild(img);
+            imageContainer.appendChild(card); // Tambahkan ke container gambar
+          });
+        } else {
+          console.warn("No images found in the data.");
+        }
       } else {
-        // Update modal fields with the fetched data
-        document.getElementById("detailNIM").textContent = data.NIM;
-        document.getElementById("detailNama").textContent = data.Nama_Mahasiswa;
-        document.getElementById("detailKompetisi").textContent =
-          data.Nama_Kompetisi;
-        document.getElementById("detailJenis").textContent =
-          data.Jenis_Kompetisi;
-        document.getElementById("detailTingkat").textContent =
-          data.Tingkat_Kompetisi;
-        document.getElementById("detailTempat").textContent =
-          data.Tempat_Kompetisi;
-        document.getElementById("detailURL").href = data.URL_Kompetisi;
-        document.getElementById("detailSurat").textContent =
-          data.No_Surat_Tugas;
+        console.error("Data tidak lengkap atau error:", data);
+        alert("Data kompetisi tidak lengkap atau terjadi kesalahan.");
       }
     })
-    .catch((error) => console.error("Error:", error));
+    .catch((error) => {
+      console.error("Error:", error);
+      alert("Terjadi kesalahan saat memuat detail kompetisi.");
+    });
 }
+
+// Insert Kompetisi
 document.addEventListener("DOMContentLoaded", function () {
   function handleFormSubmission() {
     // Tombol "Next" di modal pertama
@@ -230,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function submitFormData(finalData) {
+    console.log(baseURL + "mahasiswa/insertKompetisi");
     fetch(baseURL + "mahasiswa/insertKompetisi", {
       method: "POST",
       body: finalData,
@@ -266,24 +317,17 @@ document.addEventListener("DOMContentLoaded", function () {
   handleFormSubmission();
 });
 
-// function submitFormData(finalData) {
-//   fetch("/mahasiswa/insertKompetisi", {
-//     method: "POST",
-//     body: finalData,
-//   })
-//     .then((response) => {
-//       if (!response.ok) {
-//         throw new Error(
-//           "Network response was not ok: " + response.statusText
-//         );
-//       }
-//       return response.json();
-//     })
-//     .then((data) => {
-//       console.log("Parsed JSON:", data);
-//     })
-//     .catch((error) => {
-//       alert("Error occurred: " + error.message);
-//       console.error("Error details:", error);
-//     });
-// }
+function approveStatus(kompetisiId) {
+  fetch(baseURL + "admin/approveKompetisi/" + kompetisiId)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.success) {
+        console.log("Data berhasil disetujui");
+        document.getElementById("approveButton").innerHTML = "Berhasil";
+      } else {
+        console.log("Gagal disetujui");
+        document.getElementById("approveButton").innerHTML = "Gagal";
+      }
+    })
+    .catch((error) => console.error("Error:", error));
+}

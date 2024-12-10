@@ -4256,3 +4256,288 @@ User not found: titan[2024-12-10 02:13:03] Array
 )
 
 [2024-12-10 02:20:47] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-10 02:27:16] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-10 02:27:16] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-10 02:27:16] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-10 02:27:16] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-10 02:27:16] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-10 02:27:16] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-10 02:39:53] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Proses'.
+        )
+
+)
+
+[2024-12-10 02:39:53] Error executing stored procedure: CountKompetisi_Proses
+[2024-12-10 02:39:53] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Berhasil'.
+        )
+
+)
+
+[2024-12-10 02:39:53] Error executing stored procedure: CountKompetisi_Berhasil
+[2024-12-10 02:39:53] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 2812
+            [code] => 2812
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'CountKompetisi_Gagal'.
+        )
+
+)
+
+[2024-12-10 02:39:53] Error executing stored procedure: CountKompetisi_Gagal
+[2024-12-10 03:04:15] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 201
+            [code] => 201
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+        )
+
+)
+
+[2024-12-10 03:04:15] Error executing stored procedure: GetKompetisiAllPaginated
+[2024-12-10 03:05:12] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 201
+            [code] => 201
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+        )
+
+)
+
+[2024-12-10 03:05:12] Error executing stored procedure: GetKompetisiAllPaginated
+[2024-12-10 03:09:56] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 03:09:56] Error executing stored procedure: GetKompetisiById
+[2024-12-10 03:16:03] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 03:16:03] Error executing stored procedure: GetKompetisiById
+[2024-12-10 03:16:09] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 03:16:09] Error executing stored procedure: GetKompetisiById
+[2024-12-10 03:16:30] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 03:16:30] Error executing stored procedure: GetKompetisiById
+[2024-12-10 03:24:43] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 03:24:43] Error executing stored procedure: GetKompetisiById
+[2024-12-10 03:25:27] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 03:25:27] Error executing stored procedure: GetKompetisiById
+[2024-12-10 03:51:54] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 03:51:54] Error executing stored procedure: GetKompetisiById
+[2024-12-10 04:26:27] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-10 04:26:27] Error executing stored procedure: GetKompetisiById
+[2024-12-10 07:06:53] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 201
+            [code] => 201
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+        )
+
+)
+
+[2024-12-10 07:06:53] Error executing stored procedure: GetKompetisiAllPaginated
+[2024-12-10 07:07:32] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 201
+            [code] => 201
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+        )
+
+)
+
+[2024-12-10 07:07:32] Error executing stored procedure: GetKompetisiAllPaginated
+[2024-12-10 07:07:47] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 201
+            [code] => 201
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Procedure or function 'GetKompetisiAllPaginated' expects parameter '@limit', which was not supplied.
+        )
+
+)
+
+[2024-12-10 07:07:47] Error executing stored procedure: GetKompetisiAllPaginated
