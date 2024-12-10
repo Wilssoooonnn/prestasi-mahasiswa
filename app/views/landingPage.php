@@ -57,7 +57,7 @@ $dataOff = $controller->getLeaderboardOffset();
 
 <!-- Leaderboard Section -->
 <section id="leaderboard" class="container py-5">
-    <h2 class="text-center mb-4">Top Achievers</h2>
+    <h2 class="text-center mb-4 fw-bold">Top Achievers</h2>
 
     <!-- Display Top 3 Achievers in Cards -->
     <div class="container d-flex justify-content-center gap-5" style="border:none !important">
@@ -146,53 +146,65 @@ $dataOff = $controller->getLeaderboardOffset();
     </table>
 </section>
 
+<!-- About Us -->
+<section id="about-us" class="py-5">
+    <div class="container py-5">
+        <h2 class="text-center mb-4 fw-bold">ABOUT US</h2>
+        <div class="card text-center">
+            <div class="card-header bg-primary">
+                <strong class="text-white">Who We Are?</strong>
+            </div>
+            <div class="card-body py-5">
+                <h5 class="card-title">We are a team dedicated to helping individuals track and improve their academic and extracurricular achievements</h5>
+                <p class="card-text">Our mission is to provide a platform where students can monitor their growth, set goals, and strive towards becoming top achievers in their fields.</p>
+                <a href="#" class="btn btn-outline-primary">Get Started</a>
+            </div>
+            <div class="card-footer text-muted bg-primary">
+                <strong class="text-white">PrestasiGO</strong>
+            </div>
+        </div>
+    </div>
+</section>
 
-<section id="vertical-cards" class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-5">Why Choose Us</h2>
+
+<!-- Vertical Cards Section : Why Choose Us -->
+<section id="vertical-cards" class="py-3 bg-primary">
+    <div class="container py-5">
+        <h2 class="text-center mb-5 fw-bold text-white">Why Choose Us</h2>
         <div class="row g-4">
             <!-- Card 1 -->
             <div class="col-md-4">
-                <div class="card vertical-card h-100">
+                <div class="py-5 card vertical-card h-100">
                     <div class="card-body text-center">
-                        <div class="icon mb-3">
-                            <img src="<?= BASE_URL; ?>public/assets/images/head-logo.svg" alt="Quality" class="img-fluid" style="width: 60px;">
+                        <div class="container d-flex justify-content-center align-items-center rounded-circle bg-light" style="width: 100px; height: 100px;">
+                            <img src="<?= BASE_URL; ?>public/assets/images/trophy.svg" alt="">
                         </div>
-                        <h5 class="card-title">High Quality</h5>
-                        <p class="card-text">We deliver top-notch products that meet your expectations with unmatched precision.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <h5 class="card-title mt-4">Track Your Achievements</h5>
+                        <p class="card-text mt-2">Easily track your academic and extracurricular achievements in one place.</p>
                     </div>
                 </div>
             </div>
             <!-- Card 2 -->
             <div class="col-md-4">
-                <div class="card vertical-card h-100">
+                <div class="py-5 card vertical-card h-100">
                     <div class="card-body text-center">
-                        <div class="icon mb-3">
-                            <img src="icon-support.png" alt="Support" class="img-fluid" style="width: 60px;">
+                        <div class="container d-flex justify-content-center align-items-center rounded-circle bg-light" style="width: 100px; height: 100px;">
+                            <img src="<?= BASE_URL; ?>public/assets/images/level-up.svg" alt="" style="height: 70px; width: 70px;">
                         </div>
-                        <h5 class="card-title">24/7 Support</h5>
-                        <p class="card-text">Our team is always available to assist you anytime, ensuring a seamless experience.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <h5 class="card-title mt-4">Boost Your Achievements</h5>
+                        <p class="card-text mt-2">Enhance your skills and reach new levels of achievement.</p>
                     </div>
                 </div>
             </div>
             <!-- Card 3 -->
             <div class="col-md-4">
-                <div class="card vertical-card h-100">
+                <div class="py-5 card vertical-card h-100">
                     <div class="card-body text-center">
-                        <div class="icon mb-3">
-                            <img src="icon-value.png" alt="Value" class="img-fluid" style="width: 60px;">
+                        <div class="container d-flex justify-content-center align-items-center rounded-circle bg-light" style="width: 100px; height: 100px;">
+                            <img src="<?= BASE_URL; ?>public/assets/images/crown.svg" alt="" style="height: 70px; width: 70px;">
                         </div>
-                        <h5 class="card-title">Great Value</h5>
-                        <p class="card-text">We offer competitive pricing without compromising on quality and service.</p>
-                    </div>
-                    <div class="card-footer text-center">
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <h5 class="card-title mt-4">Be a Top Achiever</h5>
+                        <p class="card-text mt-2">See how you rank among the top achievers.</p>
                     </div>
                 </div>
             </div>
@@ -201,20 +213,102 @@ $dataOff = $controller->getLeaderboardOffset();
 </section>
 
 
-<!-- Testimonial Section -->
-<section class="testimonial">
-    <div class="container">
-        <h2 class="text-center mb-4">What Our Users Say</h2>
-        <div class="row text-center">
-            <div class="col-md-4">
-                <p><i class="fas fa-quote-left"></i> "This platform motivates me to keep achieving. Seeing my progress and rankings keeps me on track!" - <strong>John Doe</strong></p>
+
+
+<!-- Our Team -->
+<section id="our-team" class="py-5">
+    <h2 class="text-center mb-4 fw-bold">OUR TEAM</h2>
+    <div class="container-fluid bg-primary text-center py-3">
+        <strong class="text-white">MEET OUR TEAM</strong>
+    </div>
+    <div class="container-fluid my-5">
+        <div class="card-group gap-5">
+            <div class="card" style="border:none">
+                <img src="<?= BASE_URL; ?>public/assets/images/profile_dummy.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Namamu</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck1">Back-End</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck2">Front-End</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck3">Database</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck4">UI/UX</label>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <p><i class="fas fa-quote-left"></i> "The leaderboard feature is fun. I love competing with my friends to stay on top." - <strong>Jane Smith</strong></p>
+
+            <div class="card" style="border:none">
+                <img src="<?= BASE_URL; ?>public/assets/images/profile_dummy.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Namamu</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck1">Back-End</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck2">Front-End</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck3">Database</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck4">UI/UX</label>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <p><i class="fas fa-quote-left"></i> "The certificates I receive for my achievements make me feel valued!" - <strong>Alice Brown</strong></p>
+
+            <div class="card" style="border:none">
+                <img src="<?= BASE_URL; ?>public/assets/images/profile_dummy.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Namamu</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck1">Back-End</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck2">Front-End</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck3">Database</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck4">UI/UX</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="border:none">
+                <img src="<?= BASE_URL; ?>public/assets/images/profile_dummy.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Namamu</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck1">Back-End</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck2">Front-End</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck3">Database</label>
+
+                        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btncheck4">UI/UX</label>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="container-fluid bg-primary text-center py-3">
+        <strong class="text-white">PrestasiGO</strong>
     </div>
 </section>
