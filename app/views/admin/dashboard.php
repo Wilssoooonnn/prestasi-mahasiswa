@@ -118,24 +118,25 @@ $data = $controller->getKompetisiCounts();
         </nav>
 
 
-        <!-- Modal Approve-->
+        <!-- Modal Approve -->
         <div class="modal fade" id="ApproveModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal Aprrove</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Persetujuan Kompetisi</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h class="text-center">Apakah anda yakin ingin menyetujui data ini?</h>
+                        <p class="text-center">Apakah Anda yakin ingin menyetujui kompetisi ini?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" id="approveButton" onclick="">Approve</button>
+                        <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Tutup</button>
+                        <button type="button" class="btn btn-primary" id="approveButton">Approve</button>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- Modal Decline-->
         <div class="modal fade" id="DeclineModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
