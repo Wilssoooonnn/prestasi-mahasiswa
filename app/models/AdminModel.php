@@ -37,7 +37,7 @@ class AdminModel
     public function readAllKompetisi($username)
     {
         try {
-            $stmt = $this->executeStoredProcedure("GetKompetisi_All");
+            $stmt = $this->executeStoredProcedure("GetKompetisiAllPaginated");
             $result = [];
             while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
                 $result[] = $row;
@@ -52,7 +52,7 @@ class AdminModel
     public function readKompetisiPaginated($limit, $offset)
     {
         try {
-            $stmt = $this->executeStoredProcedure("GetKompetisi_All", [$limit, $offset]);
+            $stmt = $this->executeStoredProcedure("GetKompetisiAllPaginated", [$limit, $offset]);
             $result = [];
             while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
                 $result[] = $row;
@@ -92,6 +92,160 @@ class AdminModel
         } catch (Exception $e) {
             $this->logError($e->getMessage());
             return 0;
+        }
+    }
+
+    public function getKompetisiProsesCount()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_Proses");
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+
+    public function getKompetisiBerhasilCount()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_Berhasil");
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+
+    public function getKompetisiGagalCount()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("CountKompetisi_Gagal");
+            $row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+            return $row['JumlahKompetisi'] ?? 0;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return 0;
+        }
+    }
+
+
+    public function detailKompetisi($id)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetKompetisiById", [$id]);
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
+        }
+    }
+
+    public function editProfileAdmin($data)
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("EditProfileAdmin", [
+                $data['username'],
+                $data['fullName'],
+                $data['email'],
+                $data['no_telp'], 
+                $data['alamat'], 
+                $data['newUsername']
+            ]);
+
+            return true;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return false;
+        }
+    }
+
+    public function getUserByUsername($username)
+    {
+        try {
+            // Execute the stored procedure
+            $stmt = $this->executeStoredProcedure("GetUserByUsername", [$username]);
+            if ($stmt) {
+                $user = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC);
+                // Cek jika data ditemukan
+                if ($user) {
+                    return $user;
+                } else {
+                    // Jika tidak ada data yang ditemukan
+                    return null;
+                }
+            } else {
+                throw new Exception("Query execution failed.");
+            }
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return null;
+        }
+    }
+
+    public function updatePassword($data)
+    {
+        $query = "UPDATE users 
+                    SET password = ? WHERE username = ?";
+        $params = [
+            $data['newPassword'],
+            $data['user']
+        ];
+        sqlsrv_query($this->db, $query, $params);
+    }
+
+    public function insertKompetisi($data)
+    {
+        try {
+            // Prepare the parameters for the stored procedure
+            $params = [
+                [&$data['username'], SQLSRV_PARAM_IN],
+                [&$data['jenis_id'], SQLSRV_PARAM_IN],
+                [&$data['tingkat_id'], SQLSRV_PARAM_IN],
+                [&$data['nama_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['tempat_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['url_kompetisi'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_mulai'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_akhir'], SQLSRV_PARAM_IN],
+                [&$data['no_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['tanggal_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['file_surat_tugas'], SQLSRV_PARAM_IN],
+                [&$data['file_sertifikat'], SQLSRV_PARAM_IN],
+                [&$data['foto_kegiatan'], SQLSRV_PARAM_IN],
+                [&$data['file_poster'], SQLSRV_PARAM_IN],
+                [&$data['dosen_id'], SQLSRV_PARAM_IN],
+            ];
+
+            // Execute the stored procedure
+            $stmt = $this->executeStoredProcedure("InsertKompetisi_Mhs", $params);
+
+            // If successful, return a success message
+            return "Data kompetisi, dosen, dan mahasiswa berhasil ditambahkan.";
+        } catch (Exception $e) {
+            // Log and rethrow the error
+            $this->logError($e->getMessage());
+            throw new Exception("Failed to insert kompetisi data: " . $e->getMessage());
+        }
+    }
+
+    function getDataDosen()
+    {
+        try {
+            $stmt = $this->executeStoredProcedure("GetDataDosen");
+            $result = [];
+            while ($row = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_ASSOC)) {
+                $result[] = $row;
+            }
+            return $result;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return [];
         }
     }
 }

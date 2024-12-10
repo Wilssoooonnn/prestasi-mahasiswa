@@ -4,11 +4,12 @@
     const baseURL = "<?= BASE_URL ?>";
 </script>
 <!-- End Base URL -->
- 
+
 
 <!-- Local JavaScript -->
 <script src="<?= BASE_URL; ?>/public/assets/js/jquery.js"></script>
 <script src="<?= BASE_URL; ?>/public/assets/js/kompetisi.js"></script>
+<script src="<?= BASE_URL; ?>/public/assets/js/script.js"></script>
 <!-- End Local JavaScript -->
 
 
@@ -33,7 +34,7 @@
         }
     });
 </script>
-
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 <!-- End Script Code -->
 </body>
 

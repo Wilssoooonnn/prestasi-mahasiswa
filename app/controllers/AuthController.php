@@ -1,5 +1,4 @@
 <?php
-// app/controllers/AuthController.php
 
 require_once '../app/models/UserModel.php'; // Memuat model
 
@@ -91,7 +90,8 @@ class AuthController
             } else {
                 // Jika gagal menyimpan ke database
                 echo "Terjadi kesalahan saat registrasi. Coba lagi.";
-            } var_dump($isRegistered);
+            }
+            var_dump($isRegistered);
         } else {
             // Jika bukan request POST, tampilkan halaman registrasi
             AuthController::showRegisterForm(); // Bisa menampilkan form registrasi
@@ -103,7 +103,7 @@ class AuthController
     {
         session_start();
         session_destroy();
-        header('Location: ' . BASE_URL . 'auth/login'); // Arahkan kembali ke halaman login setelah logout
+        header('Location: ' . BASE_URL . 'landingPage'); // Arahkan kembali ke halaman login setelah logout
         exit();
     }
 }

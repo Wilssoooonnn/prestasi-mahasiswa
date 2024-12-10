@@ -61,27 +61,32 @@
 
                             <div class="row mt-3">
                                 <div class="col-lg-3 col-md-4 label ">ID Pegawai </div>
-                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['id'];     ?></div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['no_pegawai'];     ?></div>
                             </div>
 
                             <div class="row mt-3">
-                                <div class="col-lg-3 col-md-4 label ">Full Name</div>
+                                <div class="col-lg-3 col-md-4 label ">Nama</div>
                                 <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['nama'];     ?></div>
                             </div>
 
                             <div class="row mt-3">
-                                <div class="col-lg-3 col-md-4 label">Address</div>
+                                <div class="col-lg-3 col-md-4 label">Email</div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['email'];    ?> </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-lg-3 col-md-4 label">Nomor Telepon</div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['phone_number'];    ?> </div>
+                            </div>
+
+                            <div class="row mt-3">
+                                <div class="col-lg-3 col-md-4 label">Alamat</div>
                                 <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['address'];    ?> </div>
                             </div>
 
                             <div class="row mt-3">
-                                <div class="col-lg-3 col-md-4 label">Phone</div>
-                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['phone_number'];     ?></div>
-                            </div>
-
-                            <div class="row mt-3">
-                                <div class="col-lg-3 col-md-4 label">Email</div>
-                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['email'];     ?></div>
+                                <div class="col-lg-3 col-md-4 label">Username</div>
+                                <div class="col-lg-9 col-md-8">: <?= $dataAdmin[0]['username'];     ?></div>
                             </div>
 
                         </div>
@@ -89,36 +94,42 @@
                         <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
 
                             <!-- Profile Edit Form -->
-                            <form>
+                            <form action="profileUpdate" method="post" id="form-edit">
 
                                 <div class="row mb-3">
-                                    <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
+                                    <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nama</label>
                                     <div class="col-md-8 col-lg-9">
-                                        <input name="fullName" type="text" class="form-control" id="fullName" value="Kevin Anderson">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="Address" class="col-md-4 col-lg-3 col-form-label">Address</label>
-                                    <div class="col-md-8 col-lg-9">
-                                        <input name="address" type="text" class="form-control" id="Address" value="A108 Adam Street, New York, NY 535022">
-                                    </div>
-                                </div>
-
-                                <div class="row mb-3">
-                                    <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Phone</label>
-                                    <div class="col-md-8 col-lg-9">
-                                        <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                                        <input name="fullName" type="text" class="form-control" id="fullName" value="<?= $dataAdmin[0]['nama']; ?>">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
                                     <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                                     <div class="col-md-8 col-lg-9">
-                                        <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
+                                        <input name="email" type="text" class="form-control" id="Email" value="<?= $dataAdmin[0]['email']; ?>">
                                     </div>
                                 </div>
 
+                                <div class="row mb-3">
+                                    <label for="telp" class="col-md-4 col-lg-3 col-form-label">Nomor Telepon</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="telp" type="text" class="form-control" id="telp" value="<?= $dataAdmin[0]['phone_number']; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="alamat" class="col-md-4 col-lg-3 col-form-label">Alamat</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="alamat" type="text" class="form-control" id="alamat" value="<?= $dataAdmin[0]['address']; ?>">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="newusername" class="col-md-4 col-lg-3 col-form-label">Username</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input name="newusername" type="text" class="form-control" id="newusername" value="<?= $dataAdmin[0]['username']; ?>">
+                                    </div>
+                                </div>
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary">Save Changes</button>
                                 </div>
@@ -128,31 +139,32 @@
 
                         <div class="tab-pane fade pt-3" id="profile-change-password">
                             <!-- Change Password Form -->
-                            <form>
+                            <form action="changePassword" method="post" id="form-changepassword">
 
+                                <input name="user" type="hidden" class="form-control" id="user" value="<?= $_SESSION['user']; ?>">
                                 <div class="row mb-3">
-                                    <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                                    <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Password Sekarang</label>
                                     <div class="col-md-8 col-lg-9">
                                         <input name="password" type="password" class="form-control" id="currentPassword">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                                    <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">Password Baru</label>
                                     <div class="col-md-8 col-lg-9">
                                         <input name="newpassword" type="password" class="form-control" id="newPassword">
                                     </div>
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                                    <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Konfirmasi Password Baru</label>
                                     <div class="col-md-8 col-lg-9">
                                         <input name="renewpassword" type="password" class="form-control" id="renewPassword">
                                     </div>
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-primary">Change Password</button>
+                                    <button type="submit" class="btn btn-primary">Ganti Password</button>
                                 </div>
                             </form><!-- End Change Password Form -->
 

@@ -2104,6 +2104,7 @@ User not found: admin titan[2024-12-07 01:52:52] Array
 )
 
 [2024-12-07 03:06:13] Error executing stored procedure: GetAdminDataByUsername
+<<<<<<< HEAD
 [2024-12-07 06:42:03] Array
 (
     [0] => Array
@@ -2114,23 +2115,41 @@ User not found: admin titan[2024-12-07 01:52:52] Array
             [code] => 2812
             [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetAdminDataByUsername'.
             [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetAdminDataByUsername'.
-        )
-
-)
-
-[2024-12-07 06:42:03] Error executing stored procedure: GetAdminDataByUsername
-[2024-12-07 07:50:22] Array
+=======
+[2024-12-07 21:00:45] Array
 (
     [0] => Array
         (
-            [0] => 42000
-            [SQLSTATE] => 42000
-            [1] => 2812
-            [code] => 2812
-            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetAdminDataByUsername'.
-            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Could not find stored procedure 'GetAdminDataByUsername'.
+            [0] => 08S01
+            [SQLSTATE] => 08S01
+            [1] => 258
+            [code] => 258
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Timeout error [258]. 
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Shared Memory Provider: Timeout error [258]. 
+        )
+
+    [1] => Array
+        (
+            [0] => 08S01
+            [SQLSTATE] => 08S01
+            [1] => 258
+            [code] => 258
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+        )
+
+    [2] => Array
+        (
+            [0] => 08S01
+            [SQLSTATE] => 08S01
+            [1] => -2147467259
+            [code] => -2147467259
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server]Communication link failure
+>>>>>>> 05027d8f494e54072d026bdc54daebaafd31e5ca
         )
 
 )
 
-[2024-12-07 07:50:22] Error executing stored procedure: GetAdminDataByUsername
+<<<<<<< HEAD
+[2024-12-07 06:42:03] Error executing stored procedure: GetAdminDataByUsername
