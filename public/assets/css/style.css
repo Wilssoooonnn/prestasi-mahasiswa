@@ -120,3 +120,72 @@ span[class^="fi-rr-"]:before,
 w span[class*="fi-rr-"]:before {
     line-height: 1.6 !important;
 }
+
+/* Style Landing Page */
+.rotate-card {
+    perspective: 1000px;
+}
+
+.rotate-card .card-front,
+.rotate-card .card-back {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.375rem;
+}
+
+.rotate-card .card-front {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: rotateY(0);
+}
+
+.rotate-card .card-back {
+    background: #007bff;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg);
+}
+
+.rotate-card:hover .card-front {
+    transform: rotateY(-180deg);
+}
+
+.rotate-card:hover .card-back {
+    transform: rotateY(0);
+}
+
+.rotate-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.vertical-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #ddd;
+}
+
+.vertical-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vertical-card .icon img {
+    transition: transform 0.3s ease;
+}
+
+.vertical-card:hover .icon img {
+    transform: scale(1.1);
+}
+
+.vertical-card .card-footer {
+    background-color: #f8f9fa;
+}
