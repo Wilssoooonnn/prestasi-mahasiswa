@@ -1,5 +1,7 @@
 <?php
 require_once '../app/controllers/MahasiswaController.php';
+require_once '../app/models/KompetisiModel.php';
+
 $controller = new MahasiswaController();
 $data = $controller->getKompetisiCounts_Mhs();
 ?>
@@ -55,3 +57,6 @@ $data = $controller->getKompetisiCounts_Mhs();
         </div>
     </div>
 </div>
+<?php
+$controller->kompetisi();
+?>
