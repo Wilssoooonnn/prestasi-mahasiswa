@@ -153,13 +153,13 @@ class AdminModel
             $stmt = $this->executeStoredProcedure("EditProfileAdmin", [
                 $data['username'],
                 $data['fullName'],
-                $data['email'],
                 $data['no_telp'],
                 $data['alamat'],
+                $data['email'],
                 $data['newUsername']
             ]);
 
-            return true;
+            return $stmt !== false;
         } catch (Exception $e) {
             $this->logError($e->getMessage());
             return false;

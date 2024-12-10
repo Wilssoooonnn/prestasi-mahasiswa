@@ -133,11 +133,11 @@ class AdminController extends Controller
 
         require_once '../app/models/AdminModel.php';
         $adminModel = new AdminModel();
-        $result = $adminModel->editProfileAdmin($data);
 
-        if ($result) {
+        if ($adminModel->editProfileAdmin($data)) {
             $_SESSION['user'] = $data['newUsername'];
             header('Location: profile');
+            exit;
         } else {
             echo "Update failed!";
         }

@@ -4408,3 +4408,753 @@ User not found: alfinUser not found: alfin[2024-12-10 14:03:13] Array
 )
 
 [2024-12-10 15:23:06] Error executing stored procedure: GetDataKompetisiByNim
+[2024-12-10 21:25:33] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:25:33] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:25:53] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:25:53] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:27:15] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:27:15] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:27:21] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:27:21] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:27:38] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:27:38] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:33:35] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:33:35] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:33:47] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:33:47] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:35:53] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:35:53] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:38:20] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 515
+            [code] => 515
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'nama', table 'db_prestasi.dbo.mahasiswa'; column does not allow nulls. UPDATE fails.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'nama', table 'db_prestasi.dbo.mahasiswa'; column does not allow nulls. UPDATE fails.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:38:20] Error executing stored procedure: EditProfileMahasiswa
+[2024-12-10 21:42:19] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 515
+            [code] => 515
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'nama', table 'db_prestasi.dbo.admin'; column does not allow nulls. UPDATE fails.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'nama', table 'db_prestasi.dbo.admin'; column does not allow nulls. UPDATE fails.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:42:19] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:42:34] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:42:34] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:43:57] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:43:57] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:45:18] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:45:18] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:45:52] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:45:52] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:46:05] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:46:05] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:46:39] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:46:39] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:47:30] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:47:30] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:47:30] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:47:30] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:47:30] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:47:30] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:47:30] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:47:30] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:47:30] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:47:30] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:47:36] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:47:36] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:48:15] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:48:15] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:48:25] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:48:25] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:48:33] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:48:33] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:51:19] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:51:19] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:51:19] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:51:19] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:51:29] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:51:29] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:51:29] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 547
+            [code] => 547
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The UPDATE statement conflicted with the CHECK constraint "CK__admin__email__4316F928". The conflict occurred in database "db_prestasi", table "dbo.admin", column 'email'.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:51:29] Error executing stored procedure: EditProfileAdmin
+[2024-12-10 21:55:01] Array
+(
+    [0] => Array
+        (
+            [0] => 23000
+            [SQLSTATE] => 23000
+            [1] => 515
+            [code] => 515
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'username', table 'db_prestasi.dbo.admin'; column does not allow nulls. UPDATE fails.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Cannot insert the value NULL into column 'username', table 'db_prestasi.dbo.admin'; column does not allow nulls. UPDATE fails.
+        )
+
+    [1] => Array
+        (
+            [0] => 01000
+            [SQLSTATE] => 01000
+            [1] => 3621
+            [code] => 3621
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]The statement has been terminated.
+        )
+
+)
+
+[2024-12-10 21:55:01] Error executing stored procedure: EditProfileAdmin
