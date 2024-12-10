@@ -1,5 +1,7 @@
 <div class="container mt-3">
+    <?php
 
+    ?>
     <!-- Cards Section -->
     <div class="row mb-12">
         <div class="col-md-12">
