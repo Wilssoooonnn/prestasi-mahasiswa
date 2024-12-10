@@ -272,4 +272,90 @@ class MahasiswaController extends Controller
         // var_dump($mahasiswaModel->getLeaderboard());
         return $mahasiswaModel->getLeaderboardOffset();
     }
+
+    public function updateKompetisi()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Direktori upload
+            $uploadDir = $_SERVER['DOCUMENT_ROOT'] . '/prestasi-mahasiswa/uploads/';
+
+            // Validasi input
+            if (empty($_POST['jenis_id']) || empty($_POST['tingkat_id'])) {
+                echo json_encode(['success' => false, 'message' => 'Jenis Kompetisi dan Tingkat Kompetisi harus diisi.']);
+                exit;
+            }
+
+            // Pastikan direktori upload ada dan bisa ditulis
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0755, true);
+            }
+
+            // Menyimpan data form dan memeriksa file
+            $data = [
+                'jenis_id' => $_POST['jenis_id'],
+                'tingkat_id' => $_POST['tingkat_id'],
+                'nama_kompetisi' => $_POST['nama_kompetisi'],
+                'tempat_kompetisi' => $_POST['tempat_kompetisi'],
+                'tanggal_mulai' => $_POST['tanggal_mulai'],
+                'tanggal_akhir' => $_POST['tanggal_akhir'],
+                'no_surat_tugas' => $_POST['no_surat_tugas'],
+                'tanggal_surat_tugas' => $_POST['tanggal_surat_tugas'],
+                'url_kompetisi' => $_POST['url_kompetisi'],
+                'dosen_id' => $_POST['dosen_id'],
+                'id_kompetisi' => $_POST['id_kompetisi'],
+            ];
+
+            // Menggunakan data lama jika file tidak diupload ulang
+            $filesToUpdate = [
+                'file_surat_tugas' => isset($_FILES['file_surat_tugas_new']) && $_FILES['file_surat_tugas_new']['error'] === UPLOAD_ERR_OK ? $_FILES['file_surat_tugas_new'] : null,
+                'file_sertifikat' => isset($_FILES['file_sertifikat_new']) && $_FILES['file_sertifikat_new']['error'] === UPLOAD_ERR_OK ? $_FILES['file_sertifikat_new'] : null,
+                'foto_kegiatan' => isset($_FILES['foto_kegiatan_new']) && $_FILES['foto_kegiatan_new']['error'] === UPLOAD_ERR_OK ? $_FILES['foto_kegiatan_new'] : null,
+                'file_poster' => isset($_FILES['file_poster_new']) && $_FILES['file_poster_new']['error'] === UPLOAD_ERR_OK ? $_FILES['file_poster_new'] : null
+            ];
+
+            // Cek dan proses file upload, atau pakai file lama jika tidak ada upload baru
+            foreach ($filesToUpdate as $key => $file) {
+                if ($file !== null) {
+                    // Proses file baru yang diupload
+                    $tmpName = $file['tmp_name'];
+                    $fileName = uniqid() . '_' . basename($file['name']); // Generate unique file name
+                    $destination = $uploadDir . $fileName;
+
+                    // Cek jika ada file lama, hapus file lama sebelum upload file baru
+                    if (isset($_POST[$key . '_old'])) {
+                        $oldFilePath = $uploadDir . $_POST[$key . '_old']; // Path file lama
+                        if (file_exists($oldFilePath)) {
+                            unlink($oldFilePath); // Menghapus file lama
+                        }
+                    }
+
+                    if (move_uploaded_file($tmpName, $destination)) {
+                        $data[$key] = $fileName; // Update nama file yang baru
+                    } else {
+                        echo json_encode(['success' => false, 'message' => "Error saat mengupload file $key."]);
+                        exit;
+                    }
+                } else {
+                    // Jika tidak ada file baru, pakai file lama (gunakan hanya nama file, bukan path absolut)
+                    if (isset($_POST[$key . '_old'])) {
+                        $data[$key] = basename($_POST[$key . '_old']); // Hanya ambil nama file, bukan path lengkap
+                    } else {
+                        $data[$key] = null; // Jika tidak ada file lama, set null
+                    }
+                }
+            }
+
+            // Simpan data ke database
+            try {
+                require_once '../app/models/MahasiswaModel.php';
+                $mahasiswaModel = new MahasiswaModel(); // Instantiate the model
+                $mahasiswaModel->updateKompetisi($data); // Call the method
+                echo json_encode(['success' => true, 'message' => 'Data berhasil disimpan!']);
+            } catch (Exception $e) {
+                echo json_encode(['success' => false, 'message' => 'Error saat menyimpan data: ' . $e->getMessage()]);
+            }
+        } else {
+            echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
+        }
+    }
 }
