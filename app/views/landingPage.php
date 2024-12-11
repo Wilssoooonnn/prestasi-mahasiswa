@@ -217,98 +217,105 @@ $dataOff = $controller->getLeaderboardOffset();
 
 <!-- Our Team -->
 <section id="our-team" class="py-5">
-    <h2 class="text-center mb-4 fw-bold">OUR TEAM</h2>
-    <div class="container-fluid bg-primary text-center py-3">
+    <h2 class="text-center pb-2 fw-bold">OUR TEAM</h2>
+    <!-- <div class="container-fluid bg-primary text-center py-3">
         <strong class="text-white">MEET OUR TEAM</strong>
-    </div>
+    </div> -->
     <div class="container-fluid my-5">
         <div class="card-group gap-5">
+            <!-- Adam -->
             <div class="card" style="border:none">
-                <img src="<?= BASE_URL; ?>public/assets/images/profile_dummy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
+                <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
+                <div class="card-body text-center">
+                    <h5 class="card-title">Adamm</h5>
+                    <hr>
+                    <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="">Back-End</label>
+
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="">Front-End</label>
+
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="">Database</label>
+
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
+                        <label class="btn btn-outline-primary" for="">UI/UX</label>
+                    </div>
+                    <hr>
+                    <a class="btn btn-dark w-100" href="https://github.com/Wilssoooonnn" target="_blank">
+                        <img class="img-fluid" src="<?= BASE_URL; ?>public/assets/images/github.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+
+
+            <!-- Titan -->
+            <div class="card" style="border:none">
+                <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
+                <div class="card-body text-center">
                     <h5 class="card-title">Namamu</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
-                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck1">Back-End</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Back-End</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck2">Front-End</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Front-End</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck3">Database</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Database</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck4">UI/UX</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
                 </div>
             </div>
 
+            <!-- Natha -->
             <div class="card" style="border:none">
-                <img src="<?= BASE_URL; ?>public/assets/images/profile_dummy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
+                <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
+                <div class="card-body text-center">
                     <h5 class="card-title">Namamu</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
-                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck1">Back-End</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Back-End</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck2">Front-End</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Front-End</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck3">Database</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Database</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck4">UI/UX</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
                 </div>
             </div>
 
+            <!-- Alvin -->
             <div class="card" style="border:none">
-                <img src="<?= BASE_URL; ?>public/assets/images/profile_dummy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
+                <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
+                <div class="card-body text-center">
                     <h5 class="card-title">Namamu</h5>
                     <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
-                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck1">Back-End</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Back-End</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck2">Front-End</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Front-End</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck3">Database</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Database</label>
 
-                        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck4">UI/UX</label>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card" style="border:none">
-                <img src="<?= BASE_URL; ?>public/assets/images/profile_dummy.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Namamu</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
-                        <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck1">Back-End</label>
-
-                        <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck2">Front-End</label>
-
-                        <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck3">Database</label>
-
-                        <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btncheck4">UI/UX</label>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid bg-primary text-center py-3">
-        <strong class="text-white">PrestasiGO</strong>
-    </div>
+
 </section>
