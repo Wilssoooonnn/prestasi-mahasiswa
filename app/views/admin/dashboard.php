@@ -84,7 +84,7 @@ $data = $controller->getKompetisiCounts();
         <div class="card-header">
             <div class="row g-2 align-items-center">
                 <div class="col d-flex">
-                    <input type="search" class="form-control w-50" placeholder="Cari NIM">
+                    <!-- <input type="search" class="form-control w-50" placeholder="Cari NIM"> -->
                 </div>
             </div>
         </div>

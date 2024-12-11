@@ -14,16 +14,16 @@ $adminModel = new AdminModel();
     <h2>Data Kompetisi</h2>
     <div class="card-header">
         <div class="row g-2 align-items-center">
-            <div class="col d-flex">
+            <!-- <div class="col d-flex">
                 <input type="search" class="form-control w-50" placeholder="Cari NIM">
-            </div>
+            </div> -->
             <div class="col d-flex justify-content-end">
                 <button type="button" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#insertModal">Tambah Data</button>
             </div>
         </div>
     </div>
 
-    <div class="table-responsive mt-5">
+    <div class="table-responsive mt-3">
         <table class="table table-hover">
             <thead class="table-primary">
                 <tr>
