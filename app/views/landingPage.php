@@ -255,21 +255,25 @@ $dataOff = $controller->getLeaderboardOffset();
             <div class="card" style="border:none">
                 <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Namamu</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title">Adamm</h5>
+                    <hr>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Back-End</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Front-End</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Database</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
+                    <hr>
+                    <a class="btn btn-dark w-100" href="https://github.com/Wilssoooonnn" target="_blank">
+                        <img class="img-fluid" src="<?= BASE_URL; ?>public/assets/images/github.svg" alt="">
+                    </a>
                 </div>
             </div>
 
@@ -277,21 +281,25 @@ $dataOff = $controller->getLeaderboardOffset();
             <div class="card" style="border:none">
                 <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Namamu</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title">Adamm</h5>
+                    <hr>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Back-End</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Front-End</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Database</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
+                    <hr>
+                    <a class="btn btn-dark w-100" href="https://github.com/Wilssoooonnn" target="_blank">
+                        <img class="img-fluid" src="<?= BASE_URL; ?>public/assets/images/github.svg" alt="">
+                    </a>
                 </div>
             </div>
 
@@ -299,21 +307,25 @@ $dataOff = $controller->getLeaderboardOffset();
             <div class="card" style="border:none">
                 <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Namamu</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h5 class="card-title">Adamm</h5>
+                    <hr>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Back-End</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Front-End</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Database</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
+                    <hr>
+                    <a class="btn btn-dark w-100" href="https://github.com/Wilssoooonnn" target="_blank">
+                        <img class="img-fluid" src="<?= BASE_URL; ?>public/assets/images/github.svg" alt="">
+                    </a>
                 </div>
             </div>
         </div>
