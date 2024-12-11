@@ -227,8 +227,8 @@ $dataOff = $controller->getLeaderboardOffset();
             <div class="card" style="border:none">
                 <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
                 <div class="card-body text-center">
-                    <h4 class="card-title"><b>An Naastasya</b></h4>
-                    <h6>2341760131</h6>
+                    <h4 class="card-title"><b>Adamm</b></h4>
+                    <h6>2341760137</h6>
                     <hr>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
                         <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
@@ -260,8 +260,17 @@ $dataOff = $controller->getLeaderboardOffset();
                     <h6>2341760112</h6>
                     <hr>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Back-End</label>
+
                         <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Front-End</label>
+
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Database</label>
+
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
                     <hr>
                     <a class="btn btn-dark w-100" href="https://github.com/titaniaaurelliaa" target="_blank">
@@ -279,10 +288,16 @@ $dataOff = $controller->getLeaderboardOffset();
                     <hr>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
                         <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
-                        <label class="btn btn-outline-primary" for="">Database</label>
+                        <label class="btn btn-outline-primary" for="">Back-End</label>
+
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">Front-End</label>
 
                         <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
-                        <label class="btn btn-outline-primary" for="">Back-End</label>
+                        <label class="btn btn-outline-primary" for="">Database</label>
+
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
                     <hr>
                     <a class="btn btn-dark w-100" href="https://github.com/tasyasss" target="_blank">
@@ -293,22 +308,22 @@ $dataOff = $controller->getLeaderboardOffset();
 
             <!-- Alvin -->
             <div class="card" style="border:none">
-                <img src="<?= BASE_URL; ?>public/assets/images/Adam.svg" class="card-img-top" alt="..." style="height: 300px;">
+                <img src="<?= BASE_URL; ?>public/assets/images/alvin.svg" class="card-img-top" alt="..." style="height: 300px;">
                 <div class="card-body text-center">
-                    <h4 class="card-title"><b>An Naastasya</b></h4>
-                    <h6>2341760131</h6>
+                    <h4 class="card-title"><b>Alvin</b></h4>
+                    <h6>2341760089</h6>
                     <hr>
                     <div class="btn-group-sm" role="group" aria-label="Basic checkbox toggle button group">
                         <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Back-End</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
                         <label class="btn btn-outline-primary" for="">Front-End</label>
 
                         <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
                         <label class="btn btn-outline-primary" for="">Database</label>
 
-                        <input type="checkbox" class="btn-check" id="" autocomplete="off" checked>
+                        <input type="checkbox" class="btn-check" id="" autocomplete="off">
                         <label class="btn btn-outline-primary" for="">UI/UX</label>
                     </div>
                     <hr>
