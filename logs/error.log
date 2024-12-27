@@ -5158,3 +5158,40 @@ User not found: alfinUser not found: alfin[2024-12-10 14:03:13] Array
 )
 
 [2024-12-10 21:55:01] Error executing stored procedure: EditProfileAdmin
+[2024-12-27 07:26:28] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-27 07:26:28] Error executing stored procedure: GetDataKompetisiByNim
+[2024-12-27 08:40:28] Array
+(
+    [0] => Array
+        (
+            [0] => 42000
+            [SQLSTATE] => 42000
+            [1] => 8114
+            [code] => 8114
+            [2] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+            [message] => [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Error converting data type varchar to int.
+        )
+
+)
+
+[2024-12-27 08:40:28] Error executing stored procedure: GetDataKompetisiByNim
+[2024-12-27 08:49:30] Error di DeclineKompetisi: ID Kompetisi tidak valid.
+[2024-12-27 08:49:35] Error di DeclineKompetisi: ID Kompetisi tidak valid.
+[2024-12-27 08:49:39] Error di DeclineKompetisi: ID Kompetisi tidak valid.
+[2024-12-27 08:49:39] Error di DeclineKompetisi: ID Kompetisi tidak valid.
+[2024-12-27 08:49:39] Error di DeclineKompetisi: ID Kompetisi tidak valid.
+[2024-12-27 08:49:47] Error di ApproveKompetisi: ID Kompetisi tidak valid.
+[2024-12-27 08:49:49] Error di ApproveKompetisi: ID Kompetisi tidak valid.

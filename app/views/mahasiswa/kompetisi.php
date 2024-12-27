@@ -68,7 +68,7 @@ $adminModel = new AdminModel();
                                 <button class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#editModal<?= $row['kompetisi_id'] ?>" onclick="">
                                     <i class="fi fi-rr-pencil"></i>
                                 </button>
-                                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#deleteModal<?= $row['kompetisi_id']; ?>">
                                     <i class="fi fi-rr-trash"></i>
                                 </button>
                             </td>
@@ -247,6 +247,28 @@ $adminModel = new AdminModel();
                                     <div class="modal-footer mt-3">
                                         <button type="button" class="btn btn-outline-secondary" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                         <button type="button" class="btn btn-outline-primary" data-save data-competisi-id="<?= $row['kompetisi_id'] ?>">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Delete -->
+                        <div class="modal fade" id="deleteModal<?= $row['kompetisi_id']; ?>" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteModalLabel">Hapus Kompetisi</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Apakah anda yakin ingin menghapus data kompetisi ini?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                                        <form id="delete-form" method="POST" action="deleteKompetisi">
+                                            <input type="hidden" class="form-control" name="id_kompetisi" id="id_kompetisi" value="<?= $row['kompetisi_id']; ?>">
+                                            <button type="submit" class="btn btn-danger">Delete</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
