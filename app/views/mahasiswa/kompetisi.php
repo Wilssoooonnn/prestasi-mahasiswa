@@ -82,7 +82,7 @@ $adminModel = new AdminModel();
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form id="formUpdateDataDiri">
+                                        <form id="formUpdateDataDiri<?= $row['kompetisi_id'] ?>">
                                             <div class="position-relative m-4">
                                                 <div class="progress" style="height: 1px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -195,14 +195,14 @@ $adminModel = new AdminModel();
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-outline-secondary" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-outline-primary" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal2">Next</button>
+                                        <button type="button" class="btn btn-outline-primary" data-next data-competisi-id="<?= $row['kompetisi_id'] ?>">Next</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- modal edit slide 2 -->
-                        <div class="modal fade" id="editModal2" tabindex="-1" aria-labelledby="editModalLabel2" aria-hidden="true">
+                        <div class="modal fade" id="editModal2<?= $row['kompetisi_id'] ?>" tabindex="-1" aria-labelledby="editModalLabel2" aria-hidden="true">
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -210,7 +210,7 @@ $adminModel = new AdminModel();
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <form id="formUpdateFile">
+                                        <form id="formUpdateFile<?= $row['kompetisi_id'] ?>">
                                             <div class="position-relative m-4">
                                                 <div class="progress" style="height: 1px;">
                                                     <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -246,7 +246,7 @@ $adminModel = new AdminModel();
                                     </div>
                                     <div class="modal-footer mt-3">
                                         <button type="button" class="btn btn-outline-secondary" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-outline-primary" class="btn btn-primary" id="saveButton">Save</button>
+                                        <button type="button" class="btn btn-outline-primary" data-save data-competisi-id="<?= $row['kompetisi_id'] ?>">Save</button>
                                     </div>
                                 </div>
                             </div>

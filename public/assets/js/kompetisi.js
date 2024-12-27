@@ -219,6 +219,26 @@ Insert Kompetisi
 
 
 */
+
+function validateForm1(formData) {
+  // Validate the first form fields
+  return (
+    formData.get("jenis_id") &&
+    formData.get("tingkat_id") &&
+    formData.get("nama_kompetisi")
+  );
+}
+
+function validateForm2(formData) {
+  // Validate the second form fields (file inputs)
+  return (
+    formData.get("file_surat_tugas") &&
+    formData.get("file_sertifikat") &&
+    formData.get("foto_kegiatan") &&
+    formData.get("file_poster")
+  );
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   function handleFormSubmission() {
     // Tombol "Next" di modal pertama
@@ -288,25 +308,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function validateForm1(formData) {
-    // Validate the first form fields
-    return (
-      formData.get("jenis_id") &&
-      formData.get("tingkat_id") &&
-      formData.get("nama_kompetisi")
-    );
-  }
-
-  function validateForm2(formData) {
-    // Validate the second form fields (file inputs)
-    return (
-      formData.get("file_surat_tugas") &&
-      formData.get("file_sertifikat") &&
-      formData.get("foto_kegiatan") &&
-      formData.get("file_poster")
-    );
-  }
-
   function submitFormData(finalData) {
     console.log(baseURL + "mahasiswa/insertKompetisi");
     fetch(baseURL + "mahasiswa/insertKompetisi", {
@@ -337,92 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  function handleFormUpdate() {
-    // Tombol "Next" di modal pertama
-    document
-      .querySelector("#editModal .btn-outline-primary")
-      .addEventListener("click", function () {
-        const form1 = new FormData(
-          document.getElementById("formUpdateDataDiri")
-        );
-        if (validateForm1(form1)) {
-          console.log("Data Form 1: ", Object.fromEntries(form1)); // Debugging
-          localStorage.setItem(
-            "form1Data",
-            JSON.stringify(Object.fromEntries(form1))
-          );
-          showModal("editModal2");
-        } else {
-          alert("Pastikan semua field di Form 1 terisi!");
-        }
-      });
-
-    // Tombol "Save" di modal kedua
-    document
-      .querySelector("#editModal2 .btn-outline-primary")
-      .addEventListener("click", function () {
-        const form1Data = JSON.parse(localStorage.getItem("form1Data"));
-        const form2 = new FormData(document.getElementById("formUpdateFile"));
-
-        console.log("Data Form 1 (From LocalStorage): ", form1Data); // Debugging
-        console.log("Data Form 2: ", Object.fromEntries(form2)); // Debugging
-
-        // Combine form1Data and form2 into one FormData
-        const finalData = new FormData();
-
-        // Append data from form1Data to finalData
-        if (form1Data) {
-          Object.entries(form1Data).forEach(([key, value]) => {
-            finalData.append(key, value);
-          });
-        }
-
-        // Append form2 data (files) to finalData
-        form2.forEach((value, key) => {
-          finalData.append(key, value);
-        });
-
-        console.log("Final Data before update: ", finalData);
-        submitFormUpdate(finalData);
-      });
-  }
-
-  function submitFormUpdate(finalData) {
-    fetch(baseURL + "mahasiswa/updateKompetisi", {
-      method: "POST",
-      body: finalData,
-    })
-      .then((response) => {
-        // Check if the response is not OK
-        if (!response.ok) {
-          throw new Error(
-            "Network response was not ok: " + response.statusText
-          );
-        }
-
-        // Read the response text first to inspect if it's valid JSON or HTML
-        return response.text().then((text) => {
-          // Try parsing the response text as JSON
-          try {
-            const data = JSON.parse(text);
-            console.log("Parsed JSON:", data);
-          } catch (error) {
-            // If parsing fails, log the raw response text for debugging
-            console.error("Response is not valid JSON:", text);
-            alert(
-              "The server responded with an error or unexpected data. Check the server logs."
-            );
-          }
-        });
-      })
-      .catch((error) => {
-        alert("Error occurred: " + error.message);
-        console.error("Error details:", error);
-      });
-  }
-
   handleFormSubmission();
-  handleFormUpdate();
 });
 /*
 
@@ -513,3 +429,105 @@ function declineStatus(kompetisiId) {
       console.error("Terjadi kesalahan:", error);
     });
 }
+
+// Handle form update
+document.addEventListener("DOMContentLoaded", function () {
+  // Fungsi untuk submit data ke server
+  function submitFormUpdate(finalData) {
+    fetch(baseURL + "mahasiswa/updateKompetisi", {
+      method: "POST",
+      body: finalData,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(
+            `Network response was not ok: ${response.statusText}`
+          );
+        }
+        return response.json();
+      })
+      .then((data) => {
+        if (data.success) {
+          alert("Data berhasil diperbarui!");
+          location.reload(); // Reload halaman setelah berhasil
+        } else {
+          alert("Gagal memperbarui data. Silakan periksa kembali.");
+          console.error("Error response from server:", data);
+        }
+      })
+      .catch((error) => {
+        alert("Terjadi kesalahan: " + error.message);
+        console.error("Error details:", error);
+      });
+  }
+
+  // Event delegation untuk tombol "Next"
+  document.body.addEventListener("click", function (event) {
+    if (event.target.matches(".btn-outline-primary[data-next]")) {
+      const kompetisiId = event.target.getAttribute("data-competisi-id");
+      const formElement = document.querySelector(
+        `#formUpdateDataDiri${kompetisiId}`
+      );
+      if (!formElement) {
+        console.error(
+          `Form with ID formUpdateDataDiri${kompetisiId} not found`
+        );
+        return;
+      }
+      const form1 = new FormData(formElement);
+
+      // Validasi Form 1
+      if (validateForm1(form1)) {
+        console.log(`Data Form 1 (${kompetisiId}):`, Object.fromEntries(form1));
+        localStorage.setItem(
+          `form1Data_${kompetisiId}`,
+          JSON.stringify(Object.fromEntries(form1))
+        );
+
+        // Tutup modal pertama
+        const modal1Id = `editModal${kompetisiId}`;
+        const modal1 = bootstrap.Modal.getInstance(
+          document.getElementById(modal1Id)
+        );
+        if (modal1) modal1.hide();
+
+        // Tampilkan modal kedua
+        const modal2Id = `editModal2${kompetisiId}`;
+        const modal2 = new bootstrap.Modal(document.getElementById(modal2Id));
+        modal2.show();
+      } else {
+        alert("Pastikan semua field di Form 1 terisi!");
+      }
+    }
+  });
+
+  // Event delegation untuk tombol "Save"
+  document.body.addEventListener("click", function (event) {
+    if (event.target.matches(".btn-outline-primary[data-save]")) {
+      const kompetisiId = event.target.getAttribute("data-competisi-id");
+      const form1Data = JSON.parse(
+        localStorage.getItem(`form1Data_${kompetisiId}`)
+      );
+      const form2 = new FormData(
+        document.querySelector(`#formUpdateFile${kompetisiId}`)
+      );
+
+      console.log(`Data Form 2 (${kompetisiId}):`, Object.fromEntries(form2));
+
+      // Gabungkan data dari Form 1 dan Form 2
+      const finalData = new FormData();
+      Object.entries(form1Data).forEach(([key, value]) => {
+        finalData.append(key, value);
+      });
+      for (let [key, value] of form2.entries()) {
+        finalData.append(key, value);
+      }
+
+      console.log(
+        `Final Data (${kompetisiId}):`,
+        Object.fromEntries(finalData)
+      );
+      submitFormUpdate(finalData);
+    }
+  });
+});
