@@ -330,4 +330,20 @@ class MahasiswaModel
             throw new Exception("Failed to insert kompetisi data: " . $e->getMessage());
         }
     }
+
+    public function deleteKompetisi($data)
+    {
+        try {
+            $query = "DELETE FROM kompetisi WHERE id = ?";
+            $params = [
+                $data['id_kompetisi']
+            ];
+            sqlsrv_query($this->db, $query, $params);
+
+            return true;
+        } catch (Exception $e) {
+            $this->logError($e->getMessage());
+            return false;
+        }
+    }
 }

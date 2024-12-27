@@ -358,4 +358,21 @@ class MahasiswaController extends Controller
             echo json_encode(['success' => false, 'message' => 'Invalid request method.']);
         }
     }
+
+    public function deleteKompetisi()
+    {
+        $data = [
+            'id_kompetisi' => $_POST['id_kompetisi']
+        ];
+
+        require_once '../app/models/MahasiswaModel.php';
+        $mahasiswaModel = new MahasiswaModel();
+        $result = $mahasiswaModel->deleteKompetisi($data);
+
+        if ($result) {
+            header('Location: kompetisi');
+        } else {
+            echo "Delete failed!";
+        }
+    }
 }
